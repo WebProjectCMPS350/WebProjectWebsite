@@ -1,0 +1,28 @@
+{
+  "name": "webprojectwebsite",
+  "version": "1.0.0",
+  "description": "Here you will find the source code for the QU Student Management Application.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WebProjectCMPS350/WebProjectWebsite.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/WebProjectCMPS350/WebProjectWebsite/issues"
+  },
+  "homepage": "https://github.com/WebProjectCMPS350/WebProjectWebsite#readme",
+  "types": "module",
+  "dependencies": {
+    "fs-extra": "^11.3.0",
+    "fse": "^4.0.1",
+    "nanoid": "^5.1.5",
+    "path": "^0.12.7"
+  }
+}

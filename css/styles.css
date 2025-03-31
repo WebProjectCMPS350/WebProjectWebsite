@@ -46,10 +46,36 @@ main{
     grid-area: main;
 }
 
+#cards-container{
+    display: flex;
+    border: 1px solid blue;
+    flex-wrap: wrap;
+
+}
+
+.card{
+    border: 1px solid red;
+    width: 100%;
+    background-color: gray;
+    color: white;
+    
+}
+
+.card:hover {
+    background-color: aliceblue;
+    color: black;
+    cursor: pointer;
+
+}
+
 footer{
     background-color: #666;
     color: white;
     padding: 10px;
     text-align: center;
     grid-area: footer;
+}
+
+.search, #searchInput{
+    font-size: 2rem;
 }
