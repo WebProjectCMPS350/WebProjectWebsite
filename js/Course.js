@@ -1,4 +1,4 @@
-
+import { readFile, writeFile } from 'fs/promises';
 class Course{
     #name;
     #classList;
@@ -43,9 +43,14 @@ class Course{
         this.#status = newStatus;
     }
 
-    static async getCourses(){
+    static async readCourses(){
         const response = await fetch("../data/courses.json")
         return response.json();
+    }
+
+    static async writeCourses(courses){
+        const response = await fetch("../data/courses.json")
+        const cs = response.json();
     }
 
 

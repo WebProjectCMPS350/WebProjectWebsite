@@ -12,7 +12,7 @@ addEventListener("keyup", handleSearch);
 
 let courses = [];
 
-console.log(await Course.getCourses());
+console.log(await Course.readCourses());
 
 
 function handleSearch(e){

@@ -13,16 +13,17 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/WebProjectCMPS350/WebProjectWebsite/issues"
   },
   "homepage": "https://github.com/WebProjectCMPS350/WebProjectWebsite#readme",
   "types": "module",
   "dependencies": {
+    "fs": "^0.0.1-security",
     "fs-extra": "^11.3.0",
     "fse": "^4.0.1",
     "nanoid": "^5.1.5",
     "path": "^0.12.7"
-  }
+  },
+  "type": "module"
 }
