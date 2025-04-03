@@ -1,1 +1,17 @@
-[{"ewdwef":23,"fwfwe":9283,"classNo":2002,"amount":4000,"transType":"Deposit","fwsrfv":"ewrtfgh"},{"ewdwef":23,"fwfwe":9283},{"accountNo":2002,"amount":4000,"transType":"Deposit","courseNo":"qoxOXG3HhRVmZUEC-zIBB"}]
+[
+  {
+    "courseNo" : 1,
+    "numberOfStudents": 30,
+    "status": "Pending"
+  },
+  {
+    "courseNo" : 2,
+    "numberOfStudents": 28,
+    "status": "Pending"
+  },
+  {
+    "courseNo" : 3,
+    "numberOfStudents": 24,
+    "status": "Current"
+  }
+]
