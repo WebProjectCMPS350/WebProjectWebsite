@@ -2,12 +2,14 @@ import fse from 'fs-extra';
 import path from 'path';
 import { nanoid } from 'nanoid';
 class Course{
+    #courseNo;
     #name;
     #classList;
     #category;
     #status;
 
-    constructor(name, category){
+    constructor(name, category, courseNo){
+        this.#courseNo;
         this.#name = name;
         this.#classList=[];
         this.#category = category;
@@ -43,9 +45,9 @@ class Course{
         return account;
     }
 
-    async createAccount(course) {
+    async createCourse(course) {
         const courses = await this.getCourses();
-        course.courseNo = nanoid();
+        //course.id = nanoid();
         courses.push(course);
         await this.saveCourses(courses);
         return course;
@@ -84,6 +86,15 @@ class Course{
 
     set name(newName){
         this.#name = newName;
+    }
+
+    get courseNo() {
+        return this.#courseNo;
+
+    }
+
+    set courseNo(newCourseNo){
+        this.#name = newCourseNo;
     }
 
     get classList() {
