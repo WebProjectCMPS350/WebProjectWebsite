@@ -1,4 +1,6 @@
-import { readFile, writeFile } from 'fs/promises';
+import fse from 'fs-extra';
+import path from 'path';
+import { nanoid } from 'nanoid';
 class Course{
     #name;
     #classList;
@@ -10,6 +12,69 @@ class Course{
         this.#classList=[];
         this.#category = category;
         this.#status = 'Pending';
+        this.coursesFilePath = path.join(process.cwd(), 'app/data/accounts.json'); // 
+    }
+
+    async saveCourses(courses) {
+        await fse.writeJson(this.coursesFilePath, courses);
+    }
+
+    async getCourses(type) {
+        console.log('called with ', type);
+        
+        // readson will conert the json file into js file
+        const courses = await fse.readJson(this.coursesFilePath);
+        
+        // Return all accounts 
+        /*if (type) {
+            return courses.filter(course => course.acctType.toLowerCase() == type.toLowerCase());
+        }*/
+
+        // Else return saving or current accounts
+        return courses;
+    }
+
+    async getCourse(CourseNo) {
+        const courses = await this.getCourses();
+        const course = courses.find(course => course.accountNo == accountNo);
+        if (!course) {
+            return { error: 'Account not found' };
+        }
+        return account;
+    }
+
+    async createAccount(course) {
+        const courses = await this.getCourses();
+        course.courseNo = nanoid();
+        courses.push(course);
+        await this.saveCourses(courses);
+        return course;
+    }
+
+    async updateCourse(courseNo, course) {
+        const courses = await this.getCourses();
+
+        const index = courses.findIndex(course => course.courseNo == courseNo);
+
+        if (index < 0) {
+            return { error: 'course not found' };
+        }
+        courses[index] = { ...courses[index], ...course };
+
+        await this.saveCourses(courses);
+        return courses[index];
+    }
+
+    async deleteCourse(courseNo) {
+        const courses = await this.getCourses();
+        const index = courses.findIndex(course => course.courseNo == courseNo);
+        if (index < 0) {
+            return { error: 'course not found' };
+        }
+        courses.splice(index, 1);
+        await this.saveCourses(courses);
+        // Why inside an Object?
+        return { message: 'course deleted successfully' };
     }
 
     get name() {
@@ -43,12 +108,12 @@ class Course{
         this.#status = newStatus;
     }
 
-    static async readCourses(){
+    static async read(){
         const response = await fetch("../data/courses.json")
         return response.json();
     }
 
-    static async writeCourses(courses){
+    static async write(courses){
         const response = await fetch("../data/courses.json")
         const cs = response.json();
     }
