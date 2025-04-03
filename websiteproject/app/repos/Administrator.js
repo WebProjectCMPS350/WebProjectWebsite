@@ -8,57 +8,61 @@ class Administrator extends User{
 
     constructor(name, username, password, clas){
         super(name, username, password);
+         this.administratorsFilePath = path.join(
+           process.cwd(),
+           "app/data/administrators.json"
+         );
     }
 
-    async saveInstructors(instructors) {
-        await fse.writeJson(this.instructorsFilePath, instructors);
+    async saveAdministrators(administrator) {
+        await fse.writeJson(this.administratorsFilePath, administrator);
       }
     
-      async getInstructors() {
-        const instructors = await fse.readJson(this.instructorsFilePath);
-        return instructors;
+      async getAdministrators() {
+        const administrators = await fse.readJson(this.administratorsFilePath);
+        return administrators;
       }
     
-      async getInstructor(username) {
-        const instructors = await this.getInstructors();
-        const instructor = instructors.find((instructor) => instructor.username == username);
-        if (!instructor) {
-          return { error: "Instructor not found" };
+      async getAdministrator(username) {
+        const administrators = await this.getAdministrators();
+        const administrator = administrators.find((administrator) => administrators.username == username);
+        if (!administrator) {
+          return { error: "Administrators not found" };
         }
-        return instructor;
+        return administrator;
       }
     
-      async createInstructor(instructor) {
-        const instructors = await this.getInstructors();
+      async createAdministrator(administrator) {
+        const administrators = await this.getAdministrators();
         //course.id = nanoid();
-        instructors.push(instructor);
-        await this.saveInstructors(instructors);
-        return instructor;
+        administrators.push(administrator);
+        await this.saveAdministrators(administrators);
+        return administrator;
       }
     
-      async updateInstructor(username, instructor) {
-        const instructors = await this.getInstructors();
+      async updateAdministrator(username, administrator) {
+        const administrators = await this.getAdministrators();
     
-        const index = instructors.findIndex((instructor) => instructor.username == username);
+        const index = administrators.findIndex((administrator) => administrator.username == username);
     
         if (index < 0) {
-          return { error: "Instructor not found" };
+          return { error: "Administrator not found" };
         }
-        instructors[index] = { ...instructors[index], ...instructor };
+        administrators[index] = { ...administrators[index], ...administrator };
     
-        await this.saveInstructors(instructors);
-        return instructors[index];
+        await this.saveAdministrators(administrators);
+        return administrators[index];
       }
     
-      async deleteInstructor(username) {
-        const instructors = await this.getInstructors();
-        const index = instructors.findIndex((instructor) => instructor.username == username);
+      async deleteAdministrator(username) {
+        const administrators = await this.getAdministrators();
+        const index = administrators.findIndex((administrator) => administrator.username == username);
         if (index < 0) {
-          return { error: "Instructor not found" };
+          return { error: "Administrator not found" };
         }
-        instructors.splice(index, 1);
-        await this.saveInstructors(instructors);
-        return { message: "Instructor deleted successfully" };
+        administrators.splice(index, 1);
+        await this.saveAdministrators(administrators);
+        return { message: "Administrator deleted successfully" };
       }
 
 
