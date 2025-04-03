@@ -37,9 +37,9 @@ class Course{
         return courses.filter(course => course.category.toLowerCase() == category.toLowerCase());
     }
 
-    async getCourse(CourseNo) {
+    async getCourse(courseNo) {
         const courses = await this.getCourses();
-        const course = courses.find(course => course.CourseNo == CourseNo);
+        const course = courses.find(course => course.courseNo == courseNo);
         if (!course) {
             return { error: 'Account not found' };
         }
