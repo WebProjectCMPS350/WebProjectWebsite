@@ -12,7 +12,7 @@ class Course{
         this.#classList=[];
         this.#category = category;
         this.#status = 'Pending';
-        this.coursesFilePath = path.join(process.cwd(), 'app/data/accounts.json'); // 
+        this.coursesFilePath = path.join(process.cwd(), 'app/data/courses.json'); // 
     }
 
     async saveCourses(courses) {
