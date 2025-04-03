@@ -1,55 +1,115 @@
+import fse from 'fs-extra';
+import path from 'path';
+import { nanoid } from 'nanoid';
 
 
-class Class{
-    #name;
-    #course;
-    #instructor;
-    #students;
+class Class {
+  #name;
+  #classNo;
+  #course;
+  #instructor;
+  #students;
 
-    constructor(name, course, instructor){
-        this.#name = name;
-        this.#students=[];
-        this.#course = course;
-        this.#instructor = instructor;
+  constructor(name, course, instructor, classNo) {
+    this.#name = name;
+    this.#students = [];
+    this.#course = course;
+    this.#classNo = classNo;
+    this.#instructor = instructor;
+    this.classFilePath = path.join(process.cwd(), "app/data/classes.json"); //
+  }
+
+  async saveClasses(classes) {
+    await fse.writeJson(this.classFilePath, classes);
+  }
+
+  async getClasses() {
+    const classes = await fse.readJson(this.classFilePath);
+    return classes;
+  }
+
+  async getClass(classeNo) {
+    const classes = await this.getClasses();
+    const clas = classes.find((clas) => clas.classeNo == classeNo);
+    if (!clas) {
+      return { error: "Class not found" };
     }
+    return clas;
+  }
 
-    get name() {
-        return this.#name;
+  async createClass(clas) {
+    const classes = await this.getClasses();
+    //course.id = nanoid();
+    classes.push(clas);
+    await this.saveClasses(classes);
+    return clas;
+  }
 
+  async updateClass(classeNo, clas) {
+    const clases = await this.getClasses();
+
+    const index = clases.findIndex((c) => c.classNo == classeNo);
+
+    if (index < 0) {
+      return { error: "Class not found" };
     }
+    clases[index] = { ...clases[index], ...clas };
 
-    set name(newName){
-        this.#name = newName;
+    await this.saveClasses(clases);
+    return clases[index];
+  }
+
+  async deleteClass(classNo) {
+    const classes = await this.getClasses();
+    const index = classes.findIndex((clas) => clas.classNo == classNo);
+    if (index < 0) {
+      return { error: "course not found" };
     }
+    classes.splice(index, 1);
+    await this.saveClasses(classes);
+    // Why inside an Object?
+    return { message: "Class deleted successfully" };
+  }
 
-    get students() {
-        return this.#students;
-    }
+  get name() {
+    return this.#name;
+  }
 
-    get course() {
-        return this.#course;
+  set name(newName) {
+    this.#name = newName;
+  }
 
-    }
+  get classNo() {
+    return this.#classNo;
+  }
 
-    set course(course){
-        this.#course = course;
-    }
+  set classNo(newClassNo) {
+    this.#classNo = newClassNo;
+  }
 
-    get instructor() {
-        return this.#instructor;
+  get students() {
+    return this.#students;
+  }
 
-    }
+  get course() {
+    return this.#course;
+  }
 
-    set instructor(instructor){
-        this.#instructor = instructor;
-    }
+  set course(course) {
+    this.#course = course;
+  }
 
-    getStudentsNo() {
-        return -1;
-    }
+  get instructor() {
+    return this.#instructor;
+  }
 
+  set instructor(instructor) {
+    this.#instructor = instructor;
+  }
 
-
+  getStudentsNo() {
+    return -1;
+  }
 }
 
 export default Class;

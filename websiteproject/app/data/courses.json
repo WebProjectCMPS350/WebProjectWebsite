@@ -1,10 +1,1 @@
-[
-  { "ewdwef": 23, "fwfwe": 9283 },
-  { "ewdwef": 23, "fwfwe": 9283 },
-  {
-    "accountNo": 2002,
-    "amount": 4000,
-    "transType": "Deposit",
-    "courseNo": "qoxOXG3HhRVmZUEC-zIBB"
-  }
-]
+[{"ewdwef":23,"fwfwe":9283,"classNo":2002,"amount":4000,"transType":"Deposit","fwsrfv":"ewrtfgh"},{"ewdwef":23,"fwfwe":9283},{"accountNo":2002,"amount":4000,"transType":"Deposit","courseNo":"qoxOXG3HhRVmZUEC-zIBB"}]

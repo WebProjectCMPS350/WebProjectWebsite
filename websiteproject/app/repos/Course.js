@@ -21,28 +21,29 @@ class Course{
         await fse.writeJson(this.coursesFilePath, courses);
     }
 
-    async getCourses(type) {
-        console.log('called with ', type);
-        
-        // readson will conert the json file into js file
+    async getCourses() {
         const courses = await fse.readJson(this.coursesFilePath);
-        
-        // Return all accounts 
-        /*if (type) {
-            return courses.filter(course => course.acctType.toLowerCase() == type.toLowerCase());
-        }*/
-
-        // Else return saving or current accounts
         return courses;
+    }
+
+    async getCoursesByName(name) {
+        const courses = await fse.readJson(this.coursesFilePath);
+        return courses.filter(course => course.name.toLowerCase() == name.toLowerCase());
+
+    }
+
+    async getCoursesByCategory(category) {
+        const courses = await fse.readJson(this.coursesFilePath);
+        return courses.filter(course => course.category.toLowerCase() == category.toLowerCase());
     }
 
     async getCourse(CourseNo) {
         const courses = await this.getCourses();
-        const course = courses.find(course => course.accountNo == accountNo);
+        const course = courses.find(course => course.CourseNo == CourseNo);
         if (!course) {
             return { error: 'Account not found' };
         }
-        return account;
+        return course;
     }
 
     async createCourse(course) {
