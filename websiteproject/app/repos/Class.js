@@ -1,7 +1,7 @@
 import fse from 'fs-extra';
 import path from 'path';
 import { nanoid } from 'nanoid';
-
+import courseRepo from "@/app/repos/Course.js";
 
 class Class {
   #name;
@@ -39,7 +39,6 @@ class Class {
 
   async createClass(clas) {
     const classes = await this.getClasses();
-    //course.id = nanoid();
     classes.push(clas);
     await this.saveClasses(classes);
     return clas;

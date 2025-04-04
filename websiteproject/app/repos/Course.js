@@ -52,7 +52,6 @@ class Course {
 
   async createCourse(course) {
     const courses = await this.getCourses();
-    //course.id = nanoid();
     courses.push(course);
     await this.saveCourses(courses);
     return course;

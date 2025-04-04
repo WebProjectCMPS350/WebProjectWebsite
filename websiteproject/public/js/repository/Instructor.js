@@ -1,8 +1,5 @@
 import User from "./User.js";
-import fse from "fs-extra";
-import path from "path";
-import { nanoid } from "nanoid";
-
+const baseUrl = "/api/instructors";
 
 class Instructor extends User {
   #calsses = [];
@@ -12,19 +9,12 @@ class Instructor extends User {
     super(name, username, password);
     this.#calsses.push(clas);
     this.#expertiseAreas = [];
-    this.instructorsFilePath = path.join(
-      process.cwd(),
-      "app/data/instructors.json"
-    ); //
   }
 
-  async saveInstructors(instructors) {
-    await fse.writeJson(this.instructorsFilePath, instructors);
-  }
 
   async getInstructors() {
-    const instructors = await fse.readJson(this.instructorsFilePath);
-    return instructors;
+    const response = await fetch(baseUrl);
+    return response.json();
   }
 
   async getInstructor(username) {
@@ -39,40 +29,27 @@ class Instructor extends User {
   }
 
   async createInstructor(instructor) {
-    const instructors = await this.getInstructors();
-    //course.id = nanoid();
-    instructors.push(instructor);
-    await this.saveInstructors(instructors);
-    return instructor;
+    return await fetch(baseUrl, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(instructor),
+    });
   }
 
-  async updateInstructor(username, instructor) {
-    const instructors = await this.getInstructors();
-
-    const index = instructors.findIndex(
-      (instructor) => instructor.username == username
-    );
-
-    if (index < 0) {
-      return { error: "Instructor not found" };
-    }
-    instructors[index] = { ...instructors[index], ...instructor };
-
-    await this.saveInstructors(instructors);
-    return instructors[index];
+  async updateInstructor(instructor) {
+    return await fetch(baseUrl, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(instructor),
+    });
   }
 
-  async deleteInstructor(username) {
-    const instructors = await this.getInstructors();
-    const index = instructors.findIndex(
-      (instructor) => instructor.username == username
-    );
-    if (index < 0) {
-      return { error: "Instructor not found" };
-    }
-    instructors.splice(index, 1);
-    await this.saveInstructors(instructors);
-    return { message: "Instructor deleted successfully" };
+  async deleteInstructor(instructor) {
+    return await fetch(`${baseUrl}`, {
+      method: "DELETE",
+      headers: { "Content-Type": "application/json" },
+      body: instructor,
+    });
   }
 
   get calsses() {
@@ -84,4 +61,4 @@ class Instructor extends User {
   }
 }
 
-export default Instructor;
+export default new Instructor();
