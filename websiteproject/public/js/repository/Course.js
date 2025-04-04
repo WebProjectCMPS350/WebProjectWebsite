@@ -14,12 +14,8 @@ class Course {
     this.#classList = [];
     this.#category = category;
     this.#status = "Pending";
-    //this.coursesFilePath = path.join(process.cwd(), "app/data/courses.json"); //
   }
 
-  async saveCourses(courses) {
-    await fse.writeJson(this.coursesFilePath, courses);
-  }
 
   async getCourses() {
     const response = await fetch(baseUrl);
@@ -50,25 +46,19 @@ class Course {
   }
 
   async createCourse(course) {
-    const courses = await this.getCourses();
-    //course.id = nanoid();
-    courses.push(course);
-    await this.saveCourses(courses);
-    return course;
+    return await fetch(baseUrl, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(course),
+    });
   }
 
-  async updateCourse(courseNo, course) {
-    const courses = await this.getCourses();
-
-    const index = courses.findIndex((course) => course.courseNo == courseNo);
-
-    if (index < 0) {
-      return { error: "course not found" };
-    }
-    courses[index] = { ...courses[index], ...course };
-
-    await this.saveCourses(courses);
-    return courses[index];
+  async updateCourse(course) {
+    return await fetch(baseUrl, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(course),
+    });
   }
 
   async deleteCourse(course) {

@@ -7,5 +7,5 @@ const search = document.querySelector("#searchInput");
 search.addEventListener("keyup", handleSearch);
 
 async function handleSearch(e) {
-  console.log(await courseRepo.getCourses());
+  console.log(await courseRepo.getCoursesByName("Database"));
 }
