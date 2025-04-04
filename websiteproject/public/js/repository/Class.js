@@ -1,6 +1,4 @@
-import fse from 'fs-extra';
-import path from 'path';
-import { nanoid } from 'nanoid';
+const baseUrl = "/api/classes";
 
 
 class Class {
@@ -16,16 +14,12 @@ class Class {
     this.#course = course;
     this.#classNo = classNo;
     this.#instructor = instructor;
-    this.classFilePath = path.join(process.cwd(), "app/data/classes.json"); //
   }
 
-  async saveClasses(classes) {
-    await fse.writeJson(this.classFilePath, classes);
-  }
 
   async getClasses() {
-    const classes = await fse.readJson(this.classFilePath);
-    return classes;
+    const response = await fetch(baseUrl);
+    return response.json();
   }
 
   async getClass(classeNo) {
@@ -38,37 +32,27 @@ class Class {
   }
 
   async createClass(clas) {
-    const classes = await this.getClasses();
-    //course.id = nanoid();
-    classes.push(clas);
-    await this.saveClasses(classes);
-    return clas;
+    return await fetch(baseUrl, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(clas),
+    });
   }
 
-  async updateClass(classeNo, clas) {
-    const clases = await this.getClasses();
-
-    const index = clases.findIndex((c) => c.classNo == classeNo);
-
-    if (index < 0) {
-      return { error: "Class not found" };
-    }
-    clases[index] = { ...clases[index], ...clas };
-
-    await this.saveClasses(clases);
-    return clases[index];
+  async updateClass(clas) {
+    return await fetch(baseUrl, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(clas),
+    });
   }
 
-  async deleteClass(classNo) {
-    const classes = await this.getClasses();
-    const index = classes.findIndex((clas) => clas.classNo == classNo);
-    if (index < 0) {
-      return { error: "course not found" };
-    }
-    classes.splice(index, 1);
-    await this.saveClasses(classes);
-    // Why inside an Object?
-    return { message: "Class deleted successfully" };
+  async deleteClass(clas) {
+    return await fetch(`${baseUrl}`, {
+      method: "DELETE",
+      headers: { "Content-Type": "application/json" },
+      body: clas,
+    });
   }
 
   get name() {

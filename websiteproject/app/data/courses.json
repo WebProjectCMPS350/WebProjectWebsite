@@ -1,5 +1,1 @@
-[
-  { "courseNo": 2, "numberOfStudents": 28, "status": "Pending", "name":"OOP"  },
-  { "courseNo": 3, "numberOfStudents": 24, "status": "Current" , "name":"Math" },
-  { "courseNo": 4 , "numberOfStudents": 24, "status": "Current" , "name":"Database"}
-]
+[{"courseNo":2,"numberOfStudents":28,"status":"Current","name":"Programming"},{"courseNo":3,"numberOfStudents":24,"status":"Current","name":"Math"},{"courseNo":4,"numberOfStudents":24,"status":"Current","name":"Database"}]
