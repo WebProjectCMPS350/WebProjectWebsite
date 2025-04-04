@@ -1,4 +1,4 @@
-const baseUrl = '/api/courses';
+const baseUrl = "http://localhost:3000/api/courses";
 
 
 class Course {
@@ -14,7 +14,7 @@ class Course {
     this.#classList = [];
     this.#category = category;
     this.#status = "Pending";
-    this.coursesFilePath = path.join(process.cwd(), "app/data/courses.json"); //
+    //this.coursesFilePath = path.join(process.cwd(), "app/data/courses.json"); //
   }
 
   async saveCourses(courses) {
@@ -130,4 +130,4 @@ class Course {
   }
 }
 
-export default Course;
+export default new Course();

@@ -1,6 +1,7 @@
 import fse from "fs-extra";
 import path from "path";
 import { nanoid } from "nanoid";
+
 class Course {
   #courseNo;
   #name;
