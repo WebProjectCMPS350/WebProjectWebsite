@@ -76,6 +76,6 @@ footer{
     grid-area: footer;
 }
 
-.search, #searchInput{
-    font-size: 2rem;
+.search, #searchInput, #typeOfSearch{
+    font-size: 1.5rem;
 }

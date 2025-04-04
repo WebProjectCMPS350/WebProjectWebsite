@@ -6,8 +6,10 @@ import instructorRepo from "./repository/Instructor.js";
 
 const cardsContainer = document.querySelector("#cards-container");
 const search = document.querySelector("#searchInput");
+const typeOfSearch = document.querySelector("#typeOfSearch");
 
 search.addEventListener("keyup", handleSearch);
+typeOfSearch.addEventListener("change", type);
 
 document.addEventListener("DOMContentLoaded", loadCourses);
 
@@ -22,16 +24,32 @@ async function loadCourses(e) {
 async function templateCourses(course) {
   return `
     <div class="card">
-        <h1>${course.name}</h1>
-        <h1>${course.category}</h1>
-        <h1>${course.courseNo}</h1>
+        <h1>Name: ${course.name}</h1>
+        <h1>Category: ${course.category}</h1>
+        <h1>Number: ${course.courseNo}</h1>
     </div>
     `;
 }
+
+async function type() {
+  handleSearch();
+}
+
 // search by name
 async function handleSearch() {
+  let selectedValue = typeOfSearch.value;
+
   let courses = await courseRepo.getCourses();
-  courses = courses.filter(course => course.name.toUpperCase().includes(search.value.toUpperCase()) );
+  if (selectedValue == "By name") {
+    courses = courses.filter((course) =>
+      course.name.toUpperCase().includes(search.value.toUpperCase())
+    );
+  } else {
+    courses = courses.filter((course) =>
+      course.category.toUpperCase().includes(search.value.toUpperCase())
+    );
+  }
+
   const htmlArray = await Promise.all(
     courses.map((course) => templateCourses(course))
   );
