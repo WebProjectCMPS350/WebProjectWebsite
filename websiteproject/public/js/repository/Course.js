@@ -1,4 +1,4 @@
-const baseUrl = "http://localhost:3000/api/courses";
+const baseUrl = "/api/courses";
 
 
 class Course {
@@ -27,14 +27,14 @@ class Course {
   }
 
   async getCoursesByName(name) {
-    const courses = await fse.readJson(this.coursesFilePath);
+    const courses = await this.getCourses();
     return courses.filter(
       (course) => course.name.toLowerCase() == name.toLowerCase()
     );
   }
 
   async getCoursesByCategory(category) {
-    const courses = await fse.readJson(this.coursesFilePath);
+    const courses = await this.getCourses();
     return courses.filter(
       (course) => course.category.toLowerCase() == category.toLowerCase()
     );
@@ -71,16 +71,13 @@ class Course {
     return courses[index];
   }
 
-  async deleteCourse(courseNo) {
-    const courses = await this.getCourses();
-    const index = courses.findIndex((course) => course.courseNo == courseNo);
-    if (index < 0) {
-      return { error: "course not found" };
-    }
-    courses.splice(index, 1);
-    await this.saveCourses(courses);
-    // Why inside an Object?
-    return { message: "course deleted successfully" };
+  async deleteCourse(course) {
+    return await fetch(`${baseUrl}`, {
+      method: "DELETE",
+      headers: { "Content-Type": "application/json" },
+      body: course,
+    });
+
   }
 
   get name() {
