@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <title>QU Student Management Application</title>
 
 </head>
+
 <body>
 
     <div class="container">
@@ -14,19 +16,23 @@
             <h1>QU Student Management Application</h1>
         </header>
         <nav>
-            
-            <form action="#">
 
-                <fieldset class="search">
-                    <label for="">search:</label>
-                    <input type="text" name="search" id="searchInput">
-                    <label for="type">Choose type of search: </label>
-                    <select name="type" id="typeOfSearch">
+            <form action="#" class="formGroup1">
+
+                <div>
+                    <label for="searchInput" class="search">search:</label>
+                    <input type="text" name="search" id="searchInput" class="search">
+
+                    <label for="typeOfSearch" class="search">Choose type of search: </label>
+                    <select name="type" id="typeOfSearch" class="search">
                         <option value="By name">By name</option>
                         <option value="By category">By category</option>
                     </select>
-                </fieldset>
-               
+                </div>
+
+                <a href="learning-path.html"><input type="button" name="learningPath" id="learningPath" class="btn"
+                        value="My learning Path"></a>
+
 
             </form>
         </nav>
@@ -37,8 +43,9 @@
         </main>
         <footer>footer</footer>
     </div>
-    
+
 </body>
 
-<script type="module" src="/js/index.js"> </script>
+<script type="module" src="js/index.js"> </script>
+
 </html>

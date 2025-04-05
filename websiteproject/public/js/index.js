@@ -24,9 +24,9 @@ async function loadCourses(e) {
 async function templateCourses(course) {
   return `
     <div class="card">
-        <h1>Name: ${course.name}</h1>
-        <h1>Category: ${course.category}</h1>
-        <h1>Number: ${course.courseNo}</h1>
+        <p>Name: ${course.name}</p>
+        <p>Category: ${course.category}</p>
+        <p>Number: ${course.courseNo}</p>
     </div>
     `;
 }
@@ -55,6 +55,8 @@ async function handleSearch() {
   );
   cardsContainer.innerHTML = htmlArray.join("\n");
 }
+
+
 /*
 
     <div class="card">
