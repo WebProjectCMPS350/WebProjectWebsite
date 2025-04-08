@@ -56,7 +56,6 @@ async function handleSearch() {
   cardsContainer.innerHTML = htmlArray.join("\n");
 }
 
-
 /*
 
     <div class="card">

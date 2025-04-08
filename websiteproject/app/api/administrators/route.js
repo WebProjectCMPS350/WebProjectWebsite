@@ -1,26 +1,26 @@
-import instructor from "@/app/repos/Instructor";
+import administrator from "@/app/repos/Administrator";
 
-const instructorRepo = new instructor();
+const adminRepo = new administrator();
 
 export async function GET(req) {
-  const instructor = await instructorRepo.getInstructors();
-  return Response.json(instructor, { status: 200 });
+  const admin = await adminRepo.getAdministrators();
+  return Response.json(admin, { status: 200 });
 }
 
 export async function PUT(req) {
-  const instructor = await req.json();
-  const newInstructor = await instructorRepo.updateInstructor(instructor.username ,instructor);
-  return Response.json(newInstructor, { status: 200 });
+  const admin = await req.json();
+  const newAdmin = await adminRepo.updateAdministrator(admin.username ,admin);
+  return Response.json(newAdmin, { status: 200 });
 }
 
 export async function POST(req) {
-  const instructor = await req.json();
-  const newInstructor = await instructorRepo.createInstructor(instructor);
-  return Response.json(newInstructor, { status: 201 });
+  const admin = await req.json();
+  const newAdmin = await adminRepo.createAdministrator(admin);
+  return Response.json(newAdmin, { status: 201 });
 }
 
 export async function DELETE(req) {
-  const instructor = await req.json();
-  const newInstructor = await instructorRepo.deleteInstructor(instructor.username ,instructor);
-  return Response.json(newInstructor, { status: 200 });
+  const admin = await req.json();
+  const newAdmin = await adminRepo.deleteAdministrator(admin.username ,admin);
+  return Response.json(newAdmin, { status: 200 });
 }

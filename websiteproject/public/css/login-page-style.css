@@ -108,6 +108,15 @@ button:hover {
 
 }
 
+#error-message{
+    color: red;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: bold;
+    
+}
+
 footer{
     background: linear-gradient(to bottom, #6a11cb, #4392F1);
     color: white;

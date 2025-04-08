@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>QU Student Management Application</title>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>QU Student Management Application Admin</h1>
+        </header>
+        <nav>
+
+            <form action="#" class="formGroup1">
+
+                <div>
+                    <label for="searchInput" class="search">search:</label>
+                    <input type="text" name="search" id="searchInput" class="search">
+
+                    <label for="typeOfSearch" class="search">Choose type of search: </label>
+                    <select name="type" id="typeOfSearch" class="search">
+                        <option value="By name">By name</option>
+                        <option value="By category">By category</option>
+                    </select>
+                </div>
+
+                <a href="learning-path.html"><input type="button" name="learningPath" id="learningPath" class="btn"
+                        value="My learning Path"></a>
+
+
+            </form>
+        </nav>
+        <main>
+            <div id="cards-container">
+                <!-- Here cards will be-->
+            </div>
+        </main>
+        <footer>footer</footer>
+    </div>
+
+</body>
+
+<script>
+    if (localStorage.getItem("loggedIn") !== "true" || localStorage.userType !== "admin") {
+        window.location.href = "/login-page.html";
+    }
+</script>
+
+
+</html>

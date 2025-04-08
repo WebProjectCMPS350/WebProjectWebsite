@@ -7,6 +7,9 @@ import instructorRepo from "./repository/Instructor.js";
 const loginForm = document.querySelector("#login-form");
 const html = document.querySelector("html");
 
+localStorage.loggedIn = false;
+localStorage.userType = null;
+
 loginForm.addEventListener("submit", handleLogin);
 
 async function handleLogin(e) {
@@ -16,10 +19,13 @@ async function handleLogin(e) {
 
   const students = await studentRepo.getStudents();
   const admins = await adminRepo.getAdministrators();
-  const instructors = await instructorRepo.getInstructors(); 
+  const instructors = await instructorRepo.getInstructors();
 
   for (const student of students) {
-    if (student.username === data.username && student.password === data.password) {
+    if (
+      student.username === data.username &&
+      student.password === data.password
+    ) {
       loadStudentMainPage(student);
       return;
     }
@@ -31,19 +37,36 @@ async function handleLogin(e) {
     }
   }
   for (const instructor of instructors) {
-    if (instructor.username === data.username && instructor.password === data.password) {
+    if (
+      instructor.username === data.username &&
+      instructor.password === data.password
+    ) {
       loadInstructorMainPage(instructor);
       return;
     }
   }
+
+  const err = document.querySelector("#error-message");
+  err.innerHTML = `Invalid username or password`;
 }
 
 async function loadStudentMainPage(student) {
-  
-  html.innerHTML = `
-    <h1>Welcome, ${student.username}</h1>
-    <p>Your courses:</p>
-    <ul id="courses-list"></ul>
-  `;
-  
+  localStorage.loggedIn = true;
+  localStorage.userType = "student";
+  localStorage.username = student.username;
+  window.location.href = "/student-main-page.html";
+}
+
+async function loadInstructorMainPage(instructor) {
+  localStorage.loggedIn = true;
+  localStorage.userType = "instructor";
+  localStorage.username = instructor.username;
+  window.location.href = "/instructor-main-page.html";
+}
+
+async function loadAdminMainPage(admin) {
+  localStorage.loggedIn = true;
+  localStorage.userType = "admin";
+  localStorage.username = admin.username;
+  window.location.href = "/admin-main-page.html";
 }

@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <title>QU Student Management Application</title>
+    <link rel="stylesheet" href="css/student-main-page.css">
+    <title>Main page</title>
 
 </head>
 
@@ -13,7 +13,7 @@
 
     <div class="container">
         <header>
-            <h1>QU Student Management Application</h1>
+            <h1 id="welcome-message"> Welcome ${username}</h1>
         </header>
         <nav>
 
@@ -46,6 +46,11 @@
 
 </body>
 
-<script type="module" src="js/index.js"> </script>
+<script>
+    if (localStorage.getItem("loggedIn") !== "true" || localStorage.userType !== "student") {
+        window.location.href = "/login-page.html";
+    }
+</script>
+
 
 </html>
