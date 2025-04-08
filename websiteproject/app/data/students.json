@@ -1,1 +1,6 @@
-[{"username":"Mohammed","learningPath":[{"name":"Software Engineering","category":"Desgin","courseNo":3},{"name":"Senior1","category":"Desgin","courseNo":4}]}]
+[
+  {
+    "username": "Mohammed",
+    "password": "123456"
+  }
+]
