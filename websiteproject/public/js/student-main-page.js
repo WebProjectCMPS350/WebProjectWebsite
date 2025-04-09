@@ -8,8 +8,12 @@ const cardsContainer = document.querySelector("#cards-container");
 const search = document.querySelector("#searchInput");
 const typeOfSearch = document.querySelector("#typeOfSearch");
 
+
+
 search.addEventListener("keyup", handleSearch);
 typeOfSearch.addEventListener("change", type);
+
+
 
 document.addEventListener("DOMContentLoaded", loadCourses);
 

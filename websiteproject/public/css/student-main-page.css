@@ -11,7 +11,7 @@
     height: 100vh;
 
     grid-template-rows: auto 3fr auto;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
 
     grid-template-areas:
         "header header header"
@@ -21,9 +21,7 @@
 
 header {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
     background-color: #555;
     color: red;
     padding: 10px;
@@ -31,34 +29,45 @@ header {
     grid-area: header;
 }
 
-nav{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    gap: 1rem;
-    padding: 0;
-    margin: 0;
+header h1 {
+    border-bottom: 1px solid white;
+    width: 100%;
+
 }
+
+nav {
+    padding: 0.5rem 0;
+}
+
 
 nav li a {
     color: white;
     list-style: none;
     text-decoration: none;
+    border: 1px solid transparent;
+
+    border-radius: 2rem;
+    padding: 0.1rem 2rem;
+
+}
+
+nav li a:hover {
+    color: rgb(0, 136, 255);
+    border: 1px solid white;
+    padding: 0.1rem 2rem;
+    transition: 0.3s;
+    cursor: pointer;
 }
 
 nav ul {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     list-style: none;
     gap: 1rem;
-    padding: 0;
-    margin: 0;
-}
 
+}
 
 
 .search-bar {
@@ -75,9 +84,9 @@ nav ul {
 
 #search-bar {
     background-color: #f0f0f0;
-    color: #333; 
+    color: #333;
     border: 1px solid #ccc;
-  }
+}
 
 
 
@@ -93,29 +102,29 @@ nav ul {
     color: #333;
     border-radius: 0.5rem;
     border: none;
-    
+
 }
 
 .formGroup1 input {
-    
+
     background-color: #f0f0f0;
     padding: 1rem 2rem;
     border: none;
-    border-bottom: 1px solid #ccc; 
-    outline: none; 
+    border-bottom: 1px solid #ccc;
+    outline: none;
 }
 
 .formGroup1 select {
     background-color: #f0f0f0;
     padding: 1rem 2rem;
     border: none;
-    border-bottom: 1px solid #ccc; 
+    border-bottom: 1px solid #ccc;
     outline: none;
     cursor: pointer;
 
 }
 
-.formGroup1 div label{
+.formGroup1 div label {
 
     padding: 0.5rem 1rem;
 
@@ -167,10 +176,6 @@ footer {
 }
 
 
-
-
-
-
 .btn {
     background-color: gray;
     color: white;
@@ -213,64 +218,49 @@ footer ul li a:hover {
 
 @media screen and (min-width: 768px) {
 
-    
-.container {
+
+    .container {
+        display: grid;
+        height: 100vh;
+
+        grid-template-rows: auto 3fr auto;
         grid-template-columns: repeat(3, 1fr);
+
+        grid-template-areas:
+            "header header header"
+            "main main main"
+            "footer footer footer";
+    }
+
+    header h1 {
+        color: white;
+        border: none;
+        width: auto;
     }
 
     header {
+        display: flex;
         flex-direction: row;
-        color: white;
-    }
-
-    nav{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        list-style: none;
-        gap: 1rem;
-        padding: 0;
-        margin: 0;
+        gap: 0;
+        padding: 0rem 0rem;
+        padding-left: 0.5rem;
     }
-    
-    nav li a {
-        color: white;
-        list-style: none;
-        text-decoration: none;
-        padding: 0.5rem 1rem;
-        border-radius: 2rem;
-        border: 1px solid transparent;
 
-
-    }
-    
     nav ul {
+        flex-direction: row;
+        gap: 0rem;
+
+    }
+
+    .footer-content {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-direction: row;
+        justify-content: space-between;
         align-items: center;
-        list-style: none;
-        gap: 1rem;
-        padding: 0;
-        margin: 0;
-        
+        gap: 0rem;
+        padding: 0rem 0rem;
     }
 
-    nav ul li a:hover {
-        cursor: pointer;
-        border: 1px solid white;
-
-        transition: all 0.2s ease-in-out;
-
-    }
-
-    .formGroup1 {
-        width: 60%;
-    }
-
-
-
-    
-    
 }
