@@ -1,6 +1,54 @@
 [
   {
     "username": "mo",
-    "password": "123456"
+    "password": "123456",
+    "courses": [
+      {
+        "courseNo": 1,
+        "name": "Introduction to Computer Science",
+        "description": "Learn the basics of computer science, including programming, algorithms, and data structures.",
+        "courseDuration": "3 months",
+        "coursePrice": 300,
+        "status": "Open"
+      },
+      {
+        "courseNo": 2,
+        "name": "Web Development",
+        "description": "Build modern web applications using HTML, CSS, and JavaScript.",
+        "courseDuration": "4 months",
+        "coursePrice": 400,
+        "status": "Pending"
+
+      },
+
+      {
+        "courseNo": 3,
+        "name": "Database Management",
+        "description": "Learn how to design and manage databases using SQL.",
+        "courseDuration": "2 months",
+        "coursePrice": 200,
+        "status": "current"
+
+      },
+
+      {
+        "courseNo": 4,
+        "name": "Software Engineering",
+        "description": "Understand the principles of software development and project management.",
+        "courseDuration": "5 months",
+        "coursePrice": 500
+      },
+
+
+      {
+        "courseNo": 5,
+        "name": "Data Science",
+        "description": "Explore data analysis, machine learning, and data visualization techniques.",
+        "courseDuration": "6 months",
+        "coursePrice": 600
+      }
+
+
+    ]
   }
 ]

@@ -23,7 +23,6 @@ header {
     display: flex;
     flex-direction: column;
     background-color: #555;
-    color: red;
     padding: 10px;
     text-align: center;
     grid-area: header;
@@ -31,6 +30,7 @@ header {
 
 header h1 {
     border-bottom: 1px solid white;
+    color: white;
     width: 100%;
 
 }
@@ -142,29 +142,81 @@ main {
 }
 
 #cards-container {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-rows: repeat(auto, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 1rem;
+
 
 }
 
 .card {
-    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr;
+
+    grid-template-areas:
+        "header"
+        "content"
+        "footer";
+
+    border: 1px solid transparent;
+    border-radius: 0.5rem;
+
+
+}
+
+.card .header {
+    background-color: #4392F1;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    grid-area: header;
+    border-radius: 0.5rem;
+
+
+}
+
+.card .body {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 10px;
+    text-align: center;
+    grid-area: content;
+}
+
+.card .footer {
+    background-color: #f0f0f0;
+
+    color: white;
+    padding: 10px;
+    text-align: center;
+    grid-area: footer;
+    border-radius: 0.5rem;
+
+
+}
+
+.card .enroll-btn {
     background-color: gray;
     color: white;
+    padding: 1rem 1rem;
     border-radius: 1rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    font-size: 2rem;
+    border: none;
+}
+
+.card .enroll-btn:hover {
+    background-color: #4392F1;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    padding: 1rem 5rem;
+    transition: 0.3s;
 }
 
 .card:hover {
-    background-color: aliceblue;
-    color: black;
-    cursor: pointer;
-
+    border: 1px solid #ccc;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transition: 0.3s;
 }
 
 footer {
@@ -236,6 +288,8 @@ footer ul li a:hover {
         color: white;
         border: none;
         width: auto;
+        font-size: 1.8rem;
+        
     }
 
     header {
@@ -245,7 +299,19 @@ footer ul li a:hover {
         align-items: center;
         gap: 0;
         padding: 0rem 0rem;
-        padding-left: 0.5rem;
+        padding-left: 1rem;
+    }
+
+    nav li a {
+        border-radius: 2rem;
+        padding: 0.1rem 1.5rem;
+    
+    }
+    
+    nav li a:hover {
+
+        padding: 0.1rem 1.5rem;
+
     }
 
     nav ul {
@@ -260,7 +326,8 @@ footer ul li a:hover {
         justify-content: space-between;
         align-items: center;
         gap: 0rem;
-        padding: 0rem 0rem;
+        padding: 0rem 1rem;
     }
+
 
 }
