@@ -16,9 +16,16 @@
     <div class="container">
         <header>
             <h1> QU Student Management</h1>
-            <a href="learning-path.html"><input type="button" name="learningPath" id="learningPath" class="btn"
-                value="My learning Path"></a>
-                
+
+            <nav>
+                <ul>
+                    <li><a href="">About us</a></li>
+                    <li><a href="">Contact us</a></li>
+                    <li id="learningPath" 
+                    ><a href="learning-path.html">My learning path</a></li>
+                </ul>
+            </nav>
+
         </header>
 
         <main>
@@ -28,7 +35,8 @@
 
                     <div class="input-group">
                         <label for="searchInput" class="search"><i class="fa-solid fa-magnifying-glass"></i></label>
-                        <input type="text" name="search" id="searchInput" class="search" placeholder="Search for courses...">
+                        <input type="text" name="search" id="searchInput" class="search"
+                            placeholder="Search for courses...">
                     </div>
                     <div class="input-group">
                         <label for="typeOfSearch" class="search">By</label>
@@ -43,6 +51,18 @@
 
             <div id="cards-container">
                 <!-- Here cards will be-->
+                <div class="card">
+                    <h2>Course Title</h2>
+                    <p>Course description goes here.</p>
+                    <button class="btn">Enroll</button>
+                </div>
+
+                <div class="card">
+                    <h2>Course Title</h2>
+                    <p>Course description goes here.</p>
+                    <button class="btn">Enroll</button>
+                </div>
+
             </div>
         </main>
         <footer>

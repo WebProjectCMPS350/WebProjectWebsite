@@ -25,11 +25,41 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: #555;
-    color: white;
+    color: red;
     padding: 10px;
     text-align: center;
     grid-area: header;
 }
+
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+nav li a {
+    color: white;
+    list-style: none;
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+
 
 .search-bar {
     width: 100%;
@@ -184,154 +214,18 @@ footer ul li a:hover {
 @media screen and (min-width: 768px) {
 
     
-    .container {
-        display: grid;
-        height: 100vh;
-    
-        grid-template-rows: auto 3fr auto;
+.container {
         grid-template-columns: repeat(3, 1fr);
-    
-        grid-template-areas:
-            "header header header"
-            "main main main"
-            "footer footer footer";
     }
-    
+
     header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #555;
+        flex-direction: row;
         color: white;
-        padding: 10px;
-        text-align: center;
-        grid-area: header;
     }
-    
-    .search-bar {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        padding: 10px;
-        text-align: left;
-    
-    }
-    
-    #search-bar {
-        background-color: #f0f0f0;
-        color: #333; 
-        border: 1px solid #ccc;
-      }
-    
-    
-    
-    
-    .formGroup1 {
-        width: 60%;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        padding: 0rem 2rem;
-        background-color: #f0f0f0;
-        color: #333;
-        border-radius: 0.5rem;
-        border: none;
-        
-    }
-    
-    .formGroup1 input {
-        
-        background-color: #f0f0f0;
-        padding: 1rem 2rem;
-        border: none;
-        border-bottom: 1px solid #ccc; 
-        outline: none; 
-    }
-    
-    .formGroup1 select {
-        background-color: #f0f0f0;
-        padding: 1rem 2rem;
-        border: none;
-        border-bottom: 1px solid #ccc; 
-        outline: none;
-        cursor: pointer;
-    
-    }
-    
-    .formGroup1 div label{
-    
-        padding: 0.5rem 1rem;
-    
-    }
-    
-    
-    
-    
-    main {
-        background-color: #f9f9f9;
-        color: white;
-        padding: 10px;
-        text-align: center;
-        grid-area: main;
-    }
-    
-    #cards-container {
+
+    nav{
         display: flex;
         flex-wrap: wrap;
-        gap: 1rem;
-    
-    }
-    
-    .card {
-        width: 100%;
-        background-color: gray;
-        color: white;
-        border-radius: 1rem;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        font-size: 2rem;
-    }
-    
-    .card:hover {
-        background-color: aliceblue;
-        color: black;
-        cursor: pointer;
-    
-    }
-    
-    footer {
-        background-color: #666;
-        color: white;
-        padding: 10px;
-        text-align: center;
-        grid-area: footer;
-    }
-    
-    
-    
-    
-    
-    
-    .btn {
-        background-color: gray;
-        color: white;
-        padding: 1rem 1rem;
-        border-radius: 1rem;
-        border: none;
-    }
-    
-    .btn:hover {
-        background-color: aliceblue;
-        color: black;
-        cursor: pointer;
-        box-shadow: rgba(255, 255, 255, 0.4) 0px 2px 20px 1px;
-    }
-    
-    footer ul {
-        display: flex;
         justify-content: center;
         align-items: center;
         list-style: none;
@@ -340,16 +234,43 @@ footer ul li a:hover {
         margin: 0;
     }
     
-    footer ul li a {
+    nav li a {
         color: white;
         list-style: none;
         text-decoration: none;
+        padding: 0.5rem 1rem;
+        border-radius: 2rem;
+        border: 1px solid transparent;
+
+
     }
     
-    footer ul li a:hover {
-        color: rgb(0, 136, 255);
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        gap: 1rem;
+        padding: 0;
+        margin: 0;
+        
+    }
+
+    nav ul li a:hover {
         cursor: pointer;
-    
+        border: 1px solid white;
+
+        transition: all 0.2s ease-in-out;
+
     }
+
+    .formGroup1 {
+        width: 60%;
+    }
+
+
+
+    
     
 }
