@@ -1,6 +1,35 @@
 [
-    {"name":"Database", "category":"Programming", "courseNo":1},
-    {"name":"OOP", "category":"Programming", "courseNo":2},
-    {"name":"Software Engineering", "category":"Desgin", "courseNo":3},
-    {"name":"Senior1", "category":"Desgin", "courseNo":4}
+  {
+    "name": "Introduction to Computer Science",
+    "category": "Programming",
+    "courseNo": 1,
+    "status": "Open",
+    "description": "Learn the basics of computer science, including programming, algorithms, and data structures.",
+    "courseDuration": "3 months",
+    "prerequisites": [],
+    "coursePrice": 300,
+    "classes": [1, 2]
+  },
+  {
+    "name": "Web Development",
+    "category": "Web Design",
+    "courseNo": 2,
+    "status": "Pending",
+    "description": "Build modern web applications using HTML, CSS, and JavaScript.",
+    "courseDuration": "4 months",
+    "prerequisites": [1],
+    "coursePrice": 400,
+    "classes": [3, 4]
+  },
+  {
+    "name": "Database Management",
+    "category": "Database",
+    "courseNo": 3,
+    "status": "open",
+    "description": "Learn how to design and manage databases using SQL.",
+    "courseDuration": "2 months",
+    "prerequisites": [1],
+    "coursePrice": 200,
+    "classes": [5, 6]
+  }
 ]
