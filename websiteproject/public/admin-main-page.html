@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <title>QU Student Management Application</title>
+    <link rel="stylesheet" href="css/admin-main-page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <title>Main page</title>
 
 </head>
 
@@ -13,35 +15,65 @@
 
     <div class="container">
         <header>
-            <h1>QU Student Management Application Admin</h1>
+            <a href="student-main-page.html" ><h1>QU Student Management</h1></a>
+
+            <nav>
+                <ul>
+                    <li><a href="about-us.html">About us</a></li>
+                    <li><a href="contact-us">Contact us</a></li>
+                    <li id="learningPath"><a href="learning-path.html">My learning path</a></li>
+                </ul>
+
+            </nav>
         </header>
-        <nav>
 
-            <form action="#" class="formGroup1">
-
-                <div>
-                    <label for="searchInput" class="search">search:</label>
-                    <input type="text" name="search" id="searchInput" class="search">
-
-                    <label for="typeOfSearch" class="search">Choose type of search: </label>
-                    <select name="type" id="typeOfSearch" class="search">
-                        <option value="By name">By name</option>
-                        <option value="By category">By category</option>
-                    </select>
-                </div>
-
-                <a href="learning-path.html"><input type="button" name="learningPath" id="learningPath" class="btn"
-                        value="My learning Path"></a>
-
-
-            </form>
-        </nav>
         <main>
+            <div class="search-bar">
+
+                <form action="#" class="formGroup1">
+
+                    <div class="input-group">
+                        <label for="searchInput" class="search"><i class="fa-solid fa-magnifying-glass"></i></label>
+                        <input type="text" name="search" id="searchInput" class="search"
+                            placeholder="Search for courses...">
+                    </div>
+                    <div class="input-group">
+                        <label for="typeOfSearch" class="search">By</label>
+                        <select name="type" id="typeOfSearch" class="search">
+                            <option value="By name">Name</option>
+                            <option value="By category">Category</option>
+                        </select>
+                    </div>
+
+                </form>
+            </div>
+
             <div id="cards-container">
                 <!-- Here cards will be-->
+                
+
+                
+                
             </div>
         </main>
-        <footer>footer</footer>
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2025 QU Student Management. All rights reserved.</p>
+
+                <ul class="socials">
+                    <li><a href="#" title="Soon..."><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#" title="Soon..."><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="#" title="Soon..."><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#" title="Soon..."><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href="#" title="Soon..."><i class="fa-brands fa-youtube"></i></a></li>
+                    <li><a title="Check the website repo on GitHub"
+                            href="https://github.com/WebProjectCMPS350/WebProjectWebsite"><i
+                                class="fa-brands fa-github"></i></a></li>
+                    <li><a href="#" title="Soon..."><i class="fa-solid fa-envelope"></i></a></li>
+
+                </ul>
+            </div>
+        </footer>
     </div>
 
 </body>
@@ -52,5 +84,33 @@
     }
 </script>
 
+<script type="module" src="js/admin-main-page.js"></script>
+
 
 </html>
+
+
+
+<!--
+
+<div class="card">
+                    <div class="header">
+                        <h2 class="title">Introduction to AI</h2>
+                        <span class="category">Category: Computer Science</span>
+                    </div>
+
+                    <div class="body">
+                        <p class="desc">
+                            Learn the fundamentals of artificial intelligence, including machine learning, neural
+                            networks, and
+                            more.
+                        </p>
+                        <p class="number">Course No: CS101</p>
+                    </div>
+
+                    <div class="footer">
+                        <button class="enroll-btn">Enroll</button>
+                    </div>
+                </div>
+
+-->
