@@ -31,9 +31,9 @@ async function templateCourses(course) {
       arr.push(clas);
     }
   }
-  
+
   const registeredClass = arr[0];
-  let grade =0;
+  let grade = 0;
   for (const clas of classes2) {
     if (clas.classNo != registeredClass.classNo) {
       continue;
@@ -41,7 +41,6 @@ async function templateCourses(course) {
       grade = clas.grade;
     }
   }
-
 
   return `
     
