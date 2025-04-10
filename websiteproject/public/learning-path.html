@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/learning-path-style.css">
-    <title>QU Student Management Application</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <title>Main page</title>
 
 </head>
 
@@ -13,27 +15,87 @@
 
     <div class="container">
         <header>
-            <h1>My Learning Path</h1>
+            <a href="student-main-page.html" ><h1>QU Student Management</h1></a>
+
+            <nav>
+                <ul>
+                    <li><a href="about-us.html">About us</a></li>
+                    <li><a href="contact-us">Contact us</a></li>
+                    <li id="learningPath"><a href="learning-path.html">My learning path</a></li>
+                </ul>
+
+            </nav>
         </header>
-        <nav>
 
-            <form action="#" class="formGroup1">
-
-                <a href="student-main-page.html"><input type="button" name="mainPage" id="mainPage" class="btn"
-                        value="main Page"></a>
-
-            </form>
-        </nav>
         <main>
+
+            <div class="welcome-message">
+                <h2>Welcome, <span id="user-name"></span></h2>
+                <p>Explore your personalized learning path and courses.</p>
+
             <div id="cards-container">
                 <!-- Here cards will be-->
+                
+
+                
+                
             </div>
         </main>
-        <footer>footer</footer>
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2025 QU Student Management. All rights reserved.</p>
+
+                <ul class="socials">
+                    <li><a href="#" title="Soon..."><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#" title="Soon..."><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="#" title="Soon..."><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#" title="Soon..."><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href="#" title="Soon..."><i class="fa-brands fa-youtube"></i></a></li>
+                    <li><a title="Check the website repo on GitHub"
+                            href="https://github.com/WebProjectCMPS350/WebProjectWebsite"><i
+                                class="fa-brands fa-github"></i></a></li>
+                    <li><a href="#" title="Soon..."><i class="fa-solid fa-envelope"></i></a></li>
+
+                </ul>
+            </div>
+        </footer>
     </div>
 
 </body>
 
+<script>
+    if (localStorage.getItem("loggedIn") !== "true" || localStorage.userType !== "student") {
+        window.location.href = "/login-page.html";
+    }
+</script>
+
 <script type="module" src="js/learning-path.js"> </script>
 
+
 </html>
+
+
+
+<!--
+
+<div class="card">
+                    <div class="header">
+                        <h2 class="title">Introduction to AI</h2>
+                        <span class="category">Category: Computer Science</span>
+                    </div>
+
+                    <div class="body">
+                        <p class="desc">
+                            Learn the fundamentals of artificial intelligence, including machine learning, neural
+                            networks, and
+                            more.
+                        </p>
+                        <p class="number">Course No: CS101</p>
+                    </div>
+
+                    <div class="footer">
+                        <button class="enroll-btn">Enroll</button>
+                    </div>
+                </div>
+
+-->
