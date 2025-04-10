@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QU Student Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>QU Student Management</h1>
+
+  <h2>Admin Dashboard (Use Case 5)</h2>
+  <div id="admin-section">
+    <div id="course-list"></div>
+    <h3>Create New Course</h3>
+    <form id="new-course-form">
+      <input type="text" name="id" placeholder="Course ID" required />
+      <input type="text" name="name" placeholder="Course Name" required />
+      <input type="text" name="category" placeholder="Category" required />
+      <input type="text" name="instructor" placeholder="Instructor Name" required />
+      <button type="submit">Add Course</button>
+    </form>
+  </div>
+
+  <h2>Instructor Dashboard (Use Case 6)</h2>
+  <div id="instructor-section">
+    <div id="instructor-classes"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
