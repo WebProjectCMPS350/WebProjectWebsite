@@ -199,33 +199,53 @@ main {
 .card .footer {
     background-color: #f0f0f0;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1.5rem;
     color: white;
-    padding: 10px;
-    text-align: center;
     grid-area: footer;
     border-radius: 0.5rem;
 
 
 }
 
-.card .enroll-btn {
-    background-color: gray;
+
+
+
+
+.card .admin-btn-approve {
+    background-color: green;
     color: white;
     width: 30%;
     padding: 1rem 1rem;
     border-radius: 1rem;
-    border: none;
+    border: 1px solid transparent;
 }
 
-.card .enroll-btn:hover {
-    background-color: #4392F1;
+.card .admin-btn-approve:hover {
+    background-color: transparent;
+    color: green;
     cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-    transition: 0.3s;
+    border: 1px solid green;
+    transition: 0.2s;
+}
+
+.card .admin-btn-cancel {
+    background-color: red;
+    color: white;
+    width: 30%;
+    padding: 1rem 1rem;
+    border-radius: 1rem;
+    border: 1px solid transparent;
+}
+
+.card .admin-btn-cancel:hover {
+    background-color: transparent;
+    color: red;
+    cursor: pointer;
+    border: 1px solid red;
+    transition: 0.2s;
 }
 
 .card:hover {
@@ -355,7 +375,20 @@ footer ul li a:hover {
     nav ul {
         flex-direction: row;
         gap: 0rem;
+        ;
 
+    }
+
+    nav ul li {
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        align-items: right;
+        gap: 0rem;
+    }
+
+    nav ul li {
+        gap: 0;
     }
 
     .footer-content {
