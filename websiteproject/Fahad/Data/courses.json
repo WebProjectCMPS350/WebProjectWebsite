@@ -1,0 +1,41 @@
+[
+  {
+    "id": "CSE101",
+    "name": "Intro to CS",
+    "category": "Programming",
+    "status": "open",
+    "classes": [
+      {
+        "instructor": "Dr. A",
+        "students": ["S1", "S2"],
+        "validated": false
+      }
+    ]
+  },
+  {
+    "id": "CSE201",
+    "name": "Data Structures",
+    "category": "Programming",
+    "status": "open",
+    "classes": [
+      {
+        "instructor": "Dr. B",
+        "students": ["S3"],
+        "validated": false
+      }
+    ]
+  },
+  {
+    "id": "CSE301",
+    "name": "Databases",
+    "category": "Databases",
+    "status": "in progress",
+    "classes": [
+      {
+        "instructor": "Dr. C",
+        "students": ["S1", "S4"],
+        "validated": true
+      }
+    ]
+  }
+]
