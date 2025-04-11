@@ -12,10 +12,12 @@ const classesBtn = document.querySelector(".classes");
 const statusSelect = document.querySelector("#status");
 const categorySelect = document.querySelector("#category");
 
-statusSelect.addEventListener("change", () => filterClasses());
+statusSelect.addEventListener("change", () => searchClassesAndCourses());
+categorySelect.addEventListener("change", () => searchClassesAndCourses());
 
 const admin = await adminRepo.getAdministrator(localStorage.username);
 let currentClasses = [];
+let currentCourses = [];
 
 search.addEventListener("keyup", type);
 typeOfSearch.addEventListener("change", type);
@@ -24,16 +26,21 @@ classesBtn.addEventListener("click", handleClassesFilter);
 document.addEventListener("DOMContentLoaded", loadClasses());
 
 async function loadClasses(e) {
+  const courses = await courseRepo.getCourses();
+  const categories = new Set(courses.map((course) => course.category));
+  const htmlArray = Array.from(categories).map(
+    (category) => `<option value="${category}">${category}</option>`
+  );
+  categorySelect.innerHTML =
+    `<option value="">All</option>` + htmlArray.join("\n");
   if (
     localStorage.defaultPage == "classes" ||
     localStorage.defaultPage == undefined
   ) {
     handleClassesFilter();
-    
   } else {
     handleCoursesFilter();
   }
-  
 }
 
 async function templateClass(clas) {
@@ -63,47 +70,70 @@ async function templateClass(clas) {
 }
 
 async function type() {
-  if(localStorage.defaultPage == "classes" || localStorage.defaultPage == undefined) {
+  if (
+    localStorage.defaultPage == "classes" ||
+    localStorage.defaultPage == undefined
+  ) {
     handleSearchOfClasses();
-  }else{
+  } else {
     handleSearchOfCourses();
   }
 }
 
-async function filterClasses() {
-  if(localStorage.defaultPage == "classes" || localStorage.defaultPage == undefined) {
+async function searchClassesAndCourses() {
+  if (
+    localStorage.defaultPage == "classes" ||
+    localStorage.defaultPage == undefined
+  ) {
     await handleSearchOfClasses();
+  } else {
+    await handleSearchOfCourses();
   }
 }
 
 async function handleSearchOfClasses() {
   let selectedValue = typeOfSearch.value;
   const statusValue = statusSelect.value;
-  
+
   let classes = await classRepo.getClasses();
-   currentClasses = [...classes];
+  currentClasses = [...classes];
 
   if (selectedValue == "By name") {
     currentClasses = currentClasses.filter((clas) =>
       clas.className.toUpperCase().includes(search.value.toUpperCase())
     );
-    
   } else {
     const filterResults = await Promise.all(
       currentClasses.map(async (clas) => {
         const course = await classRepo.getParentCourse(clas.classNo);
-        const matches = course.category.toUpperCase().includes(search.value.toUpperCase());
+        const matches = course.category
+          .toUpperCase()
+          .includes(search.value.toUpperCase());
         return matches ? clas : null;
       })
     );
-    
-    currentClasses = filterResults.filter(element => element !== null);
+
+    currentClasses = filterResults.filter((element) => element !== null);
   }
 
   if (statusValue && statusValue.toUpperCase() !== "ALL") {
     currentClasses = currentClasses.filter(
       (clas) => clas.status.toUpperCase() === statusValue.toUpperCase()
     );
+  }
+
+  if (categorySelect.value && categorySelect.value.toUpperCase() !== "ALL") {
+    const filterResults = await Promise.all(
+      currentClasses.map(async (clas) => {
+        const course = await classRepo.getParentCourse(clas.classNo);
+        const matches = course.category
+          .toUpperCase()
+          .includes(categorySelect.value.toUpperCase());
+        return matches ? clas : null;
+      })
+    );
+
+    currentClasses = filterResults.filter((element) => element !== null);
   }
 
   const htmlArray = await Promise.all(
@@ -115,20 +145,38 @@ async function handleSearchOfClasses() {
 
 async function handleSearchOfCourses() {
   let selectedValue = typeOfSearch.value;
+  const statusValue = statusSelect.value;
 
   let courses = await courseRepo.getCourses();
+  currentCourses = [...courses];
   if (selectedValue == "By name") {
-    courses = courses.filter((course) =>
+    currentCourses = currentCourses.filter((course) =>
       course.name.toUpperCase().includes(search.value.toUpperCase())
     );
   } else {
-    courses = courses.filter((course) =>
+    currentCourses = currentCourses.filter((course) =>
       course.category.toUpperCase().includes(search.value.toUpperCase())
     );
   }
 
+  if (statusValue && statusValue.toUpperCase() !== "ALL") {
+    currentCourses = currentCourses.filter(
+      (clas) => clas.status.toUpperCase() === statusValue.toUpperCase()
+    );
+  }
+
+  if (categorySelect.value && categorySelect.value.toUpperCase() !== "ALL") {
+    currentCourses = await Promise.all(
+      currentCourses.filter((course) => {
+        return course.category
+          .toUpperCase()
+          .includes(categorySelect.value.toUpperCase());
+      })
+    );
+  }
+
   const htmlArray = await Promise.all(
-    courses.map((course) => templateCourses(course))
+    currentCourses.map((course) => templateCourses(course))
   );
   cardsContainer.innerHTML = htmlArray.join("\n");
 
@@ -136,7 +184,6 @@ async function handleSearchOfCourses() {
 }
 
 async function handleCoursesFilter() {
-
   localStorage.defaultPage = "courses";
   const courses = await courseRepo.getCourses();
   const htmlArray = await Promise.all(
@@ -145,8 +192,6 @@ async function handleCoursesFilter() {
   cardsContainer.innerHTML = htmlArray.join("\n");
 
   setupActionButtons();
-
-  
 }
 
 async function handleClassesFilter() {
@@ -158,8 +203,6 @@ async function handleClassesFilter() {
   cardsContainer.innerHTML = htmlArray.join("\n");
 
   setupActionButtons();
-  
-  
 }
 
 async function templateCourses(course) {
@@ -190,20 +233,17 @@ async function templateCourses(course) {
     `;
 }
 
-
-
-
 function setupActionButtons() {
   const approveButtons = document.querySelectorAll(".admin-btn-approve");
   const cancelButtons = document.querySelectorAll(".admin-btn-cancel");
-  
-  approveButtons.forEach(btn => {
+
+  approveButtons.forEach((btn) => {
     btn.addEventListener("click", (e) => {
       console.log("Approve clicked");
     });
   });
-  
-  cancelButtons.forEach(btn => {
+
+  cancelButtons.forEach((btn) => {
     btn.addEventListener("click", (e) => {
       console.log("Cancel clicked");
     });
