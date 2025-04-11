@@ -184,6 +184,8 @@ async function handleSearchOfCourses() {
 }
 
 async function handleCoursesFilter() {
+  document.querySelector(".courses").classList.add("btn-clicked");
+  document.querySelector(".classes").classList.remove("btn-clicked");
   localStorage.defaultPage = "courses";
   const courses = await courseRepo.getCourses();
   const htmlArray = await Promise.all(
@@ -195,6 +197,9 @@ async function handleCoursesFilter() {
 }
 
 async function handleClassesFilter() {
+  document.querySelector(".classes").classList.add("btn-clicked");
+  document.querySelector(".courses").classList.remove("btn-clicked");
+
   localStorage.defaultPage = "classes";
   const classes = await classRepo.getClasses();
   const htmlArray = await Promise.all(
