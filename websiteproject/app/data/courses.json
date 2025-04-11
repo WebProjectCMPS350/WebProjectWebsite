@@ -3,7 +3,7 @@
     "name": "Introduction to Computer Science",
     "category": "Programming",
     "courseNo": 1,
-    "status": "Open",
+    "status": "Current",
     "description": "Learn the basics of computer science, including programming, algorithms, and data structures.",
     "prerequisites": [],
     "classes": [1, 2, 8]
@@ -12,7 +12,7 @@
     "name": "Web Development",
     "category": "Web Design",
     "courseNo": 2,
-    "status": "Pending",
+    "status": "Current",
     "description": "Build modern web applications using HTML, CSS, and JavaScript.",
     "prerequisites": [1],
     "classes": [3, 4]
@@ -21,7 +21,7 @@
     "name": "Database Management",
     "category": "Database",
     "courseNo": 3,
-    "status": "open",
+    "status": "Open",
     "description": "Learn how to design and manage databases using SQL.",
     "prerequisites": [1],
     "classes": [5, 6]

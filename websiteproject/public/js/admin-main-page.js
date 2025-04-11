@@ -249,109 +249,194 @@ async function templateCourses(course) {
 async function setupActionButtons() {
   const approveButtons = document.querySelectorAll(".admin-btn-approve");
   const cancelButtons = document.querySelectorAll(".admin-btn-cancel");
-if( localStorage.defaultPage == "classes" || localStorage.defaultPage == undefined){
-  approveButtons.forEach((btn) => {
-    btn.addEventListener("click", async (e) => {
-      const card = e.target.closest(".card");
-      const clas = await classRepo.getClass(card.querySelector(".number").innerHTML.split(": ")[1]);
-      const course = await classRepo.getParentCourse(clas.classNo);
-      const message = card.querySelector(".message");
-
-      if(clas.status == "Pending"){
-        clas.status = "Open";
-        await classRepo.updateClass(clas);
-        handleClassesFilter();
-        message.innerHTML = "Class status changed to Open!";
-        message.classList.add("approved-message");
-        setTimeout(() => {
-          message.innerHTML = "";
-          message.classList.remove("approved-message");
-        }, 3000);
-      }else if(clas.status == "Open"){
-        clas.status = "Current";
-        await classRepo.updateClass(clas);
-        handleClassesFilter()
-
-
-        message.innerHTML = "Class status changed to Current!";
-        message.classList.add("approved-message");
-        setTimeout(() => {
-          message.innerHTML = "";
-          message.classList.remove("approved-message");
-        }, 3000);
-        setTimeout(() => {
-          message.innerHTML = "";
-          message.classList.remove("approved-message");
-        }, 3000);
-
-      }else if(clas.status == "Current" || clas.status == "Closed"){
-        message.innerHTML = "You cannot change the status of this class!";
-        message.classList.add("error-message");
-        setTimeout(() => {
-          message.innerHTML = " ";
-          message.classList.remove("error-message");
-        }, 3000);
-      }
-    
-    // Check if all classes have the same status, change course status if so
-      const allClasses = await Promise.all(
-        course.classes.map((classItem) => classRepo.getClass(classItem))
-      );
-      const allClassesHaveSameStatus = allClasses.every(
-        (c) => c.status === clas.status
-      );
-
-      if (allClassesHaveSameStatus) {
-        course.status = clas.status;
-        await courseRepo.updateCourse(course);
-      }
-    
-    });
-  });
-
-  cancelButtons.forEach((btn) => {
-    btn.addEventListener("click", async (e) => {
-      const card = e.target.closest(".card");
-      const clas = await classRepo.getClass(
-        card.querySelector(".number").innerHTML.split(": ")[1]
-      );
-      const message = card.querySelector(".message");
-
-      if (clas.status !== "Closed") {
-
-        // remove the class from the course
+  if (
+    localStorage.defaultPage == "classes" ||
+    localStorage.defaultPage == undefined
+  ) {
+    approveButtons.forEach((btn) => {
+      btn.addEventListener("click", async (e) => {
+        const card = e.target.closest(".card");
+        const clas = await classRepo.getClass(
+          card.querySelector(".number").innerHTML.split(": ")[1]
+        );
         const course = await classRepo.getParentCourse(clas.classNo);
-        course.classes = await course.classes.filter(
-          (classItem) => classItem !== clas.classNo
+        const message = card.querySelector(".message");
+
+        if (clas.status == "Pending") {
+          clas.status = "Open";
+          await classRepo.updateClass(clas);
+          handleClassesFilter();
+          message.innerHTML = "Class status changed to Open!";
+          message.classList.add("approved-message");
+          setTimeout(() => {
+            message.innerHTML = "";
+            message.classList.remove("approved-message");
+          }, 3000);
+        } else if (clas.status == "Open") {
+          clas.status = "Current";
+          await classRepo.updateClass(clas);
+          handleClassesFilter();
+
+          message.innerHTML = "Class status changed to Current!";
+          message.classList.add("approved-message");
+          setTimeout(() => {
+            message.innerHTML = "";
+            message.classList.remove("approved-message");
+          }, 3000);
+          setTimeout(() => {
+            message.innerHTML = "";
+            message.classList.remove("approved-message");
+          }, 3000);
+        } else if (clas.status == "Current" || clas.status == "Closed") {
+          message.innerHTML = "You cannot change the status of this class!";
+          message.classList.add("error-message");
+          setTimeout(() => {
+            message.innerHTML = " ";
+            message.classList.remove("error-message");
+          }, 3000);
+        }
+
+        // Check if all classes have the same status, change course status if so
+        const allClasses = await Promise.all(
+          course.classes.map((classItem) => classRepo.getClass(classItem))
+        );
+        const allClassesHaveSameStatus = allClasses.every(
+          (c) => c.status === clas.status
         );
 
-        await courseRepo.updateCourse(course);
-        await classRepo.deleteClass(clas);
+        if (allClassesHaveSameStatus) {
+          course.status = clas.status;
+          await courseRepo.updateCourse(course);
+        }
+      });
+    });
 
-        handleClassesFilter();
-      } else if (clas.status == "Closed") {
-        message.innerHTML = "You cannot change the status of this class!";
-        message.classList.add("error-message");
-        setTimeout(() => {
-          message.innerHTML = " ";
-          message.classList.remove("error-message");
-        }, 3000);
-      }
-    });
-  });
-}else{
-  approveButtons.forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-      console.log("Approve clicked");
-    });
-  });
+    cancelButtons.forEach((btn) => {
+      btn.addEventListener("click", async (e) => {
+        const card = e.target.closest(".card");
+        const clas = await classRepo.getClass(
+          card.querySelector(".number").innerHTML.split(": ")[1]
+        );
+        const message = card.querySelector(".message");
 
-  cancelButtons.forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-      console.log("Cancel clicked");
+        if (clas.status !== "Closed") {
+          // remove the class from the course
+          const course = await classRepo.getParentCourse(clas.classNo);
+          course.classes = await course.classes.filter(
+            (classItem) => classItem !== clas.classNo
+          );
+
+          await courseRepo.updateCourse(course);
+          await classRepo.deleteClass(clas);
+
+          handleClassesFilter();
+        } else if (clas.status == "Closed") {
+          message.innerHTML = "You cannot change the status of this class!";
+          message.classList.add("error-message");
+          setTimeout(() => {
+            message.innerHTML = " ";
+            message.classList.remove("error-message");
+          }, 3000);
+        }
+      });
     });
-  });
+  } else {
+    // I hate my code, what a shame!!!!
+    approveButtons.forEach(async (btn) => {
+      btn.addEventListener("click", async (e) => {
+        const card = e.target.closest(".card");
+        const course = await courseRepo.getCourse(
+          card.querySelector(".number").innerHTML.split(": ")[1]
+        );
+        const message = card.querySelector(".message");
+
+        if (course.status == "Pending") {
+          course.status = "Open";
+          await courseRepo.updateCourse(course);
+          handleCoursesFilter();
+          message.innerHTML = "Course status changed to Open!";
+          message.classList.add("approved-message");
+          setTimeout(() => {
+            message.innerHTML = "";
+            message.classList.remove("approved-message");
+          }, 3000);
+        } else if (course.status == "Open") {
+          course.status = "Current";
+          await courseRepo.updateCourse(course);
+          handleCoursesFilter();
+          message.innerHTML = "Course status changed to Current!";
+          message.classList.add("approved-message");
+          setTimeout(() => {
+            message.innerHTML = "";
+            message.classList.remove("approved-message");
+          }, 3000);
+          setTimeout(() => {
+            message.innerHTML = "";
+            message.classList.remove("approved-message");
+          }, 3000);
+        } else if (course.status == "Current" || course.status == "Closed") {
+          message.innerHTML = "You cannot change the status of this course!";
+          message.classList.add("error-message");
+          setTimeout(() => {
+            message.innerHTML = " ";
+            message.classList.remove("error-message");
+          }, 3000);
+        }
+
+        if (course.status == "Open") {
+          const classes = await Promise.all(
+            course.classes.map((classItem) => classRepo.getClass(classItem))
+          );
+          classes.forEach((clas) => {
+            if (clas.status == "Pending") {
+              clas.status = "Open";
+              classRepo.updateClass(clas);
+            }
+          });
+        } else if (course.status == "Current") {
+          const classes = await Promise.all(
+            course.classes.map((classItem) => classRepo.getClass(classItem))
+          );
+          classes.forEach((clas) => {
+            if (clas.status == "Open" || clas.status == "Pending") {
+              clas.status = "Current";
+              classRepo.updateClass(clas);
+            }
+          });
+        }
+      });
+    });
+
+    //
+
+    cancelButtons.forEach(async (btn) => {
+      btn.addEventListener("click", async (e) => {
+        const card = e.target.closest(".card");
+        const course = await courseRepo.getCourse(
+          card.querySelector(".number").innerHTML.split(": ")[1]
+        );
+        const message = card.querySelector(".message");
+
+        if (course.status !== "Closed") {
+          // remove the class from the course
+          const classes = await Promise.all(
+            course.classes.map((classItem) => classRepo.getClass(classItem))
+          );
+          classes.forEach(async (clas) => {
+            await classRepo.deleteClass(clas);
+          });
+
+          await courseRepo.deleteCourse(course);
+          handleCoursesFilter();
+        } else if (course.status == "Closed") {
+          message.innerHTML = "You cannot cancel a closed (finished) course!";
+          message.classList.add("error-message");
+          setTimeout(() => {
+            message.innerHTML = " ";
+            message.classList.remove("error-message");
+          }, 3000);
+        }
+      });
+    });
+  }
 }
-}
-
-

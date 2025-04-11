@@ -46,7 +46,7 @@
     "instructor": "Alice Johnson",
     "noOfStudents": 20,
     "parentCourse": 3,
-    "status": "Open"
+    "status": "Pending"
   },
   {
     "classNo": 6,
@@ -57,5 +57,25 @@
     "noOfStudents": 30,
     "parentCourse": 3,
     "status": "Open"
+  },
+  {
+    "classNo": 7,
+    "className": "AI Databases",
+    "classTime": "9AM",
+    "classDays": ["Sunday", "Tuesday", "Thursday"],
+    "instructor": "Ali Khan",
+    "noOfStudents": 0,
+    "status": "Open",
+    "parentCourse": 3
+  },
+  {
+    "classNo": 8,
+    "className": "Python",
+    "classTime": "9AM",
+    "classDays": ["Sunday, Tuesday, Thuersday"],
+    "instructor": "Ali Khan",
+    "noOfStudents": 0,
+    "status": "Current",
+    "parentCourse": 1
   }
 ]
