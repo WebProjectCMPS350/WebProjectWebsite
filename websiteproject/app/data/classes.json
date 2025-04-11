@@ -2,9 +2,8 @@
   {
     "classNo": 1,
     "className": "Introduction to Programming",
-    "classDuration": "2 hours",
-    "classDate": "2023-10-01",
-    "classTime": "10:00 AM - 12:00 PM",
+    "classTime": "10:00 AM",
+    "classDays": ["Monday", "Wednesday"],
     "instructor": "Ali Khan",
     "noOfStudents": 30,
     "parentCourse": 1,
@@ -13,9 +12,8 @@
   {
     "classNo": 2,
     "className": "Data Structures",
-    "classDuration": "2 hours",
-    "classDate": "2023-10-08",
-    "classTime": "10:00 AM - 12:00 PM",
+    "classTime": "10:00 AM",
+    "classDays": ["Sunday", "Tuesday", "Thursday"],
     "instructor": "John Doe",
     "noOfStudents": 25,
     "parentCourse": 1,
@@ -24,9 +22,8 @@
   {
     "classNo": 3,
     "className": "HTML Basics",
-    "classDuration": "2 hours",
-    "classDate": "2023-10-15",
-    "classTime": "10:00 AM - 12:00 PM",
+    "classTime": "9:00 AM",
+    "classDays": ["Monday", "Wednesday"],
     "instructor": "Jane Smith",
     "noOfStudents": 20,
     "parentCourse": 2,
@@ -35,9 +32,8 @@
   {
     "classNo": 4,
     "className": "CSS Fundamentals",
-    "classDuration": "2 hours",
-    "classDate": "2023-10-22",
-    "classTime": "10:00 AM - 12:00 PM",
+    "classTime": "11:00 AM",
+    "classDays": ["Monday", "Wednesday"],
     "instructor": "Jane Smith",
     "noOfStudents": 20,
     "parentCourse": 2,
@@ -46,9 +42,7 @@
   {
     "classNo": 5,
     "className": "SQL Basics",
-    "classDuration": "2 hours",
-    "classDate": "2023-11-01",
-    "classTime": "10:00 AM - 12:00 PM",
+    "classDays": ["Sunday", "Tuesday", "Thursday"],
     "instructor": "Alice Johnson",
     "noOfStudents": 20,
     "parentCourse": 3,
@@ -57,12 +51,31 @@
   {
     "classNo": 6,
     "className": "Database Design",
-    "classDuration": "2 hours",
-    "classDate": "2023-11-08",
-    "classTime": "10:00 AM - 12:00 PM",
+    "classTime": "1:00 PM",
+    "classDays": ["Monday", "Wednesday"],
     "instructor": "Mohammed Ali",
     "noOfStudents": 30,
     "parentCourse": 3,
     "status": "Pending"
+  },
+  {
+    "classNo": 7,
+    "className": "AI Databases",
+    "classTime": "9AM",
+    "classDays": ["Sunday", "Tuesday", "Thursday"],
+    "instructor": "Ali Khan",
+    "noOfStudents": 0,
+    "status": "Pending",
+    "parentCourse": 3
+  },
+  {
+    "classNo": 8,
+    "className": "Python",
+    "classTime": "9AM",
+    "classDays": ["Sunday, Tuesday, Thuersday"],
+    "instructor": "Ali Khan",
+    "noOfStudents": 0,
+    "status": "Pending",
+    "parentCourse": 1
   }
 ]

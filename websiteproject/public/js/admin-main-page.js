@@ -249,7 +249,7 @@ function setupActionButtons() {
 
   cancelButtons.forEach((btn) => {
     btn.addEventListener("click", (e) => {
-      console.log("Cancel clicked");
+      
     });
   });
 }

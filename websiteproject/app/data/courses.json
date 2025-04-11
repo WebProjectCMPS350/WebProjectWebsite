@@ -6,7 +6,7 @@
     "status": "Open",
     "description": "Learn the basics of computer science, including programming, algorithms, and data structures.",
     "prerequisites": [],
-    "classes": [1, 2]
+    "classes": [1, 2, 8]
   },
   {
     "name": "Web Development",
@@ -24,7 +24,7 @@
     "status": "open",
     "description": "Learn how to design and manage databases using SQL.",
     "prerequisites": [1],
-    "classes": [5, 6]
+    "classes": [5, 6, 7]
   },
   {
     "courseNo": 4,
