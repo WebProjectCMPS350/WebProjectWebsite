@@ -27,7 +27,7 @@
     "instructor": "Jane Smith",
     "noOfStudents": 20,
     "parentCourse": 2,
-    "status": "Open"
+    "status": "Current"
   },
   {
     "classNo": 4,
@@ -37,7 +37,7 @@
     "instructor": "Jane Smith",
     "noOfStudents": 20,
     "parentCourse": 2,
-    "status": "Open"
+    "status": "Current"
   },
   {
     "classNo": 5,
@@ -46,7 +46,7 @@
     "instructor": "Alice Johnson",
     "noOfStudents": 20,
     "parentCourse": 3,
-    "status": "Pending"
+    "status": "Open"
   },
   {
     "classNo": 6,
@@ -56,26 +56,6 @@
     "instructor": "Mohammed Ali",
     "noOfStudents": 30,
     "parentCourse": 3,
-    "status": "Pending"
-  },
-  {
-    "classNo": 7,
-    "className": "AI Databases",
-    "classTime": "9AM",
-    "classDays": ["Sunday", "Tuesday", "Thursday"],
-    "instructor": "Ali Khan",
-    "noOfStudents": 0,
-    "status": "Pending",
-    "parentCourse": 3
-  },
-  {
-    "classNo": 8,
-    "className": "Python",
-    "classTime": "9AM",
-    "classDays": ["Sunday, Tuesday, Thuersday"],
-    "instructor": "Ali Khan",
-    "noOfStudents": 0,
-    "status": "Pending",
-    "parentCourse": 1
+    "status": "Open"
   }
 ]

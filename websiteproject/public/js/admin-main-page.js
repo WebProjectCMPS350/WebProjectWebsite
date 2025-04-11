@@ -56,14 +56,17 @@ async function templateClass(clas) {
             <p class="desc">
                 ${course.description}
             </p>
-            <p class="number">Course No: ${clas.classNo}</p>
+            <p class="number">Class Number: ${clas.classNo}</p>
             <p>Status: ${clas.status}</p>
                <p id="studentsNo">Number of students: ${clas.noOfStudents} </p>
             <p>Instructor: ${clas.instructor}</p>
         </div>
         <div class="footer" style="color: black">
+        <div class="card-btns"> 
          <button class="admin-btn admin-btn-approve">Approve</button>
          <button class="admin-btn admin-btn-cancel">Cancel</button>
+         </div>
+         <p class="message"> </p> 
         </div>
     </div>
     `;
@@ -188,6 +191,7 @@ async function handleCoursesFilter() {
   document.querySelector(".classes").classList.remove("btn-clicked");
   localStorage.defaultPage = "courses";
   const courses = await courseRepo.getCourses();
+  currentCourses = [...courses];
   const htmlArray = await Promise.all(
     courses.map((course) => templateCourses(course))
   );
@@ -202,6 +206,7 @@ async function handleClassesFilter() {
 
   localStorage.defaultPage = "classes";
   const classes = await classRepo.getClasses();
+  currentClasses = [...classes];
   const htmlArray = await Promise.all(
     classes.map((clas) => templateClass(clas))
   );
@@ -230,17 +235,111 @@ async function templateCourses(course) {
             <p>Status: ${course.status}</p>
         </div>
         <div class="footer">
-            <button class="admin-btn admin-btn-approve">Approve</button>
+           <div class="card-btns"> 
+         <button class="admin-btn admin-btn-approve">Approve</button>
          <button class="admin-btn admin-btn-cancel">Cancel</button>
+         </div>
+         <p class="message"> </p> 
+        </div>
         </div>
     </div>
     `;
 }
 
-function setupActionButtons() {
+async function setupActionButtons() {
   const approveButtons = document.querySelectorAll(".admin-btn-approve");
   const cancelButtons = document.querySelectorAll(".admin-btn-cancel");
+if( localStorage.defaultPage == "classes" || localStorage.defaultPage == undefined){
+  approveButtons.forEach((btn) => {
+    btn.addEventListener("click", async (e) => {
+      const card = e.target.closest(".card");
+      const clas = await classRepo.getClass(card.querySelector(".number").innerHTML.split(": ")[1]);
+      const course = await classRepo.getParentCourse(clas.classNo);
+      const message = card.querySelector(".message");
 
+      if(clas.status == "Pending"){
+        clas.status = "Open";
+        await classRepo.updateClass(clas);
+        handleClassesFilter();
+        message.innerHTML = "Class status changed to Open!";
+        message.classList.add("approved-message");
+        setTimeout(() => {
+          message.innerHTML = "";
+          message.classList.remove("approved-message");
+        }, 3000);
+      }else if(clas.status == "Open"){
+        clas.status = "Current";
+        await classRepo.updateClass(clas);
+        handleClassesFilter()
+
+
+        message.innerHTML = "Class status changed to Current!";
+        message.classList.add("approved-message");
+        setTimeout(() => {
+          message.innerHTML = "";
+          message.classList.remove("approved-message");
+        }, 3000);
+        setTimeout(() => {
+          message.innerHTML = "";
+          message.classList.remove("approved-message");
+        }, 3000);
+
+      }else if(clas.status == "Current" || clas.status == "Closed"){
+        message.innerHTML = "You cannot change the status of this class!";
+        message.classList.add("error-message");
+        setTimeout(() => {
+          message.innerHTML = " ";
+          message.classList.remove("error-message");
+        }, 3000);
+      }
+    
+    // Check if all classes have the same status, change course status if so
+      const allClasses = await Promise.all(
+        course.classes.map((classItem) => classRepo.getClass(classItem))
+      );
+      const allClassesHaveSameStatus = allClasses.every(
+        (c) => c.status === clas.status
+      );
+
+      if (allClassesHaveSameStatus) {
+        course.status = clas.status;
+        await courseRepo.updateCourse(course);
+      }
+    
+    });
+  });
+
+  cancelButtons.forEach((btn) => {
+    btn.addEventListener("click", async (e) => {
+      const card = e.target.closest(".card");
+      const clas = await classRepo.getClass(
+        card.querySelector(".number").innerHTML.split(": ")[1]
+      );
+      const message = card.querySelector(".message");
+
+      if (clas.status !== "Closed") {
+
+        // remove the class from the course
+        const course = await classRepo.getParentCourse(clas.classNo);
+        course.classes = await course.classes.filter(
+          (classItem) => classItem !== clas.classNo
+        );
+
+        await courseRepo.updateCourse(course);
+        await classRepo.deleteClass(clas);
+
+        handleClassesFilter();
+      } else if (clas.status == "Closed") {
+        message.innerHTML = "You cannot change the status of this class!";
+        message.classList.add("error-message");
+        setTimeout(() => {
+          message.innerHTML = " ";
+          message.classList.remove("error-message");
+        }, 3000);
+      }
+    });
+  });
+}else{
   approveButtons.forEach((btn) => {
     btn.addEventListener("click", (e) => {
       console.log("Approve clicked");
@@ -249,8 +348,10 @@ function setupActionButtons() {
 
   cancelButtons.forEach((btn) => {
     btn.addEventListener("click", (e) => {
-      
       console.log("Cancel clicked");
     });
   });
 }
+}
+
+

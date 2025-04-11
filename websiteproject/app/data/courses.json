@@ -24,7 +24,7 @@
     "status": "open",
     "description": "Learn how to design and manage databases using SQL.",
     "prerequisites": [1],
-    "classes": [5, 6, 7]
+    "classes": [5, 6]
   },
   {
     "courseNo": 4,

@@ -48,7 +48,7 @@ class Instructor extends User {
     return await fetch(`${baseUrl}`, {
       method: "DELETE",
       headers: { "Content-Type": "application/json" },
-      body: instructor,
+      body: JSON.stringify(instructor),
     });
   }
 

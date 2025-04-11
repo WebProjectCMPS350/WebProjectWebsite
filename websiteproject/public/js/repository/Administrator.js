@@ -44,7 +44,7 @@ class Administrator extends User {
     return await fetch(`${baseUrl}`, {
       method: "DELETE",
       headers: { "Content-Type": "application/json" },
-      body: administrator,
+      body: JSON.stringify(administrator),
     });
   }
 }

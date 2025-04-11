@@ -51,7 +51,7 @@ class Class {
     return await fetch(`${baseUrl}`, {
       method: "DELETE",
       headers: { "Content-Type": "application/json" },
-      body: clas,
+      body: JSON.stringify(clas),
     });
   }
 
