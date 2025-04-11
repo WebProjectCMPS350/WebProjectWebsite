@@ -274,17 +274,24 @@ footer {
 
 .btn {
     background-color: gray;
+    width: 100%;
     color: white;
     padding: 1rem 1rem;
-    border-radius: 1rem;
     border: none;
+    margin-bottom: 2rem;
 }
 
 .btn:hover {
-    background-color: aliceblue;
-    color: black;
+    background-color: rgb(0, 136, 255);
     cursor: pointer;
-    box-shadow: rgba(255, 255, 255, 0.4) 0px 2px 20px 1px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;    transition: 0.2s;
+}
+
+.btns{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
 
 footer ul {
