@@ -9,7 +9,13 @@ const search = document.querySelector("#searchInput");
 const typeOfSearch = document.querySelector("#typeOfSearch");
 const coursesBtn = document.querySelector(".courses");
 const classesBtn = document.querySelector(".classes");
+const statusSelect = document.querySelector("#status");
+const categorySelect = document.querySelector("#category");
+
+statusSelect.addEventListener("change", () => filterClasses());
+
 const admin = await adminRepo.getAdministrator(localStorage.username);
+let currentClasses = [];
 
 search.addEventListener("keyup", type);
 typeOfSearch.addEventListener("change", type);
@@ -23,9 +29,11 @@ async function loadClasses(e) {
     localStorage.defaultPage == undefined
   ) {
     handleClassesFilter();
+    
   } else {
     handleCoursesFilter();
   }
+  
 }
 
 async function templateClass(clas) {
@@ -42,7 +50,7 @@ async function templateClass(clas) {
                 ${course.description}
             </p>
             <p class="number">Course No: ${clas.classNo}</p>
-            <p>Status: ${course.status}</p>
+            <p>Status: ${clas.status}</p>
                <p id="studentsNo">Number of students: ${clas.noOfStudents} </p>
             <p>Instructor: ${clas.instructor}</p>
         </div>
@@ -62,31 +70,47 @@ async function type() {
   }
 }
 
+async function filterClasses() {
+  if(localStorage.defaultPage == "classes" || localStorage.defaultPage == undefined) {
+    await handleSearchOfClasses();
+  }
+}
+
 async function handleSearchOfClasses() {
   let selectedValue = typeOfSearch.value;
-
+  const statusValue = statusSelect.value;
+  
   let classes = await classRepo.getClasses();
+   currentClasses = [...classes];
+
   if (selectedValue == "By name") {
-    classes = classes.filter((clas) =>
+    currentClasses = currentClasses.filter((clas) =>
       clas.className.toUpperCase().includes(search.value.toUpperCase())
     );
     
   } else {
     const filterResults = await Promise.all(
-      classes.map(async (clas) => {
+      currentClasses.map(async (clas) => {
         const course = await classRepo.getParentCourse(clas.classNo);
         const matches = course.category.toUpperCase().includes(search.value.toUpperCase());
         return matches ? clas : null;
       })
     );
     
-    classes = filterResults.filter(element => element !== null);
+    currentClasses = filterResults.filter(element => element !== null);
+  }
+
+  if (statusValue && statusValue.toUpperCase() !== "ALL") {
+    currentClasses = currentClasses.filter(
+      (clas) => clas.status.toUpperCase() === statusValue.toUpperCase()
+    );
   }
 
   const htmlArray = await Promise.all(
-    classes.map((clas) => templateClass(clas))
+    currentClasses.map((clas) => templateClass(clas))
   );
   cardsContainer.innerHTML = htmlArray.join("\n");
+  setupActionButtons();
 }
 
 async function handleSearchOfCourses() {
@@ -107,9 +131,12 @@ async function handleSearchOfCourses() {
     courses.map((course) => templateCourses(course))
   );
   cardsContainer.innerHTML = htmlArray.join("\n");
+
+  setupActionButtons();
 }
 
 async function handleCoursesFilter() {
+
   localStorage.defaultPage = "courses";
   const courses = await courseRepo.getCourses();
   const htmlArray = await Promise.all(
@@ -117,20 +144,9 @@ async function handleCoursesFilter() {
   );
   cardsContainer.innerHTML = htmlArray.join("\n");
 
-  const approveButtons = document.querySelectorAll(".admin-btn-approve");
-  const cancelButtons = document.querySelectorAll(".admin-btn-cancel");
+  setupActionButtons();
 
-  approveButtons.forEach((btn) => {
-    btn.addEventListener("click", async (e) => {
-      const card = btn.closest(".card");
-      const classNo = parseInt(
-        card.querySelector(".number").innerHTML.split(": ")[1]
-      );
-      const clas = await classRepo.getClass(classNo);
-      await classRepo.updateClass({ ...clas, status: "Current" });
-      loadClasses();
-    });
-  });
+  
 }
 
 async function handleClassesFilter() {
@@ -141,20 +157,9 @@ async function handleClassesFilter() {
   );
   cardsContainer.innerHTML = htmlArray.join("\n");
 
-  const approveButtons = document.querySelectorAll(".admin-btn-approve");
-  const cancelButtons = document.querySelectorAll(".admin-btn-cancel");
-
-  approveButtons.forEach((btn) => {
-    btn.addEventListener("click", async (e) => {
-      const card = btn.closest(".card");
-      const classNo = parseInt(
-        card.querySelector(".number").innerHTML.split(": ")[1]
-      );
-      const clas = await classRepo.getClass(classNo);
-      await classRepo.updateClass({ ...clas, status: "Current" });
-      loadClasses();
-    });
-  });
+  setupActionButtons();
+  
+  
 }
 
 async function templateCourses(course) {
@@ -183,4 +188,24 @@ async function templateCourses(course) {
         </div>
     </div>
     `;
+}
+
+
+
+
+function setupActionButtons() {
+  const approveButtons = document.querySelectorAll(".admin-btn-approve");
+  const cancelButtons = document.querySelectorAll(".admin-btn-cancel");
+  
+  approveButtons.forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      console.log("Approve clicked");
+    });
+  });
+  
+  cancelButtons.forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      console.log("Cancel clicked");
+    });
+  });
 }
