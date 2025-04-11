@@ -70,6 +70,7 @@ class Course {
 
   }
 
+
   get name() {
     return this.#name;
   }

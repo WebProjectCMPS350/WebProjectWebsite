@@ -228,7 +228,6 @@ async function templateCourses(course) {
             </p>
             <p class="number">Course No: ${course.courseNo}</p>
             <p>Status: ${course.status}</p>
-            <p id="studentsNo">Number of students: </p>
         </div>
         <div class="footer">
             <button class="admin-btn admin-btn-approve">Approve</button>

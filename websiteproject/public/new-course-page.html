@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/new-course-page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <title>Main page</title>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <a href="student-main-page.html">
+                <h1>QU Student Management</h1>
+            </a>
+
+            <nav>
+                <ul>
+                    <li><a href="about-us.html">About us</a></li>
+                    <li><a href="contact-us.html">Contact us</a></li>
+                    <li><a href="#">Create new course</a></li>
+                    <li><a href="#">Create new class</a></li>
+                </ul>
+
+            </nav>
+        </header>
+
+        <main>
+            <div class="course-wrapper">
+
+                <div class="course-image">
+                    <img src="./imgs/library-study-session-stockcake.jpg" alt="">
+                </div>
+
+                <div class="course">
+                    <div class="intial-info">
+                        <h2>Create a New Course</h2>
+                    </div>
+
+                    <form action="#" class="course-form">
+
+                        <div class="input-group">
+                            <label for="courseNo">Course Number:</label>
+                            <input type="number" id="courseNo" name="courseNo" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="courseName">Course Name:</label>
+                            <input type="text" id="courseName" name="courseName" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="category">Category:</label>
+                            <input type="text" id="category" name="category" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="status">Status:</label>
+                            <select id="status" name="status" required>
+                                <option value="Pending">Pending</option>
+                                <option value="Open">Open</option>
+                                <option value="Current">Current</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="description">Description:</label>
+                            <textarea id="description" name="description" rows="4" required></textarea>
+                        </div>
+
+                        <div class="input-group">
+                            <label>Prerequisites:</label>
+                            <div class="checkbox-group">
+
+                            </div>
+                          </div>
+                          
+
+                        <button type="submit">Create Course</button>
+                        <p id="message"></p>
+                </div>
+
+                </form>
+            </div>
+
+
+
+        </main>
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2025 QU Student Management. All rights reserved.</p>
+
+                <ul class="socials">
+                    <li><a href="#" title="Soon..."><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#" title="Soon..."><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="#" title="Soon..."><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#" title="Soon..."><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href="#" title="Soon..."><i class="fa-brands fa-youtube"></i></a></li>
+                    <li><a title="Check the website repo on GitHub"
+                            href="https://github.com/WebProjectCMPS350/WebProjectWebsite"><i
+                                class="fa-brands fa-github"></i></a></li>
+                    <li><a href="#" title="Soon..."><i class="fa-solid fa-envelope"></i></a></li>
+
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+<script>
+    if (localStorage.getItem("loggedIn") !== "true" || localStorage.userType !== "admin") {
+        window.location.href = "/login-page.html";
+    }
+</script>
+
+<script type="module" src="js/new-course-page.js"></script>
+
+
+
+</html>
