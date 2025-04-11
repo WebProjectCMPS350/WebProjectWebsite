@@ -1,5 +1,5 @@
 const baseUrl = "/api/classes";
-
+import courseRepo from "./Course.js";
 
 class Class {
   #name;
@@ -53,6 +53,13 @@ class Class {
       headers: { "Content-Type": "application/json" },
       body: clas,
     });
+  }
+
+  async getParentCourse(classNo) {
+    const clas = await this.getClass(classNo);
+    const courseNo = await clas.parentCourse;
+    const course = await courseRepo.getCourse(courseNo);
+    return course;
   }
 
   get name() {

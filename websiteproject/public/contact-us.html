@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/admin-main-page.css">
+    <link rel="stylesheet" href="css/contact-us.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <title>Main page</title>
@@ -29,32 +29,28 @@
         </header>
 
         <main>
-            <div class="search-bar">
-
-                <form action="#" class="formGroup1">
-
+            <div class="contact-wrapper">
+                <div class="contact-info">
+        
+                    <h2>Contact Us</h2>
+                    <p>If you have any questions or feedback, feel free to reach out to us!</p>
+        
+                </div>
+                <form action="#" method="post" class="contact-form">
                     <div class="input-group">
-                        <label for="searchInput" class="search"><i class="fa-solid fa-magnifying-glass"></i></label>
-                        <input type="text" name="search" id="searchInput" class="search"
-                            placeholder="Search for courses...">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
                     </div>
                     <div class="input-group">
-                        <label for="typeOfSearch" class="search">By</label>
-                        <select name="type" id="typeOfSearch" class="search">
-                            <option value="By name">Name</option>
-                            <option value="By category">Category</option>
-                        </select>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
                     </div>
-
+                    <div class="input-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit">Send Message</button>
                 </form>
-            </div>
-
-            <div id="cards-container">
-                <!-- Here cards will be-->
-                
-
-                
-                
             </div>
         </main>
         <footer>
@@ -78,15 +74,6 @@
     </div>
 
 </body>
-
-<script>
-    if (localStorage.getItem("loggedIn") !== "true" || localStorage.userType !== "admin") {
-        window.location.href = "/login-page.html";
-    }
-</script>
-
-<script type="module" src="js/admin-main-page.js"></script>
-
 
 </html>
 
