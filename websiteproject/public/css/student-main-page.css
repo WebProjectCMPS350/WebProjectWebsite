@@ -367,5 +367,11 @@ footer ul li a:hover {
         padding: 0rem 1rem;
     }
 
+    @media screen and (min-width:970px) {
+        .formGroup1 {
+            width: 60%;
+        }
+    
+    }
 
 }
