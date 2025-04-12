@@ -27,7 +27,7 @@ async function loadClasses() {
   const validateVtnBtn = document.querySelectorAll(".validate-btn");
   const messages = document.querySelectorAll(".message");
 
-  validateVtnBtn.forEach((btn, index) => {
+  validateVtnBtn.forEach((btn) => {
     btn.addEventListener("click", async () => {
       const card = btn.closest(".card");
       const classNo = card.querySelector(".number").textContent.split(": ")[1];
@@ -56,6 +56,8 @@ async function templateClass(clas) {
             <p>Status: ${clas.status}</p>
                <p id="studentsNo">Number of students: ${clas.noOfStudents} </p>
             <p>Instructor: ${clas.instructor}</p>
+            <p>Class Time: ${clas.classTime}</p>
+            <p>Class Days: ${clas.classDays}</p>
         </div>
         <div class="footer" style="color: black">
         <div class="card-btns"> 

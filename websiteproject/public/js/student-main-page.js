@@ -12,8 +12,6 @@ const student = await studentRepo.getStudent(localStorage.username);
 search.addEventListener("keyup", handleSearch);
 typeOfSearch.addEventListener("change", type);
 
-
-
 document.addEventListener("DOMContentLoaded", loadCourses());
 
 async function loadCourses(e) {
@@ -22,24 +20,29 @@ async function loadCourses(e) {
     courses.map((course) => templateCourses(course))
   );
   cardsContainer.innerHTML = htmlArray.join("\n");
-  
+
   const selects = document.querySelectorAll(".classSelect");
-  
+
   selects.forEach((select) => {
     select.addEventListener("change", async (e) => {
-      const card = select.closest('.card');
-      
+      const card = select.closest(".card");
+
       const studentsNo = card.querySelector("#studentsNo");
-      
+      const classTime = card.querySelector("#classTime");
+      const classDays = card.querySelector("#classDays");
+
       if (e.target.value) {
         const classNo = parseInt(e.target.value.split("-")[1]);
 
         const classItem = await classRepo.getClass(classNo);
 
         studentsNo.innerHTML = `Number of students: ${classItem.noOfStudents}`;
+        classTime.innerHTML = `Class Time: ${classItem.classTime}`;
+        classDays.innerHTML = `Class Days: ${classItem.classDays}`;
       } else {
-
         studentsNo.innerHTML = "Number of students: ";
+        classTime.innerHTML = "Class Time: ";
+        classDays.innerHTML = "Class Days: ";
       }
     });
   });
@@ -66,7 +69,7 @@ async function loadCourses(e) {
       }
 
       if (parentCourse.status.toUpperCase() != "OPEN") {
-        errorMessage.innerHTML = "Course is not open for enrollment";
+        errorMessage.innerHTML = "Class is not open for enrollment";
         setTimeout(() => {
           errorMessage.innerHTML = "";
         }, 3000);
@@ -77,7 +80,7 @@ async function loadCourses(e) {
         if (
           (await classRepo.getClass(c.classNo)).parentCourse ==
             parentCourse.courseNo &&
-          (c.grade >= 60 )
+          c.grade >= 60
         ) {
           errorMessage.innerHTML = "You already passed this course";
           setTimeout(() => {
@@ -89,7 +92,7 @@ async function loadCourses(e) {
         if (
           (await classRepo.getClass(c.classNo)).parentCourse ==
             parentCourse.courseNo &&
-          (c.grade == null)
+          c.grade == null
         ) {
           errorMessage.innerHTML = "You already registered in this course";
           setTimeout(() => {
@@ -97,9 +100,6 @@ async function loadCourses(e) {
           }, 3000);
           return;
         }
-        
-
-        
       }
 
       if (
@@ -116,7 +116,6 @@ async function loadCourses(e) {
         return;
       }
 
-      
       student.classes.push({
         classNo: classNo,
         grade: null,
@@ -134,7 +133,6 @@ async function loadCourses(e) {
       }, 3000);
     });
   });
-
 }
 
 function areListsEqual(list1, list2) {
@@ -146,11 +144,11 @@ function areListsEqual(list1, list2) {
   return sorted1.every((value, index) => value === sorted2[index]);
 }
 
-
-
 async function templateCourses(course) {
-  const classes = await Promise.all(course.classes.map((classItem) => classRepo.getClass(classItem)));
-  
+  const classes = await Promise.all(
+    course.classes.map((classItem) => classRepo.getClass(classItem))
+  );
+
   return `
     
     <div class="card">
@@ -165,11 +163,18 @@ async function templateCourses(course) {
             <p class="number">Course No: ${course.courseNo}</p>
             <p>Status: ${course.status}</p>
             <p id="studentsNo">Number of students: </p>
+            <p id="classTime">Class Time: </p>
+            <p id="classDays">Class Days: </p>
         </div>
         <div class="footer">
             <select class="classSelect">
                 <option value="">Select instructor</option>
-                ${classes.map((classItem) => `<option value="${classItem.instructor}-${classItem.classNo}">${classItem.instructor}</option>`).join("")}
+                ${classes
+                  .map(
+                    (classItem) =>
+                      `<option value="${classItem.instructor}-${classItem.classNo}">${classItem.instructor}</option>`
+                  )
+                  .join("")}
             </select>
             <button class="enroll-btn">Enroll</button>
             <p class="error-message"> </p>
@@ -182,8 +187,6 @@ async function templateCourses(course) {
 async function type() {
   handleSearch();
 }
-
-
 
 async function handleSearch() {
   let selectedValue = typeOfSearch.value;
@@ -209,9 +212,9 @@ async function handleSearch() {
   const selects = document.querySelectorAll(".classSelect");
   selects.forEach((select) => {
     select.addEventListener("change", async (e) => {
-      const card = select.closest('.card');
+      const card = select.closest(".card");
       const studentsNo = card.querySelector("#studentsNo");
-      
+
       if (e.target.value) {
         const classNo = parseInt(e.target.value.split("-")[1]);
         const classItem = await classRepo.getClass(classNo);
@@ -255,7 +258,7 @@ async function handleSearch() {
         if (
           (await classRepo.getClass(c.classNo)).parentCourse ==
             parentCourse.courseNo &&
-          (c.grade >= 60 )
+          c.grade >= 60
         ) {
           errorMessage.innerHTML = "You already passed this course";
           setTimeout(() => {
@@ -267,7 +270,7 @@ async function handleSearch() {
         if (
           (await classRepo.getClass(c.classNo)).parentCourse ==
             parentCourse.courseNo &&
-          (c.grade == null)
+          c.grade == null
         ) {
           errorMessage.innerHTML = "You already registered in this course";
           setTimeout(() => {
@@ -275,9 +278,6 @@ async function handleSearch() {
           }, 3000);
           return;
         }
-        
-
-        
       }
 
       if (
@@ -294,7 +294,6 @@ async function handleSearch() {
         return;
       }
 
-      
       student.classes.push({
         classNo: classNo,
         grade: null,

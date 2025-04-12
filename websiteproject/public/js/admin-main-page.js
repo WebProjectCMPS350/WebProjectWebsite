@@ -60,6 +60,8 @@ async function templateClass(clas) {
             <p>Status: ${clas.status}</p>
                <p id="studentsNo">Number of students: ${clas.noOfStudents} </p>
             <p>Instructor: ${clas.instructor}</p>
+            <p>Class Time: ${clas.classTime}</p>
+            <p>Class Days: ${clas.classDays}</p>
         </div>
         <div class="footer" style="color: black">
         <div class="card-btns"> 
@@ -325,13 +327,21 @@ async function setupActionButtons() {
           course.classes = await course.classes.filter(
             (classItem) => classItem !== clas.classNo
           );
+          // remove the class from students
+          const students = await studentRepo.getStudentsByClass(clas.classNo);
+          students.forEach(async (student) => {
+            student.classes = await student.classes.filter(
+              (classItem) => classItem.classNo !== clas.classNo
+            );
+            await studentRepo.updateStudent(student);
+          });
 
           await courseRepo.updateCourse(course);
           await classRepo.deleteClass(clas);
 
           handleClassesFilter();
         } else if (clas.status == "Closed") {
-          message.innerHTML = "You cannot change the status of this class!";
+          message.innerHTML = "You cannot cancel a closed (finished) class!";
           message.classList.add("error-message");
           setTimeout(() => {
             message.innerHTML = " ";
@@ -411,6 +421,8 @@ async function setupActionButtons() {
 
     cancelButtons.forEach(async (btn) => {
       btn.addEventListener("click", async (e) => {
+        console.log("cancel button clicked");
+
         const card = e.target.closest(".card");
         const course = await courseRepo.getCourse(
           card.querySelector(".number").innerHTML.split(": ")[1]
@@ -418,7 +430,7 @@ async function setupActionButtons() {
         const message = card.querySelector(".message");
 
         if (course.status !== "Closed") {
-          // remove the class from the course
+          // remove the class from the course, I hate my code so much
           const classes = await Promise.all(
             course.classes.map((classItem) => classRepo.getClass(classItem))
           );

@@ -54,12 +54,14 @@ async function templateCourses(course) {
                 ${course.description}
             </p>
             <p class="number">Course No: ${course.courseNo}</p>
-            <p>Status: ${course.status}</p>
+            <p>Status: ${registeredClass.status}</p>
             
         </div>
         <div class="footer" style="color: black">
             <p id="studentsNo">Number of students: ${registeredClass.noOfStudents}</p>
             <p>Instructor: ${registeredClass.instructor} </p>
+            <p>Class Time: ${registeredClass.classTime} </p>
+            <p>Class Days: ${registeredClass.classDays} </p>
             <p> Grade: ${grade} </p>
         </div>
     </div>

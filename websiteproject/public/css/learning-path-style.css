@@ -158,21 +158,6 @@ main {
 
 }
 
-.card .enroll-btn {
-    background-color: gray;
-    color: white;
-    width: 30%;
-    padding: 1rem 1rem;
-    border-radius: 1rem;
-    border: none;
-}
-
-.card .enroll-btn:hover {
-    background-color: #4392F1;
-    cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-    transition: 0.3s;
-}
 
 .card:hover {
     border: 1px solid #ccc;
@@ -180,14 +165,7 @@ main {
     transition: 0.3s;
 }
 
-.classSelect {
-    background-color: #f0f0f0;
-    padding: 1rem 2rem;
-    border: none;
-    border-bottom: 1px solid #ccc;
-    outline: none;
-    cursor: pointer;
-}
+
 
 footer {
     background-color: #666;
@@ -198,20 +176,6 @@ footer {
 }
 
 
-.btn {
-    background-color: gray;
-    color: white;
-    padding: 1rem 1rem;
-    border-radius: 1rem;
-    border: none;
-}
-
-.btn:hover {
-    background-color: aliceblue;
-    color: black;
-    cursor: pointer;
-    box-shadow: rgba(255, 255, 255, 0.4) 0px 2px 20px 1px;
-}
 
 footer ul {
     display: flex;
@@ -273,6 +237,10 @@ footer ul li a:hover {
         padding-left: 1rem;
     }
 
+    .card {
+        max-height: auto;
+    }
+
     nav li a {
         border-radius: 2rem;
         padding: 0.1rem 1.5rem;
@@ -290,6 +258,15 @@ footer ul li a:hover {
         gap: 0rem;
 
     }
+
+    nav ul li {
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        align-items: right;
+        gap: 0rem;
+    }
+
 
     .footer-content {
         display: flex;
