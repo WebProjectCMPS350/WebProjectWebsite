@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", loadPrerequisites);
 
 async function loadPrerequisites() {
   const courses = await courseRepo.getCourses();
+ 
   const htmlArray = courses.map(
     (course) => `
     <label for=""><input type="checkbox" id="prerequisites" name="prerequisites" value="${course.courseNo}">${course.name}</label>
@@ -20,6 +21,8 @@ async function loadPrerequisites() {
                             `
   );
   prerequisitesCheckboxs.innerHTML = htmlArray.join("\n");
+
+  
 }
 
 async function handleNewCourseFormSubmit(e) {

@@ -2,9 +2,8 @@ import User from "./User.js";
 const baseUrl = "/api/administrators";
 
 class Administrator extends User {
-  #calsses = [];
 
-  constructor(name, username, password, clas) {
+  constructor(name, username, password) {
     super(name, username, password);
   }
 
@@ -16,7 +15,7 @@ class Administrator extends User {
   async getAdministrator(username) {
     const administrators = await this.getAdministrators();
     const administrator = administrators.find(
-      (administrator) => administrators.username == username
+      (administrator) => administrator.username == username
     );
     if (!administrator) {
       return { error: "Administrators not found" };

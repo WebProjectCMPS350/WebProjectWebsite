@@ -13,6 +13,7 @@ class Course {
     this.#name = name;
     this.#classList = [];
     this.#category = category;
+    this.#courseNo = courseNo;
     this.#status = "Pending";
   }
 

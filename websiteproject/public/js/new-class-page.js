@@ -4,17 +4,24 @@ import studentRepo from "./repository/Student.js";
 import adminRepo from "./repository/Administrator.js";
 import instructorRepo from "./repository/Instructor.js";
 
+
 const form = document.querySelector(".class-form");
 const instructorSelect = document.querySelector("#instructor");
 const parentCourse = document.querySelector("#parentCourse");
 const message = document.querySelector("#message");
 
-instructorSelect.addEventListener("DOMContentLoaded", loadInstructors());
-instructorSelect.addEventListener("DOMContentLoaded", loadParentCourses());
+
+document.addEventListener("DOMContentLoaded", () => {
+  loadInstructors();
+  loadParentCourses();
+});
+
 
 document.addEventListener("submit", handleNewClassFormSubmit);
 
 async function loadInstructors() {
+  noCourseError();
+
   const instructors = await instructorRepo.getInstructors();
   const htmlArray = instructors.map(
     (instructor) =>
@@ -24,7 +31,10 @@ async function loadInstructors() {
 }
 
 async function loadParentCourses() {
+  noCourseError();
   const courses = await courseRepo.getCourses();
+
+  
   const htmlArray = courses.map(
     (course) => `<option value="${course.courseNo}">${course.name}</option>`
   );
@@ -68,8 +78,8 @@ async function handleNewClassFormSubmit(e) {
     ];
     const newCourse = await courseRepo.getCourse(clas.parentCourse);
     newCourse.classes = newClasses;
-
     await courseRepo.updateCourse(newCourse);
+
     await classRepo.createClass(clas);
 
     message.innerHTML = "Course created successfully!";
@@ -82,5 +92,22 @@ async function handleNewClassFormSubmit(e) {
       message.classList.remove("error-message");
       form.reset();
     }, 3000);
+  }
+}
+
+
+async function noCourseError() {
+  const courses = await courseRepo.getCourses();
+  if (courses.length === 0) {    
+    message.innerHTML = "Please add a course first!";
+    message.classList.add("error-message");
+    message.classList.remove("success-message");
+    setTimeout(() => {
+      message.innerHTML = "";
+      message.classList.remove("success-message");
+      message.classList.remove("error-message");
+    }, 8000);
+    return;
+
   }
 }

@@ -2,27 +2,32 @@
   {
     "username": "ali",
     "password": "123456",
-    "name": "Ali Khan"
+    "name": "Ali Khan",
+    "expArea": "Web Development"
   },
   {
     "username": "john",
     "password": "123456",
-    "name": "John Doe"
+    "name": "John Doe",
+    "expArea": "Data Science"
   },
   {
     "username": "jane",
     "password": "123456",
-    "name": "Jane Smith"
+    "name": "Jane Smith",
+    "expArea": "Machine Learning"
   },
   {
     "username": "alice",
     "password": "123456",
-    "name": "Alice Johnson"
+    "name": "Alice Johnson",
+    "expArea": "Cyber Security"
   },
 
   {
     "username": "mohammed",
     "password": "123456",
-    "name": "Mohammed Ali"
+    "name": "Mohammed Ali",
+    "expArea": "Cloud Computing"
   }
 ]

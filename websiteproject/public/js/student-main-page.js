@@ -219,8 +219,12 @@ async function handleSearch() {
         const classNo = parseInt(e.target.value.split("-")[1]);
         const classItem = await classRepo.getClass(classNo);
         studentsNo.innerHTML = `Number of students: ${classItem.noOfStudents}`;
+        classTime.innerHTML = `Class Time: ${classItem.classTime}`;
+        classDays.innerHTML = `Class Days: ${classItem.classDays}`;
       } else {
         studentsNo.innerHTML = "Number of students: ";
+        classTime.innerHTML = "Class Time: ";
+        classDays.innerHTML = "Class Days: ";
       }
     });
   });
