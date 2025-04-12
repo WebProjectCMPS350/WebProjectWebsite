@@ -1,6 +1,6 @@
 # QU Student Management 🎓
 
-![QU Student Management](./demo/preview.gif) <!-- Replace with your actual gif path -->
+<img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWQ5a296eW82b2J2c215YTdjYzZjcHloZGFwMXBubHpkd3JoYnd2NiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/bcKmIWkUMCjVm/giphy.gif" alt="Cool gif image"><!-- Replace with your actual gif path -->
 
 A web-based platform designed to help Qatar University manage student records, course offerings, class assignments, grades, and communications — all in one place. Built with **HTML**, **CSS**, and **JavaScript**, this system provides different dashboards and functionalities for **administrators**, **instructors**, and **students**.
 
