@@ -30,7 +30,7 @@ async function loadCourses(e) {
       const studentsNo = card.querySelector("#studentsNo");
       const classTime = card.querySelector("#classTime");
       const classDays = card.querySelector("#classDays");
-
+      const classStatus = card.querySelector("#ClassStatus");
       if (e.target.value) {
         const classNo = parseInt(e.target.value.split("-")[1]);
 
@@ -39,10 +39,12 @@ async function loadCourses(e) {
         studentsNo.innerHTML = `Number of students: ${classItem.noOfStudents}`;
         classTime.innerHTML = `Class Time: ${classItem.classTime}`;
         classDays.innerHTML = `Class Days: ${classItem.classDays}`;
+        classStatus.innerHTML = `Class Status: ${classItem.status}`;
       } else {
         studentsNo.innerHTML = "Number of students: ";
         classTime.innerHTML = "Class Time: ";
         classDays.innerHTML = "Class Days: ";
+        classStatus.innerHTML = "Class Status: ";
       }
     });
   });
@@ -68,7 +70,7 @@ async function loadCourses(e) {
         return;
       }
 
-      if (parentCourse.status.toUpperCase() != "OPEN") {
+      if (clas.status.toUpperCase() != "OPEN") {
         errorMessage.innerHTML = "Class is not open for enrollment";
         setTimeout(() => {
           errorMessage.innerHTML = "";
@@ -149,6 +151,7 @@ async function templateCourses(course) {
     course.classes.map((classItem) => classRepo.getClass(classItem))
   );
 
+
   return `
     
     <div class="card">
@@ -161,7 +164,8 @@ async function templateCourses(course) {
                 ${course.description}
             </p>
             <p class="number">Course No: ${course.courseNo}</p>
-            <p>Status: ${course.status}</p>
+            <p>Coure Status: ${course.status}</p>
+            <p id="ClassStatus">Class Status: </p>
             <p id="studentsNo">Number of students: </p>
             <p id="classTime">Class Time: </p>
             <p id="classDays">Class Days: </p>
@@ -214,6 +218,9 @@ async function handleSearch() {
     select.addEventListener("change", async (e) => {
       const card = select.closest(".card");
       const studentsNo = card.querySelector("#studentsNo");
+      const classTime = card.querySelector("#classTime");
+      const classDays = card.querySelector("#classDays");
+      const classStatus = card.querySelector("#ClassStatus");
 
       if (e.target.value) {
         const classNo = parseInt(e.target.value.split("-")[1]);
@@ -221,10 +228,12 @@ async function handleSearch() {
         studentsNo.innerHTML = `Number of students: ${classItem.noOfStudents}`;
         classTime.innerHTML = `Class Time: ${classItem.classTime}`;
         classDays.innerHTML = `Class Days: ${classItem.classDays}`;
+        classStatus.innerHTML = `Class Status: ${classItem.status}`;
       } else {
         studentsNo.innerHTML = "Number of students: ";
         classTime.innerHTML = "Class Time: ";
         classDays.innerHTML = "Class Days: ";
+        classStatus.innerHTML = "Class Status: ";
       }
     });
   });
@@ -250,7 +259,7 @@ async function handleSearch() {
         return;
       }
 
-      if (parentCourse.status.toUpperCase() != "OPEN") {
+      if (clas.status.toUpperCase() != "OPEN") {
         errorMessage.innerHTML = "Course is not open for enrollment";
         setTimeout(() => {
           errorMessage.innerHTML = "";
