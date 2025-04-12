@@ -1,17 +1,10 @@
 import User from "./User.js";
 import fse from "fs-extra";
 import path from "path";
-import { nanoid } from "nanoid";
-
 
 class Instructor extends User {
-  #calsses = [];
-  #expertiseAreas;
-
-  constructor(name, username, password, clas) {
+  constructor(name, username, password) {
     super(name, username, password);
-    this.#calsses.push(clas);
-    this.#expertiseAreas = [];
     this.instructorsFilePath = path.join(
       process.cwd(),
       "app/data/instructors.json"
@@ -73,14 +66,6 @@ class Instructor extends User {
     instructors.splice(index, 1);
     await this.saveInstructors(instructors);
     return { message: "Instructor deleted successfully" };
-  }
-
-  get calsses() {
-    return this.#calsses;
-  }
-
-  get expertiseAreas() {
-    return this.#expertiseAreas;
   }
 }
 

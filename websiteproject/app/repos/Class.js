@@ -1,21 +1,8 @@
-import fse from 'fs-extra';
-import path from 'path';
-import { nanoid } from 'nanoid';
-import courseRepo from "@/app/repos/Course.js";
+import fse from "fs-extra";
+import path from "path";
 
 class Class {
-  #name;
-  #classNo;
-  #course;
-  #instructor;
-  #students;
-
-  constructor(name, course, instructor, classNo) {
-    this.#name = name;
-    this.#students = [];
-    this.#course = course;
-    this.#classNo = classNo;
-    this.#instructor = instructor;
+  constructor() {
     this.classFilePath = path.join(process.cwd(), "app/data/classes.json"); //
   }
 
@@ -66,48 +53,7 @@ class Class {
     }
     classes.splice(index, 1);
     await this.saveClasses(classes);
-    // Why inside an Object?
     return { message: "Class deleted successfully" };
-  }
-
-  get name() {
-    return this.#name;
-  }
-
-  set name(newName) {
-    this.#name = newName;
-  }
-
-  get classNo() {
-    return this.#classNo;
-  }
-
-  set classNo(newClassNo) {
-    this.#classNo = newClassNo;
-  }
-
-  get students() {
-    return this.#students;
-  }
-
-  get course() {
-    return this.#course;
-  }
-
-  set course(course) {
-    this.#course = course;
-  }
-
-  get instructor() {
-    return this.#instructor;
-  }
-
-  set instructor(instructor) {
-    this.#instructor = instructor;
-  }
-
-  getStudentsNo() {
-    return -1;
   }
 }
 

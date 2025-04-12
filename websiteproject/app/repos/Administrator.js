@@ -1,10 +1,8 @@
 import User from "./User.js";
 import fse from "fs-extra";
 import path from "path";
-import { nanoid } from "nanoid";
 
 class Administrator extends User{
-    #calsses = [];
 
     constructor(name, username, password, clas){
         super(name, username, password);

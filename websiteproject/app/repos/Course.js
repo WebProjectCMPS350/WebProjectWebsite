@@ -1,20 +1,8 @@
 import fse from "fs-extra";
 import path from "path";
-import { nanoid } from "nanoid";
 
 class Course {
-  #courseNo;
-  #name;
-  #classList;
-  #category;
-  #status;
-
-  constructor(name, category, courseNo) {
-    this.#courseNo;
-    this.#name = name;
-    this.#classList = [];
-    this.#category = category;
-    this.#status = "Pending";
+  constructor() {
     this.coursesFilePath = path.join(process.cwd(), "app/data/courses.json"); //
   }
 
@@ -79,54 +67,7 @@ class Course {
     }
     courses.splice(index, 1);
     await this.saveCourses(courses);
-    // Why inside an Object?
     return { message: "course deleted successfully" };
-  }
-
-  get name() {
-    return this.#name;
-  }
-
-  set name(newName) {
-    this.#name = newName;
-  }
-
-  get courseNo() {
-    return this.#courseNo;
-  }
-
-  set courseNo(newCourseNo) {
-    this.#name = newCourseNo;
-  }
-
-  get classList() {
-    return this.#classList;
-  }
-
-  get category() {
-    return this.#category;
-  }
-
-  set category(newCategory) {
-    this.#category = newCategory;
-  }
-
-  get status() {
-    return this.#status;
-  }
-
-  set status(newStatus) {
-    this.#status = newStatus;
-  }
-
-  static async read() {
-    const response = await fetch("../data/courses.json");
-    return response.json();
-  }
-
-  static async write(courses) {
-    const response = await fetch("../data/courses.json");
-    const cs = response.json();
   }
 }
 
