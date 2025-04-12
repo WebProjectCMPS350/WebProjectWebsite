@@ -15,14 +15,14 @@
 
     <div class="container">
         <header>
-            <a href="student-main-page.html" ><h1>QU Student Management</h1></a>
+            <a class="changable-link" href="#"><h1>QU Student Management</h1></a>
 
             <nav>
                 <ul>
                     <li><a href="about-us.html">About us</a></li>
                     <li><a href="contact-us.html">Contact us</a></li>
-                    <li><a href="#">Create new course</a></li>
-                    <li><a href="#">Create new class</a></li>
+                    <li><a class="changable-link" href="#">Main page</a></li>
+                    <li><a  href="login-page.html" id="logout">Logout</a></li>
                 </ul>
 
             </nav>
@@ -74,6 +74,14 @@
     </div>
 
 </body>
+
+<script>
+    if (localStorage.getItem("loggedIn") !== "true") {
+        window.location.href = "/login-page.html";
+    }
+</script>
+
+<script type="module" src="js/contact-us.js"></script>
 
 </html>
 
