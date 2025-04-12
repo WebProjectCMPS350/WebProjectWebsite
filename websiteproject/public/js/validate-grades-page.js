@@ -6,6 +6,7 @@ import instructorRepo from "./repository/Instructor.js";
 
 const validateGradesForm = document.querySelector("#validate-grades-form");
 const clas = JSON.parse(localStorage.clas);
+const introMessage = document.querySelector("#className");
 
 document.addEventListener("DOMContentLoaded", loadGrades);
 
@@ -20,6 +21,7 @@ async function loadGrades() {
     `
     <button type="submit" class="btn">Submit All Grades</button>
   `;
+  introMessage.innerHTML = `Validating grades for "${clas.className}" class`;
 
   const submitBtn = document.querySelector(".btn");
   const message = document.querySelector("#message");
@@ -46,9 +48,11 @@ async function loadGrades() {
     await classRepo.updateClass(clas);
 
     message.textContent = "All grades submitted and class is now closed!";
-    setTimeout(() => (message.textContent = ""), 3000);
+    setTimeout(
+      () => (message.textContent = ""),
 
-    window.location.href = "instructor-main-page.html";
+      3000
+    );
   });
 }
 

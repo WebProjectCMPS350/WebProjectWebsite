@@ -1,1 +1,20 @@
-[{"username":"mo","password":"123456","name":"Mohammed","classes":[{"classNo":2,"grade":null}]},{"username":"ali2","password":"123456","name":"Ali Khan","classes":[]},{"username":"john","password":"123456","name":"John Doe","classes":[]}]
+[
+  {
+    "username": "mo",
+    "password": "123456",
+    "name": "Mohammed",
+    "classes": [{ "classNo": 4, "grade": 100 }]
+  },
+  {
+    "username": "ali2",
+    "password": "123456",
+    "name": "Ali Khan",
+    "classes": [{ "classNo": 4, "grade": 50 }]
+  },
+  {
+    "username": "john",
+    "password": "123456",
+    "name": "John Doe",
+    "classes": [{ "classNo": 4, "grade": 1 }]
+  }
+]

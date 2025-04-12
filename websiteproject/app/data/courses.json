@@ -4,7 +4,7 @@
     "name": "Introduction to Programming",
     "description": "Learn the basics of programming using Python.",
     "category": "Programming",
-    "status": "Pending",
+    "status": "Open",
     "prerequisites": [],
     "classes": [1, 2]
   },
@@ -17,7 +17,6 @@
     "prerequisites": [1],
     "classes": [3, 4]
   },
-
   {
     "courseNo": 3,
     "name": "Data Science",
@@ -27,7 +26,6 @@
     "prerequisites": [1],
     "classes": [5, 6]
   },
-
   {
     "courseNo": 4,
     "name": "Machine Learning",

@@ -5,12 +5,14 @@ import adminRepo from "./repository/Administrator.js";
 import instructorRepo from "./repository/Instructor.js";
 
 const cardsContainer = document.querySelector("#cards-container");
-
+const userNameWelcoming = document.querySelector("#user-name");
 const student = await studentRepo.getStudent(localStorage.username);
 
 document.addEventListener("DOMContentLoaded", loadCourses());
 
 async function loadCourses(e) {
+  userNameWelcoming.innerHTML = `Welcome ${student.name}`;
+
   const courses = await studentRepo.getStudentCourses(student.username);
 
   const htmlArray = await Promise.all(
