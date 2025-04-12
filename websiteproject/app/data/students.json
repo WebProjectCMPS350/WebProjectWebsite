@@ -2,9 +2,30 @@
   {
     "username": "mo",
     "password": "123456",
+    "name": "Mohammed",
     "classes": [
-      { "classNo": 1, "grade": 85 },
+      { "classNo": 1, "grade": 89 },
       { "classNo": 5, "grade": null }
+    ]
+  },
+  {
+    "username": "ali",
+    "password": "123456",
+    "name": "Ali Khan",
+    "classes": [
+      { "classNo": 1, "grade": 90 },
+      { "classNo": 2, "grade": 88 }
+    ]
+  },
+  {
+    "username": "john",
+    "password": "123456",
+    "name": "John Doe",
+    "classes": [
+      { "classNo": 2, "grade": 92 },
+      { "classNo": 3, "grade": null },
+      { "classNo": 4, "grade": null },
+      { "classNo": 1, "grade": 75 }
     ]
   }
 ]

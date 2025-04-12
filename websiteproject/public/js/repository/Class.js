@@ -62,6 +62,12 @@ class Class {
     return course;
   }
 
+  async getClassesByInstructorName(instructorName) {
+    const classes = await this.getClasses();
+    const instructorClasses = classes.filter((clas) => clas.instructor === instructorName);
+    return instructorClasses;
+  }
+
   get name() {
     return this.#name;
   }

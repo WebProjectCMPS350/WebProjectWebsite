@@ -2,6 +2,7 @@ const baseUrl = "/api/students";
 import User from "./User.js";
 import courseRepo from "./Course.js";
 import classRepo from "./Class.js";
+import studentRepo from "./Student.js";
 class Student extends User {
   #id;
   #completedCourses;
@@ -75,6 +76,14 @@ class Student extends User {
       classes.map((classItem) => courseRepo.getCourse(classItem.parentCourse))
     );
     return courses;
+  }
+
+  async getStudentsByClass(classNo) {
+    const students = await this.getStudents();
+    const studentsInClass = students.filter((student) =>
+      student.classes.some((classItem) => classItem.classNo == classNo)
+    );
+    return studentsInClass;
   }
 
   get id() {
