@@ -39,14 +39,6 @@ A web-based platform designed to help Qatar University manage student records, c
 - **Storage:** `localStorage` (for demo purposes)
 - **Icons:** [Font Awesome](https://fontawesome.com)
 
----
-
-## 📸 Demo
-
-![Demo Preview](./demo/preview.gif) <!-- Replace with the actual path to your gif -->
-
----
-
 ## 🚀 How to Run
 
 1. Clone this repo:
