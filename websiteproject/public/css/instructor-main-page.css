@@ -449,7 +449,9 @@ footer ul li a:hover {
         gap: 0rem;
     }
 
-
+    nav ul li {
+        gap: 0;
+    }
 
     .footer-content {
         display: flex;

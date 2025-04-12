@@ -103,7 +103,7 @@ nav ul {
 
 
 .formGroup1 {
-    width: 60%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -358,6 +358,14 @@ footer ul li a:hover {
 
     }
 
+    nav ul li {
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        align-items: right;
+        gap: 0rem;
+    }
+
     .footer-content {
         display: flex;
         flex-direction: row;
@@ -367,11 +375,15 @@ footer ul li a:hover {
         padding: 0rem 1rem;
     }
 
-    @media screen and (min-width:970px) {
-        .formGroup1 {
-            width: 60%;
-        }
-    
+    .formGroup1 {
+        width: 80%;
+    }
+
+}
+
+@media screen and (min-width:970px) {
+    .formGroup1 {
+        width: 60%;
     }
 
 }
