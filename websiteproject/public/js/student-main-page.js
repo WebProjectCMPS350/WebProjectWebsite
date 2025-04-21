@@ -105,9 +105,9 @@ async function loadCourses(e) {
       }
 
       if (
-        areListsEqual(
-          student.classes.map((cls) => cls.classNo),
-          parentCourse.prerequisites
+        isSubset(
+          parentCourse.prerequisites,
+          student.classes.map((cls) => cls.classNo)
         ) == false
       ) {
         errorMessage.innerHTML = "You have to pass the prerequisites first";
@@ -137,14 +137,12 @@ async function loadCourses(e) {
   });
 }
 
-function areListsEqual(list1, list2) {
-  if (list1.length !== list2.length) return false;
+function isSubset(arr1, arr2) {
+  const set2 = new Set(arr2);
 
-  const sorted1 = [...list1].sort();
-  const sorted2 = [...list2].sort();
-
-  return sorted1.every((value, index) => value === sorted2[index]);
+  return arr1.every(item => set2.has(item));
 }
+
 
 async function templateCourses(course) {
   const classes = await Promise.all(
