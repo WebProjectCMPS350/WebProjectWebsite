@@ -9,3 +9,18 @@ datasource db {
   provider = "sqlite"
   url      = env("DATABASE_URL")
 }
+
+model Class {
+}
+
+model Student {
+}
+
+model Instructor {
+}
+
+model Course {
+}
+
+model Admin {
+}
