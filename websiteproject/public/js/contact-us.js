@@ -1,7 +1,7 @@
 const submit = document.querySelector("#submit");
 const successMessage = document.querySelector("#success-message");
 const form = document.querySelector(".contact-form");
-submit.addEventListener("click", async (e) => {
+submit.addEventListener("submit", async (e) => {
   e.preventDefault();
   //alert("Your message has been sent successfully!");
   successMessage.textContent = "Your message has been sent successfully!";
