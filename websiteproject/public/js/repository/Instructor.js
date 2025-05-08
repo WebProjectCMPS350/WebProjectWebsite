@@ -1,17 +1,6 @@
-import User from "./User.js";
 const baseUrl = "/api/instructors";
 
-class Instructor extends User {
-  #calsses = [];
-  #expertiseAreas;
-
-  constructor(name, username, password, clas) {
-    super(name, username, password);
-    this.#calsses.push(clas);
-    this.#expertiseAreas = [];
-  }
-
-
+class Instructor {
   async getInstructors() {
     const response = await fetch(baseUrl);
     return response.json();
@@ -50,14 +39,6 @@ class Instructor extends User {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(instructor),
     });
-  }
-
-  get calsses() {
-    return this.#calsses;
-  }
-
-  get expertiseAreas() {
-    return this.#expertiseAreas;
   }
 }
 

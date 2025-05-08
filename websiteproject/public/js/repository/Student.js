@@ -1,20 +1,8 @@
 const baseUrl = "/api/students";
-import User from "./User.js";
 import courseRepo from "./Course.js";
 import classRepo from "./Class.js";
 import studentRepo from "./Student.js";
-class Student extends User {
-  #id;
-  #completedCourses;
-  #learningPath;
-
-  constructor(name, username, password, id) {
-    super(name, username, password);
-    this.#id = id;
-    this.#completedCourses = [];
-    this.#learningPath = [];
-  }
-
+class Student {
   async getStudents() {
     const response = await fetch(baseUrl);
     return response.json();
@@ -84,18 +72,6 @@ class Student extends User {
       student.classes.some((classItem) => classItem.classNo == classNo)
     );
     return studentsInClass;
-  }
-
-  get id() {
-    return this.#id;
-  }
-
-  get completedCourses() {
-    return this.#completedCourses;
-  }
-
-  get learningPath() {
-    return this.#learningPath;
   }
 }
 

@@ -1,10 +1,8 @@
-import User from "./User.js";
 import fse from "fs-extra";
 import path from "path";
 
-class Instructor extends User {
-  constructor(name, username, password) {
-    super(name, username, password);
+class Instructor {
+  constructor() {
     this.instructorsFilePath = path.join(
       process.cwd(),
       "app/data/instructors.json"

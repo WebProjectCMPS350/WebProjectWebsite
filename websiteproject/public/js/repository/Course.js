@@ -1,23 +1,6 @@
 const baseUrl = "/api/courses";
 
-
 class Course {
-  #courseNo;
-  #name;
-  #classList;
-  #category;
-  #status;
-
-  constructor(name, category, courseNo) {
-    this.#courseNo;
-    this.#name = name;
-    this.#classList = [];
-    this.#category = category;
-    this.#courseNo = courseNo;
-    this.#status = "Pending";
-  }
-
-
   async getCourses() {
     const response = await fetch(baseUrl);
     return response.json();
@@ -68,44 +51,6 @@ class Course {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(course),
     });
-
-  }
-
-
-  get name() {
-    return this.#name;
-  }
-
-  set name(newName) {
-    this.#name = newName;
-  }
-
-  get courseNo() {
-    return this.#courseNo;
-  }
-
-  set courseNo(newCourseNo) {
-    this.#name = newCourseNo;
-  }
-
-  get classList() {
-    return this.#classList;
-  }
-
-  get category() {
-    return this.#category;
-  }
-
-  set category(newCategory) {
-    this.#category = newCategory;
-  }
-
-  get status() {
-    return this.#status;
-  }
-
-  set status(newStatus) {
-    this.#status = newStatus;
   }
 
   static async read() {

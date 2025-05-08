@@ -1,10 +1,8 @@
-import User from "./User.js";
 import fse from "fs-extra";
 import path from "path";
 
-class Student extends User {
-  constructor(name, username, password) {
-    super(name, username, password);
+class Student {
+  constructor() {
     this.studentsFilePath = path.join(process.cwd(), "app/data/students.json"); //
   }
 

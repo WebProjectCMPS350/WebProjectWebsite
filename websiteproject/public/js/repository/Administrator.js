@@ -1,12 +1,6 @@
-import User from "./User.js";
 const baseUrl = "/api/administrators";
 
-class Administrator extends User {
-
-  constructor(name, username, password) {
-    super(name, username, password);
-  }
-
+class Administrator {
   async getAdministrators() {
     const response = await fetch(baseUrl);
     return response.json();
