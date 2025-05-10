@@ -7,17 +7,15 @@ class Course {
   }
 
   async getCoursesByName(name) {
-    const courses = await this.getCourses();
-    return courses.filter(
-      (course) => course.name.toLowerCase() == name.toLowerCase()
-    );
+    const response = await fetch(`${baseUrl}/getCoursesByName?name=${name}`);
+    return response.json();
   }
 
   async getCoursesByCategory(category) {
-    const courses = await this.getCourses();
-    return courses.filter(
-      (course) => course.category.toLowerCase() == category.toLowerCase()
+    const response = await fetch(
+      `${baseUrl}/getCoursesByCategory?category=${category}`
     );
+    return response.json();
   }
 
   async getCourse(courseNo) {

@@ -16,17 +16,20 @@ class Course {
   }
 
   async getCoursesByName(name) {
-    const courses = await fse.readJson(this.coursesFilePath);
-    return courses.filter(
-      (course) => course.name.toLowerCase() == name.toLowerCase()
+    const courses = await this.getCourses();
+    return courses.filter((course) =>
+      course.name.toLowerCase().includes(name.toLowerCase())
     );
   }
 
   async getCoursesByCategory(category) {
-    const courses = await fse.readJson(this.coursesFilePath);
-    return courses.filter(
-      (course) => course.category.toLowerCase() == category.toLowerCase()
+    const courses = await this.getCourses();
+    const filteredCourses = courses.filter((course) =>
+      course.category.toLowerCase().includes(category.toLowerCase())
     );
+    console.log(filteredCourses);
+
+    return filteredCourses;
   }
 
   async getCourse(courseNo) {
@@ -80,6 +83,20 @@ class Course {
     }
 
     return classes;
+  }
+
+  async getCourseByName(name) {
+    const courses = await this.getCourses();
+    return courses.filter((course) =>
+      course.name.toLowerCase().includes(name.toLowerCase())
+    );
+  }
+
+  async getCoursesByCategory(category) {
+    const courses = await this.getCourses();
+    return courses.filter((course) =>
+      course.category.toLowerCase().includes(category.toLowerCase())
+    );
   }
 }
 
