@@ -9,14 +9,13 @@ const search = document.querySelector("#searchInput");
 const typeOfSearch = document.querySelector("#typeOfSearch");
 const student = await studentRepo.getStudent(localStorage.username);
 
+const allClasses = await classRepo.getClasses();
+const classMap = new Map(allClasses.map((clas) => [clas.classNo, clas]));
+
 search.addEventListener("keyup", handleSearch);
 typeOfSearch.addEventListener("change", handleSearch);
 
 document.addEventListener("DOMContentLoaded", loadCourses());
-
-const allClasses = await classRepo.getClasses();
-const classMap = new Map();
-for (const clas of allClasses) classMap.set(clas.classNo, clas);
 
 async function loadCourses() {
   const courses = await courseRepo.getCourses();
@@ -30,7 +29,9 @@ async function loadCourses() {
 }
 
 async function templateCourses(course) {
-  const classes = await courseRepo.getCourseClasses(course.courseNo);
+  const classes = allClasses.filter(
+    (cls) => cls.parentCourse === course.courseNo
+  );
 
   return `
     <div class="card">

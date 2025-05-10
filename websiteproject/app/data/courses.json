@@ -1,1 +1,452 @@
-[{"courseNo":1,"name":"Introduction to Programming","description":"Learn the basics of programming using Python.","category":"Programming","status":"Current","prerequisites":[],"classes":[]},{"courseNo":5,"name":"Cyber Security","description":"Learn about network security and ethical hacking.","category":"Cyber Security","status":"Current","prerequisites":[1],"classes":[9,10]},{"courseNo":6,"name":"Cloud Computing","description":"Explore cloud services and deployment models.","category":"Cloud Computing","status":"Current","prerequisites":[1],"classes":[12]},{"courseNo":7,"name":"Mobile App Development","description":"Create mobile applications using React Native.","category":"Mobile Development","status":"Open","prerequisites":[2],"classes":[13,14]},{"courseNo":9,"name":"DevOps","description":"Understand the principles of DevOps and CI/CD.","category":"DevOps","status":"Open","prerequisites":[1,6],"classes":[17,18]},{"courseNo":10,"name":"Artificial Intelligence","description":"Explore AI concepts and applications.","category":"Artificial Intelligence","status":"Open","prerequisites":[1,4],"classes":[19,20]},{"courseNo":144,"name":"BOXING ","description":"Learn boxing with gre","category":"Sports","status":"Current","prerequisites":[1,2,3,4,5,6,7,8,9,10],"classes":[144]}]
+[
+  {
+    "courseNo": 200,
+    "name": "Course 200",
+    "description": "Description for Course 200",
+    "category": "Data Science",
+    "status": "Open",
+    "prerequisites": [],
+    "classes": [200, 201]
+  },
+  {
+    "courseNo": 201,
+    "name": "Course 201",
+    "description": "Description for Course 201",
+    "category": "Artificial Intelligence",
+    "status": "Current",
+    "prerequisites": [],
+    "classes": [202, 203]
+  },
+  {
+    "courseNo": 202,
+    "name": "Course 202",
+    "description": "Description for Course 202",
+    "category": "Design",
+    "status": "Current",
+    "prerequisites": [],
+    "classes": [204, 205]
+  },
+  {
+    "courseNo": 203,
+    "name": "Course 203",
+    "description": "Description for Course 203",
+    "category": "Business",
+    "status": "Current",
+    "prerequisites": [],
+    "classes": [206, 207]
+  },
+  {
+    "courseNo": 204,
+    "name": "Course 204",
+    "description": "Description for Course 204",
+    "category": "Sports",
+    "status": "Open",
+    "prerequisites": [],
+    "classes": [208, 209]
+  },
+  {
+    "courseNo": 205,
+    "name": "Course 205",
+    "description": "Description for Course 205",
+    "category": "DevOps",
+    "status": "Open",
+    "prerequisites": [238],
+    "classes": [210, 211]
+  },
+  {
+    "courseNo": 206,
+    "name": "Course 206",
+    "description": "Description for Course 206",
+    "category": "Cloud Computing",
+    "status": "Open",
+    "prerequisites": [232],
+    "classes": [212, 213]
+  },
+  {
+    "courseNo": 207,
+    "name": "Course 207",
+    "description": "Description for Course 207",
+    "category": "Data Science",
+    "status": "Current",
+    "prerequisites": [228],
+    "classes": [214, 215]
+  },
+  {
+    "courseNo": 208,
+    "name": "Course 208",
+    "description": "Description for Course 208",
+    "category": "Cyber Security",
+    "status": "Current",
+    "prerequisites": [],
+    "classes": [216, 217]
+  },
+  {
+    "courseNo": 209,
+    "name": "Course 209",
+    "description": "Description for Course 209",
+    "category": "Cloud Computing",
+    "status": "Open",
+    "prerequisites": [221],
+    "classes": [218, 219]
+  },
+  {
+    "courseNo": 210,
+    "name": "Course 210",
+    "description": "Description for Course 210",
+    "category": "Sports",
+    "status": "Open",
+    "prerequisites": [],
+    "classes": [220, 221]
+  },
+  {
+    "courseNo": 211,
+    "name": "Course 211",
+    "description": "Description for Course 211",
+    "category": "Mobile Development",
+    "status": "Open",
+    "prerequisites": [],
+    "classes": [222, 223]
+  },
+  {
+    "courseNo": 212,
+    "name": "Course 212",
+    "description": "Description for Course 212",
+    "category": "Artificial Intelligence",
+    "status": "Open",
+    "prerequisites": [242],
+    "classes": [224, 225]
+  },
+  {
+    "courseNo": 213,
+    "name": "Course 213",
+    "description": "Description for Course 213",
+    "category": "Design",
+    "status": "Current",
+    "prerequisites": [],
+    "classes": [226, 227]
+  },
+  {
+    "courseNo": 214,
+    "name": "Course 214",
+    "description": "Description for Course 214",
+    "category": "Artificial Intelligence",
+    "status": "Current",
+    "prerequisites": [228, 209],
+    "classes": [228, 229]
+  },
+  {
+    "courseNo": 215,
+    "name": "Course 215",
+    "description": "Description for Course 215",
+    "category": "Sports",
+    "status": "Open",
+    "prerequisites": [222, 228, 248],
+    "classes": [230, 231]
+  },
+  {
+    "courseNo": 216,
+    "name": "Course 216",
+    "description": "Description for Course 216",
+    "category": "Sports",
+    "status": "Open",
+    "prerequisites": [245],
+    "classes": [232, 233]
+  },
+  {
+    "courseNo": 217,
+    "name": "Course 217",
+    "description": "Description for Course 217",
+    "category": "Business",
+    "status": "Open",
+    "prerequisites": [],
+    "classes": [234, 235]
+  },
+  {
+    "courseNo": 218,
+    "name": "Course 218",
+    "description": "Description for Course 218",
+    "category": "Design",
+    "status": "Open",
+    "prerequisites": [],
+    "classes": [236, 237]
+  },
+  {
+    "courseNo": 219,
+    "name": "Course 219",
+    "description": "Description for Course 219",
+    "category": "Programming",
+    "status": "Current",
+    "prerequisites": [238],
+    "classes": [238, 239]
+  },
+  {
+    "courseNo": 220,
+    "name": "Course 220",
+    "description": "Description for Course 220",
+    "category": "DevOps",
+    "status": "Current",
+    "prerequisites": [240, 207, 248],
+    "classes": [240, 241]
+  },
+  {
+    "courseNo": 221,
+    "name": "Course 221",
+    "description": "Description for Course 221",
+    "category": "Artificial Intelligence",
+    "status": "Current",
+    "prerequisites": [230, 203, 244],
+    "classes": [242, 243]
+  },
+  {
+    "courseNo": 222,
+    "name": "Course 222",
+    "description": "Description for Course 222",
+    "category": "Artificial Intelligence",
+    "status": "Current",
+    "prerequisites": [],
+    "classes": [244, 245]
+  },
+  {
+    "courseNo": 223,
+    "name": "Course 223",
+    "description": "Description for Course 223",
+    "category": "Business",
+    "status": "Current",
+    "prerequisites": [],
+    "classes": [246, 247]
+  },
+  {
+    "courseNo": 224,
+    "name": "Course 224",
+    "description": "Description for Course 224",
+    "category": "Cyber Security",
+    "status": "Open",
+    "prerequisites": [],
+    "classes": [248, 249]
+  },
+  {
+    "courseNo": 225,
+    "name": "Course 225",
+    "description": "Description for Course 225",
+    "category": "DevOps",
+    "status": "Open",
+    "prerequisites": [],
+    "classes": [250, 251]
+  },
+  {
+    "courseNo": 226,
+    "name": "Course 226",
+    "description": "Description for Course 226",
+    "category": "Data Science",
+    "status": "Open",
+    "prerequisites": [],
+    "classes": [252, 253]
+  },
+  {
+    "courseNo": 227,
+    "name": "Course 227",
+    "description": "Description for Course 227",
+    "category": "Artificial Intelligence",
+    "status": "Current",
+    "prerequisites": [],
+    "classes": [254, 255]
+  },
+  {
+    "courseNo": 228,
+    "name": "Course 228",
+    "description": "Description for Course 228",
+    "category": "Cloud Computing",
+    "status": "Current",
+    "prerequisites": [],
+    "classes": [256, 257]
+  },
+  {
+    "courseNo": 229,
+    "name": "Course 229",
+    "description": "Description for Course 229",
+    "category": "Business",
+    "status": "Open",
+    "prerequisites": [],
+    "classes": [258, 259]
+  },
+  {
+    "courseNo": 230,
+    "name": "Course 230",
+    "description": "Description for Course 230",
+    "category": "Programming",
+    "status": "Open",
+    "prerequisites": [],
+    "classes": [260, 261]
+  },
+  {
+    "courseNo": 231,
+    "name": "Course 231",
+    "description": "Description for Course 231",
+    "category": "Cloud Computing",
+    "status": "Open",
+    "prerequisites": [241, 230],
+    "classes": [262, 263]
+  },
+  {
+    "courseNo": 232,
+    "name": "Course 232",
+    "description": "Description for Course 232",
+    "category": "Cloud Computing",
+    "status": "Current",
+    "prerequisites": [215],
+    "classes": [264, 265]
+  },
+  {
+    "courseNo": 233,
+    "name": "Course 233",
+    "description": "Description for Course 233",
+    "category": "Cyber Security",
+    "status": "Current",
+    "prerequisites": [],
+    "classes": [266, 267]
+  },
+  {
+    "courseNo": 234,
+    "name": "Course 234",
+    "description": "Description for Course 234",
+    "category": "Cloud Computing",
+    "status": "Current",
+    "prerequisites": [],
+    "classes": [268, 269]
+  },
+  {
+    "courseNo": 235,
+    "name": "Course 235",
+    "description": "Description for Course 235",
+    "category": "Business",
+    "status": "Open",
+    "prerequisites": [217, 237],
+    "classes": [270, 271]
+  },
+  {
+    "courseNo": 236,
+    "name": "Course 236",
+    "description": "Description for Course 236",
+    "category": "DevOps",
+    "status": "Open",
+    "prerequisites": [249, 211, 219],
+    "classes": [272, 273]
+  },
+  {
+    "courseNo": 237,
+    "name": "Course 237",
+    "description": "Description for Course 237",
+    "category": "Artificial Intelligence",
+    "status": "Open",
+    "prerequisites": [],
+    "classes": [274, 275]
+  },
+  {
+    "courseNo": 238,
+    "name": "Course 238",
+    "description": "Description for Course 238",
+    "category": "Design",
+    "status": "Current",
+    "prerequisites": [],
+    "classes": [276, 277]
+  },
+  {
+    "courseNo": 239,
+    "name": "Course 239",
+    "description": "Description for Course 239",
+    "category": "Design",
+    "status": "Open",
+    "prerequisites": [],
+    "classes": [278, 279]
+  },
+  {
+    "courseNo": 240,
+    "name": "Course 240",
+    "description": "Description for Course 240",
+    "category": "Cyber Security",
+    "status": "Current",
+    "prerequisites": [],
+    "classes": [280, 281]
+  },
+  {
+    "courseNo": 241,
+    "name": "Course 241",
+    "description": "Description for Course 241",
+    "category": "Cyber Security",
+    "status": "Open",
+    "prerequisites": [233, 223, 240],
+    "classes": [282, 283]
+  },
+  {
+    "courseNo": 242,
+    "name": "Course 242",
+    "description": "Description for Course 242",
+    "category": "Programming",
+    "status": "Current",
+    "prerequisites": [243, 237, 204],
+    "classes": [284, 285]
+  },
+  {
+    "courseNo": 243,
+    "name": "Course 243",
+    "description": "Description for Course 243",
+    "category": "Sports",
+    "status": "Current",
+    "prerequisites": [249, 215],
+    "classes": [286, 287]
+  },
+  {
+    "courseNo": 244,
+    "name": "Course 244",
+    "description": "Description for Course 244",
+    "category": "Cyber Security",
+    "status": "Current",
+    "prerequisites": [228, 208, 247],
+    "classes": [288, 289]
+  },
+  {
+    "courseNo": 245,
+    "name": "Course 245",
+    "description": "Description for Course 245",
+    "category": "DevOps",
+    "status": "Current",
+    "prerequisites": [],
+    "classes": [290, 291]
+  },
+  {
+    "courseNo": 246,
+    "name": "Course 246",
+    "description": "Description for Course 246",
+    "category": "DevOps",
+    "status": "Open",
+    "prerequisites": [],
+    "classes": [292, 293]
+  },
+  {
+    "courseNo": 247,
+    "name": "Course 247",
+    "description": "Description for Course 247",
+    "category": "Design",
+    "status": "Open",
+    "prerequisites": [],
+    "classes": [294, 295]
+  },
+  {
+    "courseNo": 248,
+    "name": "Course 248",
+    "description": "Description for Course 248",
+    "category": "Programming",
+    "status": "Current",
+    "prerequisites": [],
+    "classes": [296, 297]
+  },
+  {
+    "courseNo": 249,
+    "name": "Course 249",
+    "description": "Description for Course 249",
+    "category": "Business",
+    "status": "Open",
+    "prerequisites": [240, 233],
+    "classes": [298, 299]
+  }
+]

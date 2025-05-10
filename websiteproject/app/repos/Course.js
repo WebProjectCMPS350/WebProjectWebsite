@@ -36,7 +36,7 @@ class Course {
     const courses = await this.getCourses();
     const course = courses.find((course) => course.courseNo == courseNo);
     if (!course) {
-      return { error: "Account not found" };
+      return { error: "Course not found" };
     }
     return course;
   }
@@ -74,14 +74,13 @@ class Course {
   }
 
   async getCourseClasses(courseNo) {
-    const classes = [];
     const course = await this.getCourse(courseNo);
 
-    for (const classNo of course.classes) {
-      const classObj = await classRepo.getClass(classNo);
-      classes.push(classObj);
-    }
+    const classPromises = course.classes.map((classNo) =>
+      classRepo.getClass(classNo)
+    );
 
+    const classes = await Promise.all(classPromises);
     return classes;
   }
 
