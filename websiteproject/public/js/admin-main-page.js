@@ -209,7 +209,7 @@ async function handleCoursesFilter() {
     courses.map((course) => templateCourses(course))
   );
   cardsContainer.innerHTML = htmlArray.join("\n");
-
+  handleSearchOfCourses();
   setupActionButtons();
 }
 
@@ -224,7 +224,7 @@ async function handleClassesFilter() {
     classes.map((clas) => templateClass(clas))
   );
   cardsContainer.innerHTML = htmlArray.join("\n");
-
+  handleSearchOfClasses();
   setupActionButtons();
 }
 
