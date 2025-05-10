@@ -45,7 +45,7 @@ body::-webkit-scrollbar {
     margin: 5rem auto;
     padding: 5rem 2rem;
     border-radius: 2.5rem;
-    background-image: url(../public/imgs/cool-background.svg);
+    background-image: url(.././public/imgs/cool-background.svg);
     background-color: white;
     background-size: cover;
 
@@ -170,7 +170,6 @@ footer ul li a:hover {
         padding: 5rem 2rem;
         height: 30rem;
     }
-
 
     .footer-content {
         display: flex;

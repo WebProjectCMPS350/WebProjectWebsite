@@ -67,4 +67,4 @@ class Instructor {
   }
 }
 
-export default Instructor;
+export default new Instructor();

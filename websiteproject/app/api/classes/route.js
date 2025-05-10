@@ -1,6 +1,4 @@
-import clas from "@/app/repos/Class";
-
-const classRepo = new clas();
+import classRepo from "@/app/repos/Class";
 
 export async function GET(req) {
   const clas = await classRepo.getClasses();
@@ -9,7 +7,7 @@ export async function GET(req) {
 
 export async function PUT(req) {
   const clas = await req.json();
-  const newClass = await classRepo.updateClass(clas.classNo ,clas);
+  const newClass = await classRepo.updateClass(clas.classNo, clas);
   return Response.json(newClass, { status: 200 });
 }
 
@@ -21,6 +19,6 @@ export async function POST(req) {
 
 export async function DELETE(req) {
   const clas = await req.json();
-  const newClass = await classRepo.deleteClass(clas.classNo ,clas);
+  const newClass = await classRepo.deleteClass(clas.classNo, clas);
   return Response.json(newClass, { status: 200 });
 }

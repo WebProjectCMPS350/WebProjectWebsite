@@ -1,14 +1,12 @@
-import courseRepo from "./repository/Course.js";
-import classRepo from "./repository/Class.js";
-import studentRepo from "./repository/Student.js";
-import adminRepo from "./repository/Administrator.js";
-import instructorRepo from "./repository/Instructor.js";
+// Done
+import generalRepo from "./repository/General.js";
 
 const loginForm = document.querySelector("#login-form");
-const html = document.querySelector("html");
 
 localStorage.loggedIn = false;
 localStorage.userType = null;
+localStorage.username = null;
+localStorage.clas = null;
 
 loginForm.addEventListener("submit", handleLogin);
 
@@ -17,37 +15,30 @@ async function handleLogin(e) {
   const formData = new FormData(loginForm);
   const data = Object.fromEntries(formData);
 
-  const students = await studentRepo.getStudents();
-  const admins = await adminRepo.getAdministrators();
-  const instructors = await instructorRepo.getInstructors();
+  const answer = await generalRepo.handleLoginPage(
+    data.username,
+    data.password
+  );
 
-  for (const student of students) {
-    if (
-      student.username === data.username &&
-      student.password === data.password
-    ) {
-      loadStudentMainPage(student);
-      return;
-    }
-  }
-  for (const admin of admins) {
-    if (admin.username === data.username && admin.password === data.password) {
-      loadAdminMainPage(admin);
-      return;
-    }
-  }
-  for (const instructor of instructors) {
-    if (
-      instructor.username === data.username &&
-      instructor.password === data.password
-    ) {
-      loadInstructorMainPage(instructor);
-      return;
-    }
-  }
+  if (answer.role === null) {
+    const err = document.querySelector("#error-message");
+    err.innerHTML = `Invalid username or password`;
+    setTimeout(() => {
+      err.innerHTML = "";
+    }, 3000);
+    return;
+  } else if (answer.role === "Student") {
+    loadStudentMainPage(answer.obj);
+    return;
+  } else if (answer.role === "Instructor") {
+    loadInstructorMainPage(answer.obj);
+    return;
+  } else if (answer.role === "Admin") {
+    console.log(answer);
+    loadAdminMainPage(answer.obj);
 
-  const err = document.querySelector("#error-message");
-  err.innerHTML = `Invalid username or password`;
+    return;
+  }
 }
 
 async function loadStudentMainPage(student) {

@@ -1,6 +1,4 @@
-import student from "@/app/repos/Student";
-
-const studentRepo = new student();
+import studentRepo from "@/app/repos/Student";
 
 export async function GET(req) {
   const stu = await studentRepo.getStudents();
@@ -9,7 +7,7 @@ export async function GET(req) {
 
 export async function PUT(req) {
   const stu = await req.json();
-  const newStudent = await studentRepo.updateStudent(stu.username ,stu);
+  const newStudent = await studentRepo.updateStudent(stu.username, stu);
   return Response.json(newStudent, { status: 200 });
 }
 
@@ -21,6 +19,6 @@ export async function POST(req) {
 
 export async function DELETE(req) {
   const stu = await req.json();
-  const newStudent = await studentRepo.deleteStudent(stu.username ,stu);
+  const newStudent = await studentRepo.deleteStudent(stu.username, stu);
   return Response.json(newStudent, { status: 200 });
 }

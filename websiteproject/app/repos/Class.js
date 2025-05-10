@@ -57,4 +57,4 @@ class Class {
   }
 }
 
-export default Class;
+export default new Class();

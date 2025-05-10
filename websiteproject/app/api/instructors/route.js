@@ -1,6 +1,4 @@
-import instructor from "@/app/repos/Instructor";
-
-const instructorRepo = new instructor();
+import instructorRepo from "@/app/repos/Instructor";
 
 export async function GET(req) {
   const instructor = await instructorRepo.getInstructors();
@@ -9,7 +7,10 @@ export async function GET(req) {
 
 export async function PUT(req) {
   const instructor = await req.json();
-  const newInstructor = await instructorRepo.updateInstructor(instructor.username ,instructor);
+  const newInstructor = await instructorRepo.updateInstructor(
+    instructor.username,
+    instructor
+  );
   return Response.json(newInstructor, { status: 200 });
 }
 
@@ -21,6 +22,9 @@ export async function POST(req) {
 
 export async function DELETE(req) {
   const instructor = await req.json();
-  const newInstructor = await instructorRepo.deleteInstructor(instructor.username ,instructor);
+  const newInstructor = await instructorRepo.deleteInstructor(
+    instructor.username,
+    instructor
+  );
   return Response.json(newInstructor, { status: 200 });
 }

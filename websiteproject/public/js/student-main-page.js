@@ -1,8 +1,6 @@
 import courseRepo from "./repository/Course.js";
 import classRepo from "./repository/Class.js";
 import studentRepo from "./repository/Student.js";
-import adminRepo from "./repository/Administrator.js";
-import instructorRepo from "./repository/Instructor.js";
 
 const cardsContainer = document.querySelector("#cards-container");
 const search = document.querySelector("#searchInput");
@@ -140,15 +138,13 @@ async function loadCourses(e) {
 function isSubset(arr1, arr2) {
   const set2 = new Set(arr2);
 
-  return arr1.every(item => set2.has(item));
+  return arr1.every((item) => set2.has(item));
 }
-
 
 async function templateCourses(course) {
   const classes = await Promise.all(
     course.classes.map((classItem) => classRepo.getClass(classItem))
   );
-
 
   return `
     
@@ -323,11 +319,3 @@ async function handleSearch() {
     });
   });
 }
-
-/*
-
-    <div class="card">
-        <h1>Hello</h1>
-    </div>
-
-*/

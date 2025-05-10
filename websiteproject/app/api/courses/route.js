@@ -1,6 +1,4 @@
-import course from "@/app/repos/Course";
-
-const courseRepo = new course();
+import courseRepo from "@/app/repos/Course";
 
 export async function GET(req) {
   const course = await courseRepo.getCourses();
@@ -9,7 +7,7 @@ export async function GET(req) {
 
 export async function PUT(req) {
   const course = await req.json();
-  const newCourse = await courseRepo.updateCourse(course.courseNo ,course);
+  const newCourse = await courseRepo.updateCourse(course.courseNo, course);
   return Response.json(newCourse, { status: 200 });
 }
 
@@ -21,6 +19,6 @@ export async function POST(req) {
 
 export async function DELETE(req) {
   const course = await req.json();
-  const newCourse = await courseRepo.deleteCourse(course.courseNo ,course);
+  const newCourse = await courseRepo.deleteCourse(course.courseNo, course);
   return Response.json(newCourse, { status: 200 });
 }

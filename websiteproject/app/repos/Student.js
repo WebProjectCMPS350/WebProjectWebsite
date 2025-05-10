@@ -58,4 +58,4 @@ class Student {
   }
 }
 
-export default Student;
+export default new Student();

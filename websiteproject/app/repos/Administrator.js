@@ -21,10 +21,10 @@ class Administrator {
   async getAdministrator(username) {
     const administrators = await this.getAdministrators();
     const administrator = administrators.find(
-      (administrator) => administrators.username == username
+      (administrator) => administrator.username == username
     );
     if (!administrator) {
-      return { error: "Administrators not found" };
+      return { error: "Administrator not found" };
     }
     return administrator;
   }
@@ -67,4 +67,4 @@ class Administrator {
   }
 }
 
-export default Administrator;
+export default new Administrator();

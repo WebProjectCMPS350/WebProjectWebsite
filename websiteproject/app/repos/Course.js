@@ -71,4 +71,4 @@ class Course {
   }
 }
 
-export default Course;
+export default new Course();
