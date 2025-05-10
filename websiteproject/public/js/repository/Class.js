@@ -41,10 +41,10 @@ class Class {
   }
 
   async getParentCourse(classNo) {
-    const clas = await this.getClass(classNo);
-    const courseNo = await clas.parentCourse;
-    const course = await courseRepo.getCourse(courseNo);
-    return course;
+    const response = await fetch(
+      `${baseUrl}/getParentCourse?classNo=${classNo}`
+    );
+    return response.json();
   }
 
   async getClassesByInstructorName(instructorName) {

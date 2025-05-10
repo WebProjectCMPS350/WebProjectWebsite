@@ -2,7 +2,7 @@ import courseRepo from "./repository/Course.js";
 import classRepo from "./repository/Class.js";
 import studentRepo from "./repository/Student.js";
 import adminRepo from "./repository/Administrator.js";
-import instructorRepo from "./repository/Instructor.js";
+import generalRepo from "./repository/General.js";
 
 const cardsContainer = document.querySelector("#cards-container");
 const search = document.querySelector("#searchInput");
@@ -18,6 +18,15 @@ categorySelect.addEventListener("change", () => searchClassesAndCourses());
 const admin = await adminRepo.getAdministrator(localStorage.username);
 let currentClasses = [];
 let currentCourses = [];
+
+const allCourses = await courseRepo.getCourses();
+const allClasses = await classRepo.getClasses();
+
+const courseMap = new Map();
+const classMap = new Map();
+
+for (const course of allCourses) courseMap.set(course.courseNo, course);
+for (const clas of allClasses) classMap.set(clas.classNo, clas);
 
 search.addEventListener("keyup", type);
 typeOfSearch.addEventListener("change", type);
@@ -44,7 +53,8 @@ async function loadClasses(e) {
 }
 
 async function templateClass(clas) {
-  const course = await classRepo.getParentCourse(clas.classNo);
+  const course = courseMap.get(clas.parentCourse);
+
   return `
     
     <div class="card">
@@ -218,10 +228,6 @@ async function handleClassesFilter() {
 }
 
 async function templateCourses(course) {
-  const classes = await Promise.all(
-    course.classes.map((classItem) => classRepo.getClass(classItem))
-  );
-
   return `
     
     <div class="card">

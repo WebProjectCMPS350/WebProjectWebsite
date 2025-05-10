@@ -1,5 +1,6 @@
 import fse from "fs-extra";
 import path from "path";
+import courseRepo from "./Course.js"; // Import the course repository
 
 class Class {
   constructor() {
@@ -54,6 +55,13 @@ class Class {
     classes.splice(index, 1);
     await this.saveClasses(classes);
     return { message: "Class deleted successfully" };
+  }
+
+  async getParentCourse(classNo) {
+    const clas = await this.getClass(classNo);
+    const courseNo = await clas.parentCourse;
+
+    return await courseRepo.getCourse(courseNo);
   }
 }
 
