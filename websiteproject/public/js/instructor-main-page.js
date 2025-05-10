@@ -1,7 +1,5 @@
-import courseRepo from "./repository/Course.js";
 import classRepo from "./repository/Class.js";
-import studentRepo from "./repository/Student.js";
-import adminRepo from "./repository/Administrator.js";
+import courseRepo from "./repository/Course.js";
 import instructorRepo from "./repository/Instructor.js";
 
 const cardsContainer = document.querySelector("#cards-container");
@@ -10,7 +8,7 @@ const typeOfSearch = document.querySelector("#typeOfSearch");
 
 document.addEventListener("DOMContentLoaded", loadClasses);
 search.addEventListener("keyup", handleSearch);
-typeOfSearch.addEventListener("change", type);
+typeOfSearch.addEventListener("change", handleSearch);
 
 async function loadClasses() {
   const instructor = await instructorRepo.getInstructor(localStorage.username);
@@ -25,7 +23,6 @@ async function loadClasses() {
   cardsContainer.innerHTML = htmlArray.join("\n");
 
   const validateVtnBtn = document.querySelectorAll(".validate-btn");
-  const messages = document.querySelectorAll(".message");
 
   validateVtnBtn.forEach((btn) => {
     btn.addEventListener("click", async () => {
@@ -38,9 +35,12 @@ async function loadClasses() {
     });
   });
 }
+const allCourses = await courseRepo.getCourses();
+const courseMap = new Map();
+for (const course of allCourses) courseMap.set(course.courseNo, course);
 
 async function templateClass(clas) {
-  const course = await classRepo.getParentCourse(clas.classNo);
+  const course = await courseMap.get(clas.parentCourse);
   return `
     
     <div class="card">
@@ -67,10 +67,6 @@ async function templateClass(clas) {
         </div>
     </div>
     `;
-}
-
-async function type() {
-  handleSearch();
 }
 
 async function handleSearch() {
