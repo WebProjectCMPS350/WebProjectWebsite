@@ -1,132 +1,172 @@
-/* Reset some default styles */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+:root {}
+
+.container {
+    display: grid;
+    height: 100vh;
+
+    grid-template-rows: auto 3fr auto;
+    grid-template-columns: 1fr;
+
+    grid-template-areas:
+        "header header header"
+        "main main main"
+        "footer footer footer";
 }
 
 header {
-    background: linear-gradient(to bottom, #6a11cb, #4392F1);
-    color: white;
-    padding: 2.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #555;
+    padding: 10px;
     text-align: center;
-    width: 100%;
-    box-shadow: 0 0px 50px 5px #4392F1a1;
-    border: none;
-
+    grid-area: header;
 }
 
 header h1 {
-    font-size: 2rem;
-    opacity: 0.9;
-    margin-bottom: 1rem;
+    border-bottom: 1px solid white;
+    color: white;
+    width: 100%;
+
 
 }
 
-body {
+header h1:hover {
+    color: rgb(0, 136, 255);
+    cursor: pointer;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+}
+
+nav {
+    padding: 0.5rem 0;
+}
+
+
+nav li a {
+    color: white;
+    list-style: none;
+    text-decoration: none;
+    border: 1px solid transparent;
+
+    border-radius: 2rem;
+    padding: 0.1rem 2rem;
+
+}
+
+nav li a:hover {
+    color: rgb(0, 136, 255);
+    border: 1px solid white;
+    padding: 0.1rem 2rem;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+nav ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow: scroll;
-
+    list-style: none;
+    gap: 1rem;
 
 }
 
-body::-webkit-scrollbar {
-    display: none;
+
+
+main {
+    background-color: #f9f9f9;
+    color: black;
+    padding: 10px;
+    text-align: center;
+    grid-area: main;
 }
 
 
-.login-container {
-    width: 80%;
+.contact-wrapper {
     display: flex;
     flex-direction: column;
-    margin: 5rem auto;
-    padding: 5rem 2rem;
-    border-radius: 2.5rem;
-    background-image: url(.././public/imgs/cool-background.svg);
-    background-color: white;
-    background-size: cover;
-
-
+    align-items: center;
+    padding: 2rem;
+    gap: 2rem;
+    background-color: #fff;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    max-width: 600px;
+    margin: 2rem auto;
 }
 
-form {
+.contact-info h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    color: #333;
+}
+
+.contact-form {
     display: flex;
     flex-direction: column;
+    width: 100%;
     gap: 1rem;
 }
 
-.login-container:hover {
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-    transition: 250ms;
-}
-
-#login-form {
-    font-size: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    align-items: left;
-    justify-content: left;
-}
-
-.input-group input {
-    width: 100%;
-    padding: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-}
-
 .input-group {
-    margin-bottom: 1rem;
     display: flex;
     flex-direction: column;
-
 }
 
+.input-group label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
 
-button {
-    width: 100%;
-    padding: 1rem;
-    margin-top: 2rem;
-    border-radius: 2.5rem;
+.input-group input,
+.input-group textarea {
+    padding: 0.75rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
     font-size: 1rem;
-    font-weight: bold;
-    background-color: transparent;
-    border: 2px solid black;
 }
 
-button:hover {
-    background-color: #4392F1;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    cursor: pointer;
-    transition: 250ms;
+.contact-form button {
+    background-color: #555;
     color: white;
-    border: 2px solid #4392F1;
-
-}
-
-#error-message{
-    color: red;
-    font-size: 1.2rem;
-    margin-top: 1rem;
-    text-align: center;
-    font-weight: bold;
-    
-}
-
-footer{
-    background: linear-gradient(to bottom, #6a11cb, #4392F1);
-    color: white;
-    padding: 1rem 1rem;
-    text-align: center;
-    width: 100%;
-    box-shadow: 0 0px 50px 5px #4392F1a1;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
     border: none;
-    font-size: 1.1rem;
+    cursor: pointer;
+    font-size: 1rem;
 }
+
+.contact-form button:hover {
+    background-color: rgb(0, 136, 255);
+    box-shadow: rgba(0, 136, 255, 0.4) 0px 2px 10px;
+    transition: 0.3s;
+}
+
+
+
+
+footer {
+    background-color: #666;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    grid-area: footer;
+}
+
 
 footer ul {
     display: flex;
@@ -152,23 +192,72 @@ footer ul li a:hover {
 }
 
 
+
+/* Responsive Styles */
+
 @media screen and (min-width: 768px) {
-    .input-group {
-        margin-bottom: 1rem;
+
+
+    .container {
+        display: grid;
+        height: 100vh;
+
+        grid-template-rows: auto 3fr auto;
+        grid-template-columns: repeat(3, 1fr);
+
+        grid-template-areas:
+            "header header header"
+            "main main main"
+            "footer footer footer";
+    }
+
+    header h1 {
+        color: white;
+        border: none;
+        width: auto;
+        font-size: 1.8rem;
+
+    }
+
+    header {
         display: flex;
         flex-direction: row;
-        gap: 1rem;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0;
+        padding: 0rem 0rem;
+        padding-left: 1rem;
     }
 
-    #white-space {
-        margin-right: 5px;
+    nav li a {
+        border-radius: 2rem;
+        padding: 0.1rem 1.5rem;
+
     }
 
-    .login-container {
-        max-width: 55rem;
-        margin: 5rem auto;
-        padding: 5rem 2rem;
-        height: 30rem;
+    nav li a:hover {
+
+        padding: 0.1rem 1.5rem;
+
+    }
+
+    nav ul {
+        flex-direction: row;
+        gap: 0rem;
+        ;
+
+    }
+
+    nav ul li {
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        align-items: right;
+        gap: 0rem;
+    }
+
+    nav ul li {
+        gap: 0;
     }
 
     .footer-content {
@@ -179,4 +268,9 @@ footer ul li a:hover {
         gap: 0rem;
         padding: 0rem 1rem;
     }
+
+
+
+
+
 }
