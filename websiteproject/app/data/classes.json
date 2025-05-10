@@ -5,9 +5,9 @@
     "classTime": "9:00 AM",
     "classDays": ["Sunday", "Tuesday", "Thursday"],
     "instructor": "Instructor YS",
-    "noOfStudents": 0,
     "status": "Current",
-    "parentCourse": 200
+    "parentCourse": 200,
+    "noOfStudents": 12
   },
   {
     "classNo": 201,
@@ -15,9 +15,9 @@
     "classTime": "12:00 AM",
     "classDays": ["Monday", "Wednesday"],
     "instructor": "Instructor QP",
-    "noOfStudents": 0,
     "status": "Open",
-    "parentCourse": 200
+    "parentCourse": 200,
+    "noOfStudents": 15
   },
   {
     "classNo": 202,
@@ -25,9 +25,9 @@
     "classTime": "9:00 AM",
     "classDays": ["Tuesday", "Thursday"],
     "instructor": "Instructor LJ",
-    "noOfStudents": 0,
     "status": "Current",
-    "parentCourse": 201
+    "parentCourse": 201,
+    "noOfStudents": 17
   },
   {
     "classNo": 203,
@@ -35,9 +35,9 @@
     "classTime": "10:00 AM",
     "classDays": ["Tuesday", "Thursday"],
     "instructor": "Instructor DJ",
-    "noOfStudents": 0,
     "status": "Current",
-    "parentCourse": 201
+    "parentCourse": 201,
+    "noOfStudents": 15
   },
   {
     "classNo": 204,
@@ -45,9 +45,9 @@
     "classTime": "12:00 AM",
     "classDays": ["Sunday", "Tuesday", "Thursday"],
     "instructor": "Instructor GB",
-    "noOfStudents": 2,
     "status": "Open",
-    "parentCourse": 202
+    "parentCourse": 202,
+    "noOfStudents": 24
   },
   {
     "classNo": 205,
@@ -55,9 +55,9 @@
     "classTime": "12:00 AM",
     "classDays": ["Sunday", "Tuesday", "Thursday"],
     "instructor": "Instructor PW",
-    "noOfStudents": 0,
     "status": "Open",
-    "parentCourse": 202
+    "parentCourse": 202,
+    "noOfStudents": 12
   },
   {
     "classNo": 206,
@@ -65,9 +65,9 @@
     "classTime": "9:00 AM",
     "classDays": ["Monday", "Wednesday"],
     "instructor": "Instructor XR",
-    "noOfStudents": 0,
     "status": "Closed",
-    "parentCourse": 203
+    "parentCourse": 203,
+    "noOfStudents": 20
   },
   {
     "classNo": 207,
@@ -75,9 +75,9 @@
     "classTime": "10:00 AM",
     "classDays": ["Sunday", "Tuesday", "Thursday"],
     "instructor": "Instructor UB",
-    "noOfStudents": 0,
     "status": "Closed",
-    "parentCourse": 203
+    "parentCourse": 203,
+    "noOfStudents": 17
   },
   {
     "classNo": 208,
@@ -85,9 +85,9 @@
     "classTime": "12:00 AM",
     "classDays": ["Tuesday", "Thursday"],
     "instructor": "Instructor XM",
-    "noOfStudents": 0,
     "status": "Closed",
-    "parentCourse": 204
+    "parentCourse": 204,
+    "noOfStudents": 18
   },
   {
     "classNo": 209,
@@ -95,9 +95,9 @@
     "classTime": "12:00 AM",
     "classDays": ["Sunday", "Tuesday", "Thursday"],
     "instructor": "Instructor GB",
-    "noOfStudents": 0,
     "status": "Open",
-    "parentCourse": 204
+    "parentCourse": 204,
+    "noOfStudents": 9
   },
   {
     "classNo": 210,
@@ -105,9 +105,9 @@
     "classTime": "10:00 AM",
     "classDays": ["Monday", "Wednesday"],
     "instructor": "Instructor UB",
-    "noOfStudents": 0,
     "status": "Closed",
-    "parentCourse": 205
+    "parentCourse": 205,
+    "noOfStudents": 21
   },
   {
     "classNo": 211,
@@ -115,9 +115,9 @@
     "classTime": "9:00 AM",
     "classDays": ["Sunday", "Tuesday", "Thursday"],
     "instructor": "Instructor TT",
-    "noOfStudents": 0,
     "status": "Current",
-    "parentCourse": 205
+    "parentCourse": 205,
+    "noOfStudents": 23
   },
   {
     "classNo": 212,
@@ -125,9 +125,9 @@
     "classTime": "10:00 AM",
     "classDays": ["Sunday", "Tuesday", "Thursday"],
     "instructor": "Instructor QP",
-    "noOfStudents": 0,
     "status": "Closed",
-    "parentCourse": 206
+    "parentCourse": 206,
+    "noOfStudents": 14
   },
   {
     "classNo": 213,
@@ -135,9 +135,9 @@
     "classTime": "9:00 AM",
     "classDays": ["Monday", "Wednesday"],
     "instructor": "Instructor DJ",
-    "noOfStudents": 0,
     "status": "Open",
-    "parentCourse": 206
+    "parentCourse": 206,
+    "noOfStudents": 20
   },
   {
     "classNo": 214,
@@ -145,9 +145,9 @@
     "classTime": "8:00 AM",
     "classDays": ["Tuesday", "Thursday"],
     "instructor": "Instructor TT",
-    "noOfStudents": 0,
     "status": "Open",
-    "parentCourse": 207
+    "parentCourse": 207,
+    "noOfStudents": 21
   },
   {
     "classNo": 215,
@@ -155,9 +155,9 @@
     "classTime": "12:00 AM",
     "classDays": ["Monday", "Wednesday"],
     "instructor": "Instructor GB",
-    "noOfStudents": 0,
     "status": "Current",
-    "parentCourse": 207
+    "parentCourse": 207,
+    "noOfStudents": 16
   },
   {
     "classNo": 216,
@@ -165,9 +165,9 @@
     "classTime": "8:00 AM",
     "classDays": ["Monday", "Wednesday"],
     "instructor": "Instructor UB",
-    "noOfStudents": 0,
     "status": "Open",
-    "parentCourse": 208
+    "parentCourse": 208,
+    "noOfStudents": 15
   },
   {
     "classNo": 217,
@@ -175,9 +175,9 @@
     "classTime": "12:00 AM",
     "classDays": ["Monday", "Wednesday"],
     "instructor": "Instructor XM",
-    "noOfStudents": 0,
     "status": "Open",
-    "parentCourse": 208
+    "parentCourse": 208,
+    "noOfStudents": 20
   },
   {
     "classNo": 218,
@@ -185,9 +185,9 @@
     "classTime": "9:00 AM",
     "classDays": ["Sunday", "Tuesday", "Thursday"],
     "instructor": "Instructor XR",
-    "noOfStudents": 0,
     "status": "Current",
-    "parentCourse": 209
+    "parentCourse": 209,
+    "noOfStudents": 11
   },
   {
     "classNo": 219,
@@ -195,9 +195,9 @@
     "classTime": "9:00 AM",
     "classDays": ["Sunday", "Tuesday", "Thursday"],
     "instructor": "Instructor GB",
-    "noOfStudents": 0,
     "status": "Current",
-    "parentCourse": 209
+    "parentCourse": 209,
+    "noOfStudents": 14
   },
   {
     "classNo": 220,
@@ -205,9 +205,9 @@
     "classTime": "8:00 AM",
     "classDays": ["Sunday", "Tuesday", "Thursday"],
     "instructor": "Instructor YS",
-    "noOfStudents": 0,
     "status": "Closed",
-    "parentCourse": 210
+    "parentCourse": 210,
+    "noOfStudents": 10
   },
   {
     "classNo": 221,
@@ -215,9 +215,9 @@
     "classTime": "10:00 AM",
     "classDays": ["Tuesday", "Thursday"],
     "instructor": "Instructor CE",
-    "noOfStudents": 0,
     "status": "Closed",
-    "parentCourse": 210
+    "parentCourse": 210,
+    "noOfStudents": 14
   },
   {
     "classNo": 222,
@@ -225,9 +225,9 @@
     "classTime": "9:00 AM",
     "classDays": ["Monday", "Wednesday"],
     "instructor": "Instructor YS",
-    "noOfStudents": 0,
     "status": "Open",
-    "parentCourse": 211
+    "parentCourse": 211,
+    "noOfStudents": 14
   },
   {
     "classNo": 223,
@@ -235,9 +235,9 @@
     "classTime": "8:00 AM",
     "classDays": ["Sunday", "Tuesday", "Thursday"],
     "instructor": "Instructor XI",
-    "noOfStudents": 0,
     "status": "Closed",
-    "parentCourse": 211
+    "parentCourse": 211,
+    "noOfStudents": 21
   },
   {
     "classNo": 224,
@@ -245,9 +245,9 @@
     "classTime": "8:00 AM",
     "classDays": ["Sunday", "Tuesday", "Thursday"],
     "instructor": "Instructor DJ",
-    "noOfStudents": 0,
     "status": "Current",
-    "parentCourse": 212
+    "parentCourse": 212,
+    "noOfStudents": 28
   },
   {
     "classNo": 225,
@@ -255,9 +255,9 @@
     "classTime": "10:00 AM",
     "classDays": ["Sunday", "Tuesday", "Thursday"],
     "instructor": "Instructor ZV",
-    "noOfStudents": 0,
     "status": "Closed",
-    "parentCourse": 212
+    "parentCourse": 212,
+    "noOfStudents": 23
   },
   {
     "classNo": 226,
@@ -265,9 +265,9 @@
     "classTime": "12:00 AM",
     "classDays": ["Monday", "Wednesday"],
     "instructor": "Instructor XM",
-    "noOfStudents": 0,
     "status": "Current",
-    "parentCourse": 213
+    "parentCourse": 213,
+    "noOfStudents": 11
   },
   {
     "classNo": 227,
@@ -275,9 +275,9 @@
     "classTime": "11:00 AM",
     "classDays": ["Tuesday", "Thursday"],
     "instructor": "Instructor YS",
-    "noOfStudents": 0,
     "status": "Current",
-    "parentCourse": 213
+    "parentCourse": 213,
+    "noOfStudents": 17
   },
   {
     "classNo": 228,
@@ -285,9 +285,9 @@
     "classTime": "9:00 AM",
     "classDays": ["Tuesday", "Thursday"],
     "instructor": "Instructor IM",
-    "noOfStudents": 0,
     "status": "Closed",
-    "parentCourse": 214
+    "parentCourse": 214,
+    "noOfStudents": 14
   },
   {
     "classNo": 229,
@@ -295,9 +295,9 @@
     "classTime": "12:00 AM",
     "classDays": ["Monday", "Wednesday"],
     "instructor": "Instructor LJ",
-    "noOfStudents": 0,
     "status": "Open",
-    "parentCourse": 214
+    "parentCourse": 214,
+    "noOfStudents": 13
   },
   {
     "classNo": 230,
@@ -305,9 +305,9 @@
     "classTime": "10:00 AM",
     "classDays": ["Monday", "Wednesday"],
     "instructor": "Instructor QP",
-    "noOfStudents": 0,
     "status": "Open",
-    "parentCourse": 215
+    "parentCourse": 215,
+    "noOfStudents": 17
   },
   {
     "classNo": 231,
@@ -315,9 +315,9 @@
     "classTime": "8:00 AM",
     "classDays": ["Sunday", "Tuesday", "Thursday"],
     "instructor": "Instructor UB",
-    "noOfStudents": 0,
     "status": "Closed",
-    "parentCourse": 215
+    "parentCourse": 215,
+    "noOfStudents": 22
   },
   {
     "classNo": 232,
@@ -325,9 +325,9 @@
     "classTime": "11:00 AM",
     "classDays": ["Monday", "Wednesday"],
     "instructor": "Instructor DZ",
-    "noOfStudents": 0,
     "status": "Closed",
-    "parentCourse": 216
+    "parentCourse": 216,
+    "noOfStudents": 17
   },
   {
     "classNo": 233,
@@ -335,9 +335,9 @@
     "classTime": "10:00 AM",
     "classDays": ["Tuesday", "Thursday"],
     "instructor": "Instructor DJ",
-    "noOfStudents": 0,
     "status": "Closed",
-    "parentCourse": 216
+    "parentCourse": 216,
+    "noOfStudents": 19
   },
   {
     "classNo": 234,
@@ -345,9 +345,9 @@
     "classTime": "11:00 AM",
     "classDays": ["Monday", "Wednesday"],
     "instructor": "Instructor PW",
-    "noOfStudents": 0,
     "status": "Open",
-    "parentCourse": 217
+    "parentCourse": 217,
+    "noOfStudents": 19
   },
   {
     "classNo": 235,
@@ -355,9 +355,9 @@
     "classTime": "11:00 AM",
     "classDays": ["Monday", "Wednesday"],
     "instructor": "Instructor LY",
-    "noOfStudents": 0,
     "status": "Current",
-    "parentCourse": 217
+    "parentCourse": 217,
+    "noOfStudents": 24
   },
   {
     "classNo": 236,
@@ -365,9 +365,9 @@
     "classTime": "11:00 AM",
     "classDays": ["Sunday", "Tuesday", "Thursday"],
     "instructor": "Instructor XM",
-    "noOfStudents": 0,
     "status": "Closed",
-    "parentCourse": 218
+    "parentCourse": 218,
+    "noOfStudents": 19
   },
   {
     "classNo": 237,
@@ -375,9 +375,9 @@
     "classTime": "11:00 AM",
     "classDays": ["Tuesday", "Thursday"],
     "instructor": "Instructor UB",
-    "noOfStudents": 0,
     "status": "Open",
-    "parentCourse": 218
+    "parentCourse": 218,
+    "noOfStudents": 13
   },
   {
     "classNo": 238,
@@ -385,9 +385,9 @@
     "classTime": "10:00 AM",
     "classDays": ["Tuesday", "Thursday"],
     "instructor": "Instructor DI",
-    "noOfStudents": 0,
     "status": "Current",
-    "parentCourse": 219
+    "parentCourse": 219,
+    "noOfStudents": 14
   },
   {
     "classNo": 239,
@@ -395,9 +395,9 @@
     "classTime": "8:00 AM",
     "classDays": ["Sunday", "Tuesday", "Thursday"],
     "instructor": "Instructor GB",
-    "noOfStudents": 0,
     "status": "Closed",
-    "parentCourse": 219
+    "parentCourse": 219,
+    "noOfStudents": 25
   },
   {
     "classNo": 240,
@@ -405,9 +405,9 @@
     "classTime": "9:00 AM",
     "classDays": ["Monday", "Wednesday"],
     "instructor": "Instructor QP",
-    "noOfStudents": 0,
     "status": "Open",
-    "parentCourse": 220
+    "parentCourse": 220,
+    "noOfStudents": 14
   },
   {
     "classNo": 241,
@@ -415,9 +415,9 @@
     "classTime": "8:00 AM",
     "classDays": ["Monday", "Wednesday"],
     "instructor": "Instructor DI",
-    "noOfStudents": 0,
     "status": "Closed",
-    "parentCourse": 220
+    "parentCourse": 220,
+    "noOfStudents": 17
   },
   {
     "classNo": 242,
@@ -425,9 +425,9 @@
     "classTime": "11:00 AM",
     "classDays": ["Monday", "Wednesday"],
     "instructor": "Instructor DZ",
-    "noOfStudents": 0,
     "status": "Closed",
-    "parentCourse": 221
+    "parentCourse": 221,
+    "noOfStudents": 18
   },
   {
     "classNo": 243,
@@ -435,9 +435,9 @@
     "classTime": "12:00 AM",
     "classDays": ["Monday", "Wednesday"],
     "instructor": "Instructor LJ",
-    "noOfStudents": 0,
     "status": "Open",
-    "parentCourse": 221
+    "parentCourse": 221,
+    "noOfStudents": 16
   },
   {
     "classNo": 244,
@@ -445,9 +445,9 @@
     "classTime": "12:00 AM",
     "classDays": ["Tuesday", "Thursday"],
     "instructor": "Instructor UB",
-    "noOfStudents": 0,
     "status": "Current",
-    "parentCourse": 222
+    "parentCourse": 222,
+    "noOfStudents": 11
   },
   {
     "classNo": 245,
@@ -455,9 +455,9 @@
     "classTime": "10:00 AM",
     "classDays": ["Monday", "Wednesday"],
     "instructor": "Instructor DF",
-    "noOfStudents": 0,
     "status": "Current",
-    "parentCourse": 222
+    "parentCourse": 222,
+    "noOfStudents": 23
   },
   {
     "classNo": 246,
@@ -465,9 +465,9 @@
     "classTime": "10:00 AM",
     "classDays": ["Monday", "Wednesday"],
     "instructor": "Instructor XI",
-    "noOfStudents": 0,
     "status": "Current",
-    "parentCourse": 223
+    "parentCourse": 223,
+    "noOfStudents": 19
   },
   {
     "classNo": 247,
@@ -475,9 +475,9 @@
     "classTime": "9:00 AM",
     "classDays": ["Monday", "Wednesday"],
     "instructor": "Instructor YS",
-    "noOfStudents": 0,
     "status": "Closed",
-    "parentCourse": 223
+    "parentCourse": 223,
+    "noOfStudents": 17
   },
   {
     "classNo": 248,
@@ -485,9 +485,9 @@
     "classTime": "10:00 AM",
     "classDays": ["Sunday", "Tuesday", "Thursday"],
     "instructor": "Instructor DJ",
-    "noOfStudents": 0,
     "status": "Closed",
-    "parentCourse": 224
+    "parentCourse": 224,
+    "noOfStudents": 19
   },
   {
     "classNo": 249,
@@ -495,9 +495,9 @@
     "classTime": "8:00 AM",
     "classDays": ["Tuesday", "Thursday"],
     "instructor": "Instructor UB",
-    "noOfStudents": 0,
     "status": "Open",
-    "parentCourse": 224
+    "parentCourse": 224,
+    "noOfStudents": 12
   },
   {
     "classNo": 250,
@@ -505,9 +505,9 @@
     "classTime": "9:00 AM",
     "classDays": ["Monday", "Wednesday"],
     "instructor": "Instructor DI",
-    "noOfStudents": 0,
     "status": "Current",
-    "parentCourse": 225
+    "parentCourse": 225,
+    "noOfStudents": 12
   },
   {
     "classNo": 251,
@@ -515,9 +515,9 @@
     "classTime": "10:00 AM",
     "classDays": ["Monday", "Wednesday"],
     "instructor": "Instructor XM",
-    "noOfStudents": 0,
     "status": "Closed",
-    "parentCourse": 225
+    "parentCourse": 225,
+    "noOfStudents": 20
   },
   {
     "classNo": 252,
@@ -525,9 +525,9 @@
     "classTime": "11:00 AM",
     "classDays": ["Sunday", "Tuesday", "Thursday"],
     "instructor": "Instructor XM",
-    "noOfStudents": 0,
     "status": "Closed",
-    "parentCourse": 226
+    "parentCourse": 226,
+    "noOfStudents": 19
   },
   {
     "classNo": 253,
@@ -535,9 +535,9 @@
     "classTime": "10:00 AM",
     "classDays": ["Monday", "Wednesday"],
     "instructor": "Instructor XI",
-    "noOfStudents": 0,
     "status": "Closed",
-    "parentCourse": 226
+    "parentCourse": 226,
+    "noOfStudents": 15
   },
   {
     "classNo": 254,
@@ -545,9 +545,9 @@
     "classTime": "10:00 AM",
     "classDays": ["Sunday", "Tuesday", "Thursday"],
     "instructor": "Instructor UB",
-    "noOfStudents": 0,
     "status": "Open",
-    "parentCourse": 227
+    "parentCourse": 227,
+    "noOfStudents": 23
   },
   {
     "classNo": 255,
@@ -555,9 +555,9 @@
     "classTime": "8:00 AM",
     "classDays": ["Tuesday", "Thursday"],
     "instructor": "Instructor DI",
-    "noOfStudents": 0,
     "status": "Closed",
-    "parentCourse": 227
+    "parentCourse": 227,
+    "noOfStudents": 13
   },
   {
     "classNo": 256,
@@ -565,9 +565,9 @@
     "classTime": "8:00 AM",
     "classDays": ["Sunday", "Tuesday", "Thursday"],
     "instructor": "Instructor DI",
-    "noOfStudents": 0,
     "status": "Open",
-    "parentCourse": 228
+    "parentCourse": 228,
+    "noOfStudents": 18
   },
   {
     "classNo": 257,
@@ -575,9 +575,9 @@
     "classTime": "12:00 AM",
     "classDays": ["Tuesday", "Thursday"],
     "instructor": "Instructor DF",
-    "noOfStudents": 0,
     "status": "Closed",
-    "parentCourse": 228
+    "parentCourse": 228,
+    "noOfStudents": 21
   },
   {
     "classNo": 258,
@@ -585,9 +585,9 @@
     "classTime": "10:00 AM",
     "classDays": ["Monday", "Wednesday"],
     "instructor": "Instructor TT",
-    "noOfStudents": 0,
     "status": "Open",
-    "parentCourse": 229
+    "parentCourse": 229,
+    "noOfStudents": 13
   },
   {
     "classNo": 259,
@@ -595,9 +595,9 @@
     "classTime": "10:00 AM",
     "classDays": ["Sunday", "Tuesday", "Thursday"],
     "instructor": "Instructor DF",
-    "noOfStudents": 0,
     "status": "Closed",
-    "parentCourse": 229
+    "parentCourse": 229,
+    "noOfStudents": 15
   },
   {
     "classNo": 260,
@@ -605,9 +605,9 @@
     "classTime": "8:00 AM",
     "classDays": ["Sunday", "Tuesday", "Thursday"],
     "instructor": "Instructor ZV",
-    "noOfStudents": 0,
     "status": "Current",
-    "parentCourse": 230
+    "parentCourse": 230,
+    "noOfStudents": 16
   },
   {
     "classNo": 261,
@@ -615,9 +615,9 @@
     "classTime": "11:00 AM",
     "classDays": ["Sunday", "Tuesday", "Thursday"],
     "instructor": "Instructor IM",
-    "noOfStudents": 0,
     "status": "Open",
-    "parentCourse": 230
+    "parentCourse": 230,
+    "noOfStudents": 22
   },
   {
     "classNo": 262,
@@ -625,9 +625,9 @@
     "classTime": "12:00 AM",
     "classDays": ["Monday", "Wednesday"],
     "instructor": "Instructor GB",
-    "noOfStudents": 0,
     "status": "Current",
-    "parentCourse": 231
+    "parentCourse": 231,
+    "noOfStudents": 21
   },
   {
     "classNo": 263,
@@ -635,9 +635,9 @@
     "classTime": "8:00 AM",
     "classDays": ["Monday", "Wednesday"],
     "instructor": "Instructor IM",
-    "noOfStudents": 0,
     "status": "Closed",
-    "parentCourse": 231
+    "parentCourse": 231,
+    "noOfStudents": 12
   },
   {
     "classNo": 264,
@@ -645,9 +645,9 @@
     "classTime": "9:00 AM",
     "classDays": ["Sunday", "Tuesday", "Thursday"],
     "instructor": "Instructor YS",
-    "noOfStudents": 0,
     "status": "Closed",
-    "parentCourse": 232
+    "parentCourse": 232,
+    "noOfStudents": 16
   },
   {
     "classNo": 265,
@@ -655,9 +655,9 @@
     "classTime": "8:00 AM",
     "classDays": ["Tuesday", "Thursday"],
     "instructor": "Instructor XR",
-    "noOfStudents": 0,
     "status": "Current",
-    "parentCourse": 232
+    "parentCourse": 232,
+    "noOfStudents": 20
   },
   {
     "classNo": 266,
@@ -665,9 +665,9 @@
     "classTime": "11:00 AM",
     "classDays": ["Tuesday", "Thursday"],
     "instructor": "Instructor XI",
-    "noOfStudents": 0,
     "status": "Closed",
-    "parentCourse": 233
+    "parentCourse": 233,
+    "noOfStudents": 18
   },
   {
     "classNo": 267,
@@ -675,9 +675,9 @@
     "classTime": "11:00 AM",
     "classDays": ["Tuesday", "Thursday"],
     "instructor": "Instructor CE",
-    "noOfStudents": 0,
     "status": "Open",
-    "parentCourse": 233
+    "parentCourse": 233,
+    "noOfStudents": 17
   },
   {
     "classNo": 268,
@@ -685,9 +685,9 @@
     "classTime": "8:00 AM",
     "classDays": ["Monday", "Wednesday"],
     "instructor": "Instructor LY",
-    "noOfStudents": 0,
     "status": "Current",
-    "parentCourse": 234
+    "parentCourse": 234,
+    "noOfStudents": 11
   },
   {
     "classNo": 269,
@@ -695,9 +695,9 @@
     "classTime": "12:00 AM",
     "classDays": ["Tuesday", "Thursday"],
     "instructor": "Instructor DI",
-    "noOfStudents": 0,
     "status": "Closed",
-    "parentCourse": 234
+    "parentCourse": 234,
+    "noOfStudents": 7
   },
   {
     "classNo": 270,
@@ -705,9 +705,9 @@
     "classTime": "12:00 AM",
     "classDays": ["Sunday", "Tuesday", "Thursday"],
     "instructor": "Instructor IM",
-    "noOfStudents": 0,
     "status": "Closed",
-    "parentCourse": 235
+    "parentCourse": 235,
+    "noOfStudents": 18
   },
   {
     "classNo": 271,
@@ -715,9 +715,9 @@
     "classTime": "10:00 AM",
     "classDays": ["Sunday", "Tuesday", "Thursday"],
     "instructor": "Instructor LY",
-    "noOfStudents": 0,
     "status": "Open",
-    "parentCourse": 235
+    "parentCourse": 235,
+    "noOfStudents": 12
   },
   {
     "classNo": 272,
@@ -725,9 +725,9 @@
     "classTime": "9:00 AM",
     "classDays": ["Tuesday", "Thursday"],
     "instructor": "Instructor DI",
-    "noOfStudents": 0,
     "status": "Current",
-    "parentCourse": 236
+    "parentCourse": 236,
+    "noOfStudents": 16
   },
   {
     "classNo": 273,
@@ -735,9 +735,9 @@
     "classTime": "10:00 AM",
     "classDays": ["Monday", "Wednesday"],
     "instructor": "Instructor DJ",
-    "noOfStudents": 0,
     "status": "Current",
-    "parentCourse": 236
+    "parentCourse": 236,
+    "noOfStudents": 14
   },
   {
     "classNo": 274,
@@ -745,9 +745,9 @@
     "classTime": "11:00 AM",
     "classDays": ["Tuesday", "Thursday"],
     "instructor": "Instructor DZ",
-    "noOfStudents": 0,
     "status": "Open",
-    "parentCourse": 237
+    "parentCourse": 237,
+    "noOfStudents": 21
   },
   {
     "classNo": 275,
@@ -755,9 +755,9 @@
     "classTime": "12:00 AM",
     "classDays": ["Monday", "Wednesday"],
     "instructor": "Instructor IM",
-    "noOfStudents": 0,
     "status": "Closed",
-    "parentCourse": 237
+    "parentCourse": 237,
+    "noOfStudents": 21
   },
   {
     "classNo": 276,
@@ -765,9 +765,9 @@
     "classTime": "8:00 AM",
     "classDays": ["Monday", "Wednesday"],
     "instructor": "Instructor IM",
-    "noOfStudents": 0,
     "status": "Closed",
-    "parentCourse": 238
+    "parentCourse": 238,
+    "noOfStudents": 17
   },
   {
     "classNo": 277,
@@ -775,9 +775,9 @@
     "classTime": "11:00 AM",
     "classDays": ["Monday", "Wednesday"],
     "instructor": "Instructor XR",
-    "noOfStudents": 0,
     "status": "Closed",
-    "parentCourse": 238
+    "parentCourse": 238,
+    "noOfStudents": 25
   },
   {
     "classNo": 278,
@@ -785,9 +785,9 @@
     "classTime": "9:00 AM",
     "classDays": ["Tuesday", "Thursday"],
     "instructor": "Instructor XR",
-    "noOfStudents": 0,
     "status": "Closed",
-    "parentCourse": 239
+    "parentCourse": 239,
+    "noOfStudents": 19
   },
   {
     "classNo": 279,
@@ -795,9 +795,9 @@
     "classTime": "8:00 AM",
     "classDays": ["Monday", "Wednesday"],
     "instructor": "Instructor YS",
-    "noOfStudents": 0,
     "status": "Open",
-    "parentCourse": 239
+    "parentCourse": 239,
+    "noOfStudents": 16
   },
   {
     "classNo": 280,
@@ -805,9 +805,9 @@
     "classTime": "10:00 AM",
     "classDays": ["Tuesday", "Thursday"],
     "instructor": "Instructor LJ",
-    "noOfStudents": 0,
     "status": "Current",
-    "parentCourse": 240
+    "parentCourse": 240,
+    "noOfStudents": 14
   },
   {
     "classNo": 281,
@@ -815,9 +815,9 @@
     "classTime": "11:00 AM",
     "classDays": ["Tuesday", "Thursday"],
     "instructor": "Instructor TT",
-    "noOfStudents": 0,
     "status": "Closed",
-    "parentCourse": 240
+    "parentCourse": 240,
+    "noOfStudents": 12
   },
   {
     "classNo": 282,
@@ -825,9 +825,9 @@
     "classTime": "9:00 AM",
     "classDays": ["Monday", "Wednesday"],
     "instructor": "Instructor TT",
-    "noOfStudents": 0,
     "status": "Open",
-    "parentCourse": 241
+    "parentCourse": 241,
+    "noOfStudents": 21
   },
   {
     "classNo": 283,
@@ -835,9 +835,9 @@
     "classTime": "11:00 AM",
     "classDays": ["Sunday", "Tuesday", "Thursday"],
     "instructor": "Instructor DZ",
-    "noOfStudents": 0,
     "status": "Closed",
-    "parentCourse": 241
+    "parentCourse": 241,
+    "noOfStudents": 20
   },
   {
     "classNo": 284,
@@ -845,9 +845,9 @@
     "classTime": "11:00 AM",
     "classDays": ["Tuesday", "Thursday"],
     "instructor": "Instructor QP",
-    "noOfStudents": 0,
     "status": "Closed",
-    "parentCourse": 242
+    "parentCourse": 242,
+    "noOfStudents": 16
   },
   {
     "classNo": 285,
@@ -855,9 +855,9 @@
     "classTime": "11:00 AM",
     "classDays": ["Sunday", "Tuesday", "Thursday"],
     "instructor": "Instructor DJ",
-    "noOfStudents": 0,
     "status": "Open",
-    "parentCourse": 242
+    "parentCourse": 242,
+    "noOfStudents": 17
   },
   {
     "classNo": 286,
@@ -865,9 +865,9 @@
     "classTime": "12:00 AM",
     "classDays": ["Tuesday", "Thursday"],
     "instructor": "Instructor TT",
-    "noOfStudents": 0,
     "status": "Closed",
-    "parentCourse": 243
+    "parentCourse": 243,
+    "noOfStudents": 23
   },
   {
     "classNo": 287,
@@ -875,9 +875,9 @@
     "classTime": "10:00 AM",
     "classDays": ["Sunday", "Tuesday", "Thursday"],
     "instructor": "Instructor DJ",
-    "noOfStudents": 0,
     "status": "Closed",
-    "parentCourse": 243
+    "parentCourse": 243,
+    "noOfStudents": 21
   },
   {
     "classNo": 288,
@@ -885,9 +885,9 @@
     "classTime": "11:00 AM",
     "classDays": ["Sunday", "Tuesday", "Thursday"],
     "instructor": "Instructor DI",
-    "noOfStudents": 0,
     "status": "Open",
-    "parentCourse": 244
+    "parentCourse": 244,
+    "noOfStudents": 18
   },
   {
     "classNo": 289,
@@ -895,9 +895,9 @@
     "classTime": "12:00 AM",
     "classDays": ["Sunday", "Tuesday", "Thursday"],
     "instructor": "Instructor PW",
-    "noOfStudents": 0,
     "status": "Current",
-    "parentCourse": 244
+    "parentCourse": 244,
+    "noOfStudents": 20
   },
   {
     "classNo": 290,
@@ -905,9 +905,9 @@
     "classTime": "11:00 AM",
     "classDays": ["Tuesday", "Thursday"],
     "instructor": "Instructor DF",
-    "noOfStudents": 0,
     "status": "Open",
-    "parentCourse": 245
+    "parentCourse": 245,
+    "noOfStudents": 19
   },
   {
     "classNo": 291,
@@ -915,9 +915,9 @@
     "classTime": "10:00 AM",
     "classDays": ["Tuesday", "Thursday"],
     "instructor": "Instructor LJ",
-    "noOfStudents": 0,
     "status": "Open",
-    "parentCourse": 245
+    "parentCourse": 245,
+    "noOfStudents": 13
   },
   {
     "classNo": 292,
@@ -925,9 +925,9 @@
     "classTime": "12:00 AM",
     "classDays": ["Sunday", "Tuesday", "Thursday"],
     "instructor": "Instructor DI",
-    "noOfStudents": 0,
     "status": "Closed",
-    "parentCourse": 246
+    "parentCourse": 246,
+    "noOfStudents": 13
   },
   {
     "classNo": 293,
@@ -935,9 +935,9 @@
     "classTime": "10:00 AM",
     "classDays": ["Monday", "Wednesday"],
     "instructor": "Instructor LJ",
-    "noOfStudents": 0,
     "status": "Open",
-    "parentCourse": 246
+    "parentCourse": 246,
+    "noOfStudents": 16
   },
   {
     "classNo": 294,
@@ -945,9 +945,9 @@
     "classTime": "8:00 AM",
     "classDays": ["Monday", "Wednesday"],
     "instructor": "Instructor GB",
-    "noOfStudents": 0,
     "status": "Closed",
-    "parentCourse": 247
+    "parentCourse": 247,
+    "noOfStudents": 10
   },
   {
     "classNo": 295,
@@ -955,9 +955,9 @@
     "classTime": "10:00 AM",
     "classDays": ["Tuesday", "Thursday"],
     "instructor": "Instructor LJ",
-    "noOfStudents": 0,
     "status": "Current",
-    "parentCourse": 247
+    "parentCourse": 247,
+    "noOfStudents": 24
   },
   {
     "classNo": 296,
@@ -965,9 +965,9 @@
     "classTime": "10:00 AM",
     "classDays": ["Tuesday", "Thursday"],
     "instructor": "Instructor GB",
-    "noOfStudents": 0,
     "status": "Open",
-    "parentCourse": 248
+    "parentCourse": 248,
+    "noOfStudents": 14
   },
   {
     "classNo": 297,
@@ -975,9 +975,9 @@
     "classTime": "12:00 AM",
     "classDays": ["Monday", "Wednesday"],
     "instructor": "Instructor QP",
-    "noOfStudents": 0,
     "status": "Closed",
-    "parentCourse": 248
+    "parentCourse": 248,
+    "noOfStudents": 19
   },
   {
     "classNo": 298,
@@ -985,9 +985,9 @@
     "classTime": "12:00 AM",
     "classDays": ["Monday", "Wednesday"],
     "instructor": "Instructor CE",
-    "noOfStudents": 0,
     "status": "Closed",
-    "parentCourse": 249
+    "parentCourse": 249,
+    "noOfStudents": 18
   },
   {
     "classNo": 299,
@@ -995,8 +995,8 @@
     "classTime": "11:00 AM",
     "classDays": ["Monday", "Wednesday"],
     "instructor": "Instructor LY",
-    "noOfStudents": 0,
     "status": "Closed",
-    "parentCourse": 249
+    "parentCourse": 249,
+    "noOfStudents": 16
   }
 ]

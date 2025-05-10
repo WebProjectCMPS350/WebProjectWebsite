@@ -12,8 +12,9 @@ document.addEventListener("DOMContentLoaded", loadGrades);
 
 async function loadGrades() {
   const students = await studentRepo.getStudentsByClass(clas.classNo);
+  let number = 1;
   const htmlArray = await Promise.all(
-    students.map((student) => templateStudent(student))
+    students.map((student) => templateStudent(student, number++))
   );
 
   validateGradesForm.innerHTML =
@@ -56,11 +57,11 @@ async function loadGrades() {
   });
 }
 
-function templateStudent(student) {
+function templateStudent(student, num) {
   return `
     <div class="student">
       <div class="studentName">
-        <label id="${student.username}">Student name:</label>
+        <label id="${student.username}">${num}- Student name:</label>
         <label>${student.name},</label>
       </div>
 
