@@ -1,1 +1,202 @@
-[{"classNo":1,"className":"Introduction to Programming","classTime":"9:00 AM","classDays":["Monday","Wednesday"],"instructor":"John Doe","noOfStudents":3,"status":"Open","parentCourse":1},{"classNo":2,"className":"Advanced Programming","classTime":"11:00 AM","classDays":["Tuesday","Thursday"],"instructor":"Jane Smith","noOfStudents":4,"status":"Open","parentCourse":1},{"classNo":3,"className":"Web Development Basics","classTime":"10:00 AM","classDays":["Monday","Wednesday"],"instructor":"Alice Johnson","noOfStudents":4,"status":"Open","parentCourse":2},{"classNo":4,"className":"Advanced Web Development","classTime":"1:00 PM","classDays":["Tuesday","Thursday"],"instructor":"Ali Khan","noOfStudents":12,"status":"Closed","parentCourse":2},{"classNo":5,"className":"Data Science Fundamentals","classTime":"9:00 AM","classDays":["Monday","Wednesday"],"instructor":"John Doe","noOfStudents":12,"status":"Current","parentCourse":3},{"classNo":6,"className":"Data Visualization","classTime":"11:00 AM","classDays":["Tuesday","Thursday"],"instructor":"Jane Smith","noOfStudents":24,"status":"Open","parentCourse":3},{"classNo":7,"className":"Machine Learning Basics","classTime":"10:00 AM","classDays":["Monday","Wednesday"],"instructor":"Jane Smith","noOfStudents":23,"status":"Open","parentCourse":4},{"classNo":8,"className":"Deep Learning","classTime":"1:00 PM","classDays":["Tuesday","Thursday"],"instructor":"Jane Smith","noOfStudents":21,"status":"Open","parentCourse":4},{"classNo":9,"className":"Cyber Security Basics","classTime":"9:00 AM","classDays":["Monday","Wednesday"],"instructor":"Ali Khan","noOfStudents":15,"status":"Closed","parentCourse":5},{"classNo":10,"className":"Ethical Hacking","classTime":"11:00 AM","classDays":["Tuesday","Thursday"],"instructor":"Ali Khan","noOfStudents":6,"status":"Closed","parentCourse":5},{"classNo":12,"className":"Cloud Deployment Models","classTime":"1:00 PM","classDays":["Tuesday","Thursday"],"instructor":"Ali Khan","noOfStudents":22,"status":"Closed","parentCourse":6},{"classNo":13,"className":"Mobile App Development Basics","classTime":"9:00 AM","classDays":["Monday","Wednesday"],"instructor":"Mohammed Ali","noOfStudents":30,"status":"Pending","parentCourse":7},{"classNo":14,"className":"Advanced Mobile App Development","classTime":"11:00 AM","classDays":["Tuesday","Thursday"],"instructor":"Ali Khan","noOfStudents":30,"status":"Pending","parentCourse":7},{"classNo":15,"className":"Database Management Basics","classTime":"10:00 AM","classDays":["Monday","Wednesday"],"instructor":"Mohammed Ali","noOfStudents":13,"status":"Open","parentCourse":8},{"classNo":16,"className":"SQL and NoSQL Databases","classTime":"1:00 PM","classDays":["Tuesday","Thursday"],"instructor":"Mohammed Ali","noOfStudents":15,"status":"Open","parentCourse":8},{"classNo":17,"className":"DevOps Fundamentals","classTime":"9:00 AM","classDays":["Monday","Wednesday"],"instructor":"Alice Johnson","noOfStudents":18,"status":"Open","parentCourse":9},{"classNo":18,"className":"CI/CD Principles","classTime":"11:00 AM","classDays":["Tuesday","Thursday"],"instructor":"Alice Johnson","noOfStudents":9,"status":"Open","parentCourse":9},{"classNo":19,"className":"Data Science with Python","classTime":"10:00 AM","classDays":["Monday","Wednesday"],"instructor":"John Doe","noOfStudents":30,"status":"Open","parentCourse":10},{"classNo":20,"className":"Data Science with R","classTime":"1:00 PM","classDays":["Tuesday","Thursday"],"instructor":"Mohammed Ali","noOfStudents":28,"status":"Open","parentCourse":10},{"classNo":144,"className":"Intro to boxing","classTime":"9AM","classDays":["Sunday, Tuesday, Thuersday"],"instructor":"Mohammed Ali","noOfStudents":0,"status":"Open","parentCourse":144}]
+[
+  {
+    "classNo": 1,
+    "className": "Introduction to Programming",
+    "classTime": "9:00 AM",
+    "classDays": ["Monday", "Wednesday"],
+    "instructor": "John Doe",
+    "noOfStudents": 3,
+    "status": "Open",
+    "parentCourse": 1
+  },
+  {
+    "classNo": 2,
+    "className": "Advanced Programming",
+    "classTime": "11:00 AM",
+    "classDays": ["Tuesday", "Thursday"],
+    "instructor": "Jane Smith",
+    "noOfStudents": 4,
+    "status": "Open",
+    "parentCourse": 1
+  },
+  {
+    "classNo": 3,
+    "className": "Web Development Basics",
+    "classTime": "10:00 AM",
+    "classDays": ["Monday", "Wednesday"],
+    "instructor": "Alice Johnson",
+    "noOfStudents": 4,
+    "status": "Open",
+    "parentCourse": 2
+  },
+  {
+    "classNo": 4,
+    "className": "Advanced Web Development",
+    "classTime": "1:00 PM",
+    "classDays": ["Tuesday", "Thursday"],
+    "instructor": "Ali Khan",
+    "noOfStudents": 12,
+    "status": "Closed",
+    "parentCourse": 2
+  },
+  {
+    "classNo": 5,
+    "className": "Data Science Fundamentals",
+    "classTime": "9:00 AM",
+    "classDays": ["Monday", "Wednesday"],
+    "instructor": "John Doe",
+    "noOfStudents": 12,
+    "status": "Current",
+    "parentCourse": 3
+  },
+  {
+    "classNo": 6,
+    "className": "Data Visualization",
+    "classTime": "11:00 AM",
+    "classDays": ["Tuesday", "Thursday"],
+    "instructor": "Jane Smith",
+    "noOfStudents": 24,
+    "status": "Open",
+    "parentCourse": 3
+  },
+  {
+    "classNo": 7,
+    "className": "Machine Learning Basics",
+    "classTime": "10:00 AM",
+    "classDays": ["Monday", "Wednesday"],
+    "instructor": "Jane Smith",
+    "noOfStudents": 23,
+    "status": "Open",
+    "parentCourse": 4
+  },
+  {
+    "classNo": 8,
+    "className": "Deep Learning",
+    "classTime": "1:00 PM",
+    "classDays": ["Tuesday", "Thursday"],
+    "instructor": "Jane Smith",
+    "noOfStudents": 21,
+    "status": "Open",
+    "parentCourse": 4
+  },
+  {
+    "classNo": 9,
+    "className": "Cyber Security Basics",
+    "classTime": "9:00 AM",
+    "classDays": ["Monday", "Wednesday"],
+    "instructor": "Ali Khan",
+    "noOfStudents": 15,
+    "status": "Closed",
+    "parentCourse": 5
+  },
+  {
+    "classNo": 10,
+    "className": "Ethical Hacking",
+    "classTime": "11:00 AM",
+    "classDays": ["Tuesday", "Thursday"],
+    "instructor": "Ali Khan",
+    "noOfStudents": 6,
+    "status": "Closed",
+    "parentCourse": 5
+  },
+  {
+    "classNo": 12,
+    "className": "Cloud Deployment Models",
+    "classTime": "1:00 PM",
+    "classDays": ["Tuesday", "Thursday"],
+    "instructor": "Ali Khan",
+    "noOfStudents": 22,
+    "status": "Closed",
+    "parentCourse": 6
+  },
+  {
+    "classNo": 13,
+    "className": "Mobile App Development Basics",
+    "classTime": "9:00 AM",
+    "classDays": ["Monday", "Wednesday"],
+    "instructor": "Mohammed Ali",
+    "noOfStudents": 30,
+    "status": "Pending",
+    "parentCourse": 7
+  },
+  {
+    "classNo": 14,
+    "className": "Advanced Mobile App Development",
+    "classTime": "11:00 AM",
+    "classDays": ["Tuesday", "Thursday"],
+    "instructor": "Ali Khan",
+    "noOfStudents": 30,
+    "status": "Pending",
+    "parentCourse": 7
+  },
+  {
+    "classNo": 15,
+    "className": "Database Management Basics",
+    "classTime": "10:00 AM",
+    "classDays": ["Monday", "Wednesday"],
+    "instructor": "Mohammed Ali",
+    "noOfStudents": 13,
+    "status": "Open",
+    "parentCourse": 8
+  },
+  {
+    "classNo": 16,
+    "className": "SQL and NoSQL Databases",
+    "classTime": "1:00 PM",
+    "classDays": ["Tuesday", "Thursday"],
+    "instructor": "Mohammed Ali",
+    "noOfStudents": 15,
+    "status": "Open",
+    "parentCourse": 8
+  },
+  {
+    "classNo": 17,
+    "className": "DevOps Fundamentals",
+    "classTime": "9:00 AM",
+    "classDays": ["Monday", "Wednesday"],
+    "instructor": "Alice Johnson",
+    "noOfStudents": 18,
+    "status": "Open",
+    "parentCourse": 9
+  },
+  {
+    "classNo": 18,
+    "className": "CI/CD Principles",
+    "classTime": "11:00 AM",
+    "classDays": ["Tuesday", "Thursday"],
+    "instructor": "Alice Johnson",
+    "noOfStudents": 9,
+    "status": "Open",
+    "parentCourse": 9
+  },
+  {
+    "classNo": 19,
+    "className": "Data Science with Python",
+    "classTime": "10:00 AM",
+    "classDays": ["Monday", "Wednesday"],
+    "instructor": "John Doe",
+    "noOfStudents": 30,
+    "status": "Open",
+    "parentCourse": 10
+  },
+  {
+    "classNo": 20,
+    "className": "Data Science with R",
+    "classTime": "1:00 PM",
+    "classDays": ["Tuesday", "Thursday"],
+    "instructor": "Mohammed Ali",
+    "noOfStudents": 28,
+    "status": "Open",
+    "parentCourse": 10
+  },
+  {
+    "classNo": 144,
+    "className": "Intro to boxing",
+    "classTime": "9AM",
+    "classDays": ["Sunday, Tuesday, Thuersday"],
+    "instructor": "Mohammed Ali",
+    "noOfStudents": 0,
+    "status": "Open",
+    "parentCourse": 144
+  }
+]

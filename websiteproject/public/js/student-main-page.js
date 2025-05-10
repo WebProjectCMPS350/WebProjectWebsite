@@ -12,10 +12,12 @@ typeOfSearch.addEventListener("change", type);
 
 document.addEventListener("DOMContentLoaded", loadCourses());
 
+let filteredCourses = [];
+
 async function loadCourses(e) {
-  const courses = await courseRepo.getCourses();
+  filteredCourses = await courseRepo.getCourses();
   const htmlArray = await Promise.all(
-    courses.map((course) => templateCourses(course))
+    filteredCourses.map((course) => templateCourses(course))
   );
   cardsContainer.innerHTML = htmlArray.join("\n");
 
@@ -142,9 +144,7 @@ function isSubset(arr1, arr2) {
 }
 
 async function templateCourses(course) {
-  const classes = await Promise.all(
-    course.classes.map((classItem) => classRepo.getClass(classItem))
-  );
+  const classes = await courseRepo.getCourseClasses(course.courseNo);
 
   return `
     

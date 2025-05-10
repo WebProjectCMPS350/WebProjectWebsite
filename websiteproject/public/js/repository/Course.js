@@ -62,6 +62,11 @@ class Course {
     const response = await fetch("../data/courses.json");
     const cs = response.json();
   }
+
+  async getCourseClasses(courseNo) {
+    const response = await fetch(`${baseUrl}/${courseNo}/classes`);
+    return response.json();
+  }
 }
 
 export default new Course();

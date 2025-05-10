@@ -1,6 +1,6 @@
 import fse from "fs-extra";
 import path from "path";
-
+import classRepo from "./Class.js";
 class Course {
   constructor() {
     this.coursesFilePath = path.join(process.cwd(), "app/data/courses.json"); //
@@ -68,6 +68,18 @@ class Course {
     courses.splice(index, 1);
     await this.saveCourses(courses);
     return { message: "course deleted successfully" };
+  }
+
+  async getCourseClasses(courseNo) {
+    const classes = [];
+    const course = await this.getCourse(courseNo);
+
+    for (const classNo of course.classes) {
+      const classObj = await classRepo.getClass(classNo);
+      classes.push(classObj);
+    }
+
+    return classes;
   }
 }
 

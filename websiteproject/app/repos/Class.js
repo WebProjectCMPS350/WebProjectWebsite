@@ -15,9 +15,9 @@ class Class {
     return classes;
   }
 
-  async getClass(classeNo) {
+  async getClass(classNo) {
     const classes = await this.getClasses();
-    const clas = classes.find((clas) => clas.classeNo == classeNo);
+    const clas = classes.find((clas) => clas.classNo == classNo);
     if (!clas) {
       return { error: "Class not found" };
     }
