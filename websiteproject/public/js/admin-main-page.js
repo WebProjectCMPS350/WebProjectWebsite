@@ -35,13 +35,12 @@ classesBtn.addEventListener("click", handleClassesFilter);
 document.addEventListener("DOMContentLoaded", loadClasses());
 
 async function loadClasses(e) {
-  const courses = await courseRepo.getCourses();
-  const categories = new Set(courses.map((course) => course.category));
+  const categories = new Set(allCourses.map((course) => course.category));
+
   const htmlArray = Array.from(categories).map(
     (category) => `<option value="${category}">${category}</option>`
   );
-  categorySelect.innerHTML =
-    `<option value="">All</option>` + htmlArray.join("\n");
+  categorySelect.innerHTML += htmlArray.join("\n");
   if (
     localStorage.defaultPage == "classes" ||
     localStorage.defaultPage == undefined
@@ -120,7 +119,8 @@ async function handleSearchOfClasses() {
   } else {
     const filterResults = await Promise.all(
       currentClasses.map(async (clas) => {
-        const course = await classRepo.getParentCourse(clas.classNo);
+        const course = courseMap.get(clas.parentCourse);
+
         const matches = course.category
           .toUpperCase()
           .includes(search.value.toUpperCase());
@@ -140,7 +140,8 @@ async function handleSearchOfClasses() {
   if (categorySelect.value && categorySelect.value.toUpperCase() !== "ALL") {
     const filterResults = await Promise.all(
       currentClasses.map(async (clas) => {
-        const course = await classRepo.getParentCourse(clas.classNo);
+        const course = courseMap.get(clas.parentCourse);
+
         const matches = course.category
           .toUpperCase()
           .includes(categorySelect.value.toUpperCase());
@@ -267,33 +268,30 @@ async function setupActionButtons() {
         const clas = await classRepo.getClass(
           card.querySelector(".number").innerHTML.split(": ")[1]
         );
-        const course = await classRepo.getParentCourse(clas.classNo);
+        const course = courseMap.get(clas.parentCourse);
+
         const message = card.querySelector(".message");
 
         if (clas.status == "Pending") {
           clas.status = "Open";
           await classRepo.updateClass(clas);
-          handleClassesFilter();
           message.innerHTML = "Class status changed to Open!";
           message.classList.add("approved-message");
           setTimeout(() => {
             message.innerHTML = "";
             message.classList.remove("approved-message");
+            handleClassesFilter();
           }, 3000);
         } else if (clas.status == "Open") {
           clas.status = "Current";
           await classRepo.updateClass(clas);
-          handleClassesFilter();
 
           message.innerHTML = "Class status changed to Current!";
           message.classList.add("approved-message");
           setTimeout(() => {
             message.innerHTML = "";
             message.classList.remove("approved-message");
-          }, 3000);
-          setTimeout(() => {
-            message.innerHTML = "";
-            message.classList.remove("approved-message");
+            handleClassesFilter();
           }, 3000);
         } else if (clas.status == "Current" || clas.status == "Closed") {
           message.innerHTML = "You cannot change the status of this class!";
@@ -329,7 +327,7 @@ async function setupActionButtons() {
 
         if (clas.status !== "Closed") {
           // remove the class from the course
-          const course = await classRepo.getParentCourse(clas.classNo);
+          const course = courseMap.get(clas.parentCourse);
           course.classes = await course.classes.filter(
             (classItem) => classItem !== clas.classNo
           );
@@ -358,7 +356,7 @@ async function setupActionButtons() {
     });
   } else {
     // I hate my code, what a shame!!!!
-    approveButtons.forEach(async (btn) => {
+    approveButtons.forEach((btn) => {
       btn.addEventListener("click", async (e) => {
         const card = e.target.closest(".card");
         const course = await courseRepo.getCourse(
@@ -369,26 +367,22 @@ async function setupActionButtons() {
         if (course.status == "Pending") {
           course.status = "Open";
           await courseRepo.updateCourse(course);
-          handleCoursesFilter();
           message.innerHTML = "Course status changed to Open!";
           message.classList.add("approved-message");
           setTimeout(() => {
             message.innerHTML = "";
             message.classList.remove("approved-message");
+            handleCoursesFilter();
           }, 3000);
         } else if (course.status == "Open") {
           course.status = "Current";
           await courseRepo.updateCourse(course);
-          handleCoursesFilter();
           message.innerHTML = "Course status changed to Current!";
           message.classList.add("approved-message");
           setTimeout(() => {
             message.innerHTML = "";
             message.classList.remove("approved-message");
-          }, 3000);
-          setTimeout(() => {
-            message.innerHTML = "";
-            message.classList.remove("approved-message");
+            handleCoursesFilter();
           }, 3000);
         } else if (course.status == "Current" || course.status == "Closed") {
           message.innerHTML = "You cannot change the status of this course!";
@@ -403,20 +397,20 @@ async function setupActionButtons() {
           const classes = await Promise.all(
             course.classes.map((classItem) => classRepo.getClass(classItem))
           );
-          classes.forEach((clas) => {
+          classes.forEach(async (clas) => {
             if (clas.status == "Pending") {
               clas.status = "Open";
-              classRepo.updateClass(clas);
+              await classRepo.updateClass(clas);
             }
           });
         } else if (course.status == "Current") {
           const classes = await Promise.all(
             course.classes.map((classItem) => classRepo.getClass(classItem))
           );
-          classes.forEach((clas) => {
+          classes.forEach(async (clas) => {
             if (clas.status == "Open" || clas.status == "Pending") {
               clas.status = "Current";
-              classRepo.updateClass(clas);
+              await classRepo.updateClass(clas);
             }
           });
         }
