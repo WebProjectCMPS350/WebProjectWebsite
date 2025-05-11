@@ -435,7 +435,7 @@
     "classTime": "12:00 AM",
     "classDays": ["Monday", "Wednesday"],
     "instructor": "Instructor LJ",
-    "status": "Open",
+    "status": "Closed",
     "parentCourse": 221,
     "noOfStudents": 16
   },

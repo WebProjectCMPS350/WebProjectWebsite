@@ -6,7 +6,7 @@
     "classes": [
       { "classNo": 221, "grade": null },
       { "classNo": 278, "grade": null },
-      { "classNo": 285, "grade": 49 },
+      { "classNo": 285, "grade": null },
       { "classNo": 234, "grade": null },
       { "classNo": 242, "grade": 49 },
       { "classNo": 203, "grade": null },
@@ -38,7 +38,7 @@
     "name": "Student 3",
     "classes": [
       { "classNo": 266, "grade": 2 },
-      { "classNo": 295, "grade": 22 },
+      { "classNo": 295, "grade": null },
       { "classNo": 283, "grade": 47 },
       { "classNo": 253, "grade": 93 }
     ]
@@ -47,14 +47,14 @@
     "username": "user4",
     "password": "123456",
     "name": "Student 4",
-    "classes": [{ "classNo": 211, "grade": 37 }]
+    "classes": [{ "classNo": 211, "grade": null }]
   },
   {
     "username": "user5",
     "password": "123456",
     "name": "Student 5",
     "classes": [
-      { "classNo": 291, "grade": 34 },
+      { "classNo": 291, "grade": null },
       { "classNo": 261, "grade": null }
     ]
   },
@@ -67,7 +67,7 @@
       { "classNo": 201, "grade": null },
       { "classNo": 205, "grade": null },
       { "classNo": 281, "grade": null },
-      { "classNo": 222, "grade": 62 }
+      { "classNo": 222, "grade": null }
     ]
   },
   {
@@ -90,8 +90,8 @@
       { "classNo": 298, "grade": 4 },
       { "classNo": 273, "grade": null },
       { "classNo": 294, "grade": 12 },
-      { "classNo": 240, "grade": 63 },
-      { "classNo": 237, "grade": 28 }
+      { "classNo": 240, "grade": null },
+      { "classNo": 237, "grade": null }
     ]
   },
   {
@@ -139,7 +139,7 @@
     "name": "Student 13",
     "classes": [
       { "classNo": 229, "grade": null },
-      { "classNo": 262, "grade": 81 },
+      { "classNo": 262, "grade": null },
       { "classNo": 276, "grade": null }
     ]
   },
@@ -162,11 +162,11 @@
     "name": "Student 15",
     "classes": [
       { "classNo": 279, "grade": null },
-      { "classNo": 230, "grade": 96 },
-      { "classNo": 217, "grade": 28 },
-      { "classNo": 254, "grade": 14 },
+      { "classNo": 230, "grade": null },
+      { "classNo": 217, "grade": null },
+      { "classNo": 254, "grade": null },
       { "classNo": 292, "grade": null },
-      { "classNo": 296, "grade": 71 }
+      { "classNo": 296, "grade": null }
     ]
   },
   {
@@ -175,8 +175,8 @@
     "name": "Student 16",
     "classes": [
       { "classNo": 271, "grade": null },
-      { "classNo": 267, "grade": 11 },
-      { "classNo": 268, "grade": 7 },
+      { "classNo": 267, "grade": null },
+      { "classNo": 268, "grade": null },
       { "classNo": 275, "grade": 73 }
     ]
   },
@@ -186,7 +186,7 @@
     "name": "Student 17",
     "classes": [
       { "classNo": 272, "grade": null },
-      { "classNo": 204, "grade": 62 }
+      { "classNo": 204, "grade": null }
     ]
   },
   {
@@ -195,7 +195,7 @@
     "name": "Student 18",
     "classes": [
       { "classNo": 248, "grade": 23 },
-      { "classNo": 238, "grade": 53 },
+      { "classNo": 238, "grade": null },
       { "classNo": 228, "grade": null },
       { "classNo": 263, "grade": null },
       { "classNo": 224, "grade": null },
@@ -208,7 +208,7 @@
     "name": "Student 19",
     "classes": [
       { "classNo": 233, "grade": null },
-      { "classNo": 280, "grade": 79 }
+      { "classNo": 280, "grade": null }
     ]
   },
   {
@@ -216,10 +216,10 @@
     "password": "123456",
     "name": "Student 20",
     "classes": [
-      { "classNo": 274, "grade": 21 },
+      { "classNo": 274, "grade": null },
       { "classNo": 207, "grade": 31 },
       { "classNo": 282, "grade": null },
-      { "classNo": 243, "grade": null },
+      { "classNo": 243, "grade": 100 },
       { "classNo": 220, "grade": 13 }
     ]
   },
@@ -231,7 +231,7 @@
       { "classNo": 231, "grade": 40 },
       { "classNo": 270, "grade": 24 },
       { "classNo": 250, "grade": null },
-      { "classNo": 265, "grade": 58 },
+      { "classNo": 265, "grade": null },
       { "classNo": 246, "grade": null }
     ]
   },
@@ -253,7 +253,7 @@
       { "classNo": 223, "grade": null },
       { "classNo": 299, "grade": 84 },
       { "classNo": 259, "grade": null },
-      { "classNo": 245, "grade": 90 }
+      { "classNo": 245, "grade": null }
     ]
   },
   {
@@ -268,7 +268,7 @@
     "name": "Student 25",
     "classes": [
       { "classNo": 200, "grade": null },
-      { "classNo": 256, "grade": 92 },
+      { "classNo": 256, "grade": null },
       { "classNo": 206, "grade": null },
       { "classNo": 218, "grade": null }
     ]
@@ -279,9 +279,9 @@
     "name": "Student 26",
     "classes": [
       { "classNo": 227, "grade": null },
-      { "classNo": 289, "grade": 14 },
+      { "classNo": 289, "grade": null },
       { "classNo": 288, "grade": null },
-      { "classNo": 227, "grade": 2 }
+      { "classNo": 227, "grade": null }
     ]
   },
   {
@@ -295,8 +295,8 @@
     "password": "123456",
     "name": "Student 28",
     "classes": [
-      { "classNo": 249, "grade": 41 },
-      { "classNo": 273, "grade": 61 },
+      { "classNo": 249, "grade": null },
+      { "classNo": 273, "grade": null },
       { "classNo": 231, "grade": null },
       { "classNo": 233, "grade": 5 },
       { "classNo": 268, "grade": null },
@@ -308,9 +308,9 @@
     "password": "123456",
     "name": "Student 29",
     "classes": [
-      { "classNo": 295, "grade": 79 },
-      { "classNo": 227, "grade": 23 },
-      { "classNo": 229, "grade": 18 }
+      { "classNo": 295, "grade": null },
+      { "classNo": 227, "grade": null },
+      { "classNo": 229, "grade": null }
     ]
   },
   {
@@ -333,9 +333,9 @@
     "password": "123456",
     "name": "Student 32",
     "classes": [
-      { "classNo": 218, "grade": 58 },
+      { "classNo": 218, "grade": null },
       { "classNo": 287, "grade": null },
-      { "classNo": 243, "grade": 45 }
+      { "classNo": 243, "grade": 100 }
     ]
   },
   {
@@ -344,8 +344,8 @@
     "name": "Student 33",
     "classes": [
       { "classNo": 263, "grade": null },
-      { "classNo": 260, "grade": 61 },
-      { "classNo": 214, "grade": 28 },
+      { "classNo": 260, "grade": null },
+      { "classNo": 214, "grade": null },
       { "classNo": 287, "grade": 32 }
     ]
   },
@@ -371,7 +371,7 @@
       { "classNo": 247, "grade": 76 },
       { "classNo": 209, "grade": null },
       { "classNo": 264, "grade": 49 },
-      { "classNo": 246, "grade": 20 }
+      { "classNo": 246, "grade": null }
     ]
   },
   {
@@ -388,7 +388,7 @@
     "password": "123456",
     "name": "Student 37",
     "classes": [
-      { "classNo": 282, "grade": 75 },
+      { "classNo": 282, "grade": null },
       { "classNo": 286, "grade": null },
       { "classNo": 217, "grade": null },
       { "classNo": 247, "grade": null }
@@ -406,10 +406,10 @@
     "name": "Student 39",
     "classes": [
       { "classNo": 203, "grade": null },
-      { "classNo": 246, "grade": 95 },
-      { "classNo": 243, "grade": null },
+      { "classNo": 246, "grade": null },
+      { "classNo": 243, "grade": 100 },
       { "classNo": 228, "grade": 52 },
-      { "classNo": 243, "grade": 70 }
+      { "classNo": 243, "grade": null }
     ]
   },
   {
@@ -421,7 +421,7 @@
       { "classNo": 204, "grade": null },
       { "classNo": 284, "grade": null },
       { "classNo": 285, "grade": null },
-      { "classNo": 262, "grade": 1 },
+      { "classNo": 262, "grade": null },
       { "classNo": 282, "grade": null }
     ]
   },
@@ -430,9 +430,9 @@
     "password": "123456",
     "name": "Student 41",
     "classes": [
-      { "classNo": 217, "grade": 82 },
+      { "classNo": 217, "grade": null },
       { "classNo": 277, "grade": null },
-      { "classNo": 296, "grade": 65 },
+      { "classNo": 296, "grade": null },
       { "classNo": 215, "grade": null }
     ]
   },
@@ -442,7 +442,7 @@
     "name": "Student 42",
     "classes": [
       { "classNo": 208, "grade": null },
-      { "classNo": 288, "grade": 12 },
+      { "classNo": 288, "grade": null },
       { "classNo": 291, "grade": null }
     ]
   },
@@ -452,9 +452,9 @@
     "name": "Student 43",
     "classes": [
       { "classNo": 229, "grade": null },
-      { "classNo": 289, "grade": 92 },
+      { "classNo": 289, "grade": null },
       { "classNo": 246, "grade": null },
-      { "classNo": 290, "grade": 17 }
+      { "classNo": 290, "grade": null }
     ]
   },
   {
@@ -462,10 +462,10 @@
     "password": "123456",
     "name": "Student 44",
     "classes": [
-      { "classNo": 282, "grade": 73 },
+      { "classNo": 282, "grade": null },
       { "classNo": 231, "grade": null },
       { "classNo": 210, "grade": null },
-      { "classNo": 289, "grade": 40 },
+      { "classNo": 289, "grade": null },
       { "classNo": 267, "grade": null }
     ]
   },
@@ -474,11 +474,11 @@
     "password": "123456",
     "name": "Student 45",
     "classes": [
-      { "classNo": 213, "grade": 97 },
+      { "classNo": 213, "grade": null },
       { "classNo": 208, "grade": null },
-      { "classNo": 273, "grade": 92 },
-      { "classNo": 289, "grade": 37 },
-      { "classNo": 265, "grade": 4 },
+      { "classNo": 273, "grade": null },
+      { "classNo": 289, "grade": null },
+      { "classNo": 265, "grade": null },
       { "classNo": 235, "grade": null }
     ]
   },
@@ -488,7 +488,7 @@
     "name": "Student 46",
     "classes": [
       { "classNo": 210, "grade": null },
-      { "classNo": 203, "grade": 42 },
+      { "classNo": 203, "grade": null },
       { "classNo": 206, "grade": 46 },
       { "classNo": 259, "grade": 16 },
       { "classNo": 221, "grade": 50 }
@@ -500,7 +500,7 @@
     "name": "Student 47",
     "classes": [
       { "classNo": 233, "grade": 31 },
-      { "classNo": 204, "grade": 21 }
+      { "classNo": 204, "grade": null }
     ]
   },
   {
@@ -517,8 +517,8 @@
     "password": "123456",
     "name": "Student 49",
     "classes": [
-      { "classNo": 296, "grade": 57 },
-      { "classNo": 273, "grade": 64 }
+      { "classNo": 296, "grade": null },
+      { "classNo": 273, "grade": null }
     ]
   },
   {
@@ -536,7 +536,7 @@
     "name": "Student 51",
     "classes": [
       { "classNo": 287, "grade": 55 },
-      { "classNo": 201, "grade": 41 }
+      { "classNo": 201, "grade": null }
     ]
   },
   {
@@ -546,9 +546,9 @@
     "classes": [
       { "classNo": 205, "grade": null },
       { "classNo": 220, "grade": null },
-      { "classNo": 268, "grade": 36 },
-      { "classNo": 290, "grade": 19 },
-      { "classNo": 293, "grade": 26 },
+      { "classNo": 268, "grade": null },
+      { "classNo": 290, "grade": null },
+      { "classNo": 293, "grade": null },
       { "classNo": 211, "grade": null }
     ]
   },
@@ -557,7 +557,7 @@
     "password": "123456",
     "name": "Student 53",
     "classes": [
-      { "classNo": 204, "grade": 23 },
+      { "classNo": 204, "grade": null },
       { "classNo": 242, "grade": 49 }
     ]
   },
@@ -566,7 +566,7 @@
     "password": "123456",
     "name": "Student 54",
     "classes": [
-      { "classNo": 265, "grade": 96 },
+      { "classNo": 265, "grade": null },
       { "classNo": 283, "grade": 100 }
     ]
   },
@@ -587,7 +587,7 @@
       { "classNo": 263, "grade": 19 },
       { "classNo": 224, "grade": null },
       { "classNo": 266, "grade": 51 },
-      { "classNo": 244, "grade": 20 }
+      { "classNo": 244, "grade": null }
     ]
   },
   {
@@ -607,8 +607,8 @@
     "name": "Student 58",
     "classes": [
       { "classNo": 217, "grade": null },
-      { "classNo": 271, "grade": 1 },
-      { "classNo": 272, "grade": 6 },
+      { "classNo": 271, "grade": null },
+      { "classNo": 272, "grade": null },
       { "classNo": 294, "grade": 28 }
     ]
   },
@@ -630,9 +630,9 @@
       { "classNo": 299, "grade": 4 },
       { "classNo": 241, "grade": null },
       { "classNo": 208, "grade": 29 },
-      { "classNo": 202, "grade": 81 },
+      { "classNo": 202, "grade": null },
       { "classNo": 248, "grade": null },
-      { "classNo": 234, "grade": 33 }
+      { "classNo": 234, "grade": null }
     ]
   },
   {
@@ -668,7 +668,7 @@
       { "classNo": 223, "grade": 97 },
       { "classNo": 223, "grade": null },
       { "classNo": 224, "grade": null },
-      { "classNo": 229, "grade": 48 }
+      { "classNo": 229, "grade": null }
     ]
   },
   {
@@ -677,7 +677,7 @@
     "name": "Student 65",
     "classes": [
       { "classNo": 274, "grade": null },
-      { "classNo": 295, "grade": 3 },
+      { "classNo": 295, "grade": null },
       { "classNo": 287, "grade": 14 }
     ]
   },
@@ -686,10 +686,10 @@
     "password": "123456",
     "name": "Student 66",
     "classes": [
-      { "classNo": 293, "grade": 9 },
+      { "classNo": 293, "grade": null },
       { "classNo": 257, "grade": 57 },
       { "classNo": 286, "grade": 75 },
-      { "classNo": 235, "grade": 92 },
+      { "classNo": 235, "grade": null },
       { "classNo": 262, "grade": null }
     ]
   },
@@ -698,8 +698,8 @@
     "password": "123456",
     "name": "Student 67",
     "classes": [
-      { "classNo": 295, "grade": 20 },
-      { "classNo": 279, "grade": 87 }
+      { "classNo": 295, "grade": null },
+      { "classNo": 279, "grade": null }
     ]
   },
   {
@@ -708,7 +708,7 @@
     "name": "Student 68",
     "classes": [
       { "classNo": 206, "grade": null },
-      { "classNo": 280, "grade": 54 },
+      { "classNo": 280, "grade": null },
       { "classNo": 207, "grade": 52 },
       { "classNo": 286, "grade": 71 }
     ]
@@ -761,7 +761,7 @@
       { "classNo": 202, "grade": null },
       { "classNo": 299, "grade": 57 },
       { "classNo": 279, "grade": null },
-      { "classNo": 226, "grade": 8 }
+      { "classNo": 226, "grade": null }
     ]
   },
   {
@@ -769,7 +769,7 @@
     "password": "123456",
     "name": "Student 74",
     "classes": [
-      { "classNo": 265, "grade": 16 },
+      { "classNo": 265, "grade": null },
       { "classNo": 264, "grade": 51 },
       { "classNo": 239, "grade": 86 },
       { "classNo": 238, "grade": null },
@@ -781,7 +781,7 @@
     "password": "123456",
     "name": "Student 75",
     "classes": [
-      { "classNo": 282, "grade": 94 },
+      { "classNo": 282, "grade": null },
       { "classNo": 220, "grade": 88 }
     ]
   },
@@ -837,7 +837,7 @@
     "password": "123456",
     "name": "Student 80",
     "classes": [
-      { "classNo": 224, "grade": 71 },
+      { "classNo": 224, "grade": null },
       { "classNo": 248, "grade": 67 }
     ]
   },
@@ -846,9 +846,9 @@
     "password": "123456",
     "name": "Student 81",
     "classes": [
-      { "classNo": 285, "grade": 48 },
+      { "classNo": 285, "grade": null },
       { "classNo": 208, "grade": null },
-      { "classNo": 250, "grade": 50 },
+      { "classNo": 250, "grade": null },
       { "classNo": 247, "grade": null },
       { "classNo": 282, "grade": null },
       { "classNo": 216, "grade": null }
@@ -861,8 +861,8 @@
     "classes": [
       { "classNo": 236, "grade": null },
       { "classNo": 295, "grade": null },
-      { "classNo": 280, "grade": 100 },
-      { "classNo": 261, "grade": 71 }
+      { "classNo": 280, "grade": null },
+      { "classNo": 261, "grade": null }
     ]
   },
   {
@@ -880,8 +880,8 @@
     "name": "Student 84",
     "classes": [
       { "classNo": 239, "grade": null },
-      { "classNo": 265, "grade": 35 },
-      { "classNo": 261, "grade": 59 },
+      { "classNo": 265, "grade": null },
+      { "classNo": 261, "grade": null },
       { "classNo": 285, "grade": null }
     ]
   },
@@ -890,7 +890,7 @@
     "password": "123456",
     "name": "Student 85",
     "classes": [
-      { "classNo": 213, "grade": 67 },
+      { "classNo": 213, "grade": null },
       { "classNo": 289, "grade": null },
       { "classNo": 275, "grade": null },
       { "classNo": 270, "grade": 80 }
@@ -903,7 +903,7 @@
     "classes": [
       { "classNo": 260, "grade": null },
       { "classNo": 277, "grade": null },
-      { "classNo": 214, "grade": 35 },
+      { "classNo": 214, "grade": null },
       { "classNo": 278, "grade": 83 }
     ]
   },
@@ -931,11 +931,11 @@
     "password": "123456",
     "name": "Student 89",
     "classes": [
-      { "classNo": 215, "grade": 75 },
-      { "classNo": 218, "grade": 0 },
+      { "classNo": 215, "grade": null },
+      { "classNo": 218, "grade": null },
       { "classNo": 247, "grade": 17 },
       { "classNo": 229, "grade": null },
-      { "classNo": 296, "grade": 53 },
+      { "classNo": 296, "grade": null },
       { "classNo": 223, "grade": null }
     ]
   },
@@ -947,7 +947,7 @@
       { "classNo": 288, "grade": null },
       { "classNo": 204, "grade": null },
       { "classNo": 226, "grade": null },
-      { "classNo": 288, "grade": 9 },
+      { "classNo": 288, "grade": null },
       { "classNo": 287, "grade": 82 }
     ]
   },
@@ -972,7 +972,7 @@
       { "classNo": 230, "grade": null },
       { "classNo": 266, "grade": null },
       { "classNo": 295, "grade": null },
-      { "classNo": 261, "grade": 94 }
+      { "classNo": 261, "grade": null }
     ]
   },
   {
@@ -1000,9 +1000,9 @@
     "name": "Student 95",
     "classes": [
       { "classNo": 297, "grade": 100 },
-      { "classNo": 215, "grade": 29 },
+      { "classNo": 215, "grade": null },
       { "classNo": 266, "grade": null },
-      { "classNo": 201, "grade": 74 }
+      { "classNo": 201, "grade": null }
     ]
   },
   {
@@ -1016,8 +1016,8 @@
     "password": "123456",
     "name": "Student 97",
     "classes": [
-      { "classNo": 245, "grade": 47 },
-      { "classNo": 268, "grade": 89 },
+      { "classNo": 245, "grade": null },
+      { "classNo": 268, "grade": null },
       { "classNo": 297, "grade": null },
       { "classNo": 211, "grade": null }
     ]
@@ -1028,7 +1028,7 @@
     "name": "Student 98",
     "classes": [
       { "classNo": 239, "grade": 89 },
-      { "classNo": 200, "grade": 13 },
+      { "classNo": 200, "grade": null },
       { "classNo": 254, "grade": null },
       { "classNo": 239, "grade": null }
     ]
@@ -1049,7 +1049,7 @@
     "classes": [
       { "classNo": 296, "grade": null },
       { "classNo": 299, "grade": 26 },
-      { "classNo": 237, "grade": 63 }
+      { "classNo": 237, "grade": null }
     ]
   },
   {
@@ -1058,7 +1058,7 @@
     "name": "Student 101",
     "classes": [
       { "classNo": 249, "grade": null },
-      { "classNo": 290, "grade": 4 },
+      { "classNo": 290, "grade": null },
       { "classNo": 273, "grade": null }
     ]
   },
@@ -1080,7 +1080,7 @@
     "password": "123456",
     "name": "Student 103",
     "classes": [
-      { "classNo": 240, "grade": 66 },
+      { "classNo": 240, "grade": null },
       { "classNo": 299, "grade": 77 }
     ]
   },
@@ -1101,7 +1101,7 @@
     "classes": [
       { "classNo": 276, "grade": 10 },
       { "classNo": 206, "grade": null },
-      { "classNo": 230, "grade": 9 },
+      { "classNo": 230, "grade": null },
       { "classNo": 234, "grade": null },
       { "classNo": 236, "grade": 60 },
       { "classNo": 275, "grade": 41 }
@@ -1113,8 +1113,8 @@
     "name": "Student 106",
     "classes": [
       { "classNo": 265, "grade": null },
-      { "classNo": 285, "grade": 93 },
-      { "classNo": 267, "grade": 62 }
+      { "classNo": 285, "grade": null },
+      { "classNo": 267, "grade": null }
     ]
   },
   {
@@ -1169,8 +1169,8 @@
     "classes": [
       { "classNo": 212, "grade": null },
       { "classNo": 245, "grade": null },
-      { "classNo": 205, "grade": 99 },
-      { "classNo": 216, "grade": 34 }
+      { "classNo": 205, "grade": null },
+      { "classNo": 216, "grade": null }
     ]
   },
   {
@@ -1179,7 +1179,7 @@
     "name": "Student 113",
     "classes": [
       { "classNo": 257, "grade": null },
-      { "classNo": 224, "grade": 5 },
+      { "classNo": 224, "grade": null },
       { "classNo": 213, "grade": null }
     ]
   },
@@ -1188,7 +1188,7 @@
     "password": "123456",
     "name": "Student 114",
     "classes": [
-      { "classNo": 293, "grade": 20 },
+      { "classNo": 293, "grade": null },
       { "classNo": 206, "grade": null },
       { "classNo": 272, "grade": null },
       { "classNo": 223, "grade": null },
@@ -1224,9 +1224,9 @@
     "name": "Student 117",
     "classes": [
       { "classNo": 270, "grade": 87 },
-      { "classNo": 243, "grade": 97 },
-      { "classNo": 258, "grade": 85 },
-      { "classNo": 265, "grade": 74 },
+      { "classNo": 243, "grade": 100 },
+      { "classNo": 258, "grade": null },
+      { "classNo": 265, "grade": null },
       { "classNo": 240, "grade": null },
       { "classNo": 227, "grade": null }
     ]
@@ -1236,7 +1236,7 @@
     "password": "123456",
     "name": "Student 118",
     "classes": [
-      { "classNo": 256, "grade": 64 },
+      { "classNo": 256, "grade": null },
       { "classNo": 284, "grade": null }
     ]
   },
@@ -1266,8 +1266,8 @@
     "password": "123456",
     "name": "Student 121",
     "classes": [
-      { "classNo": 240, "grade": 57 },
-      { "classNo": 261, "grade": 54 },
+      { "classNo": 240, "grade": null },
+      { "classNo": 261, "grade": null },
       { "classNo": 252, "grade": null },
       { "classNo": 264, "grade": null }
     ]
@@ -1313,7 +1313,7 @@
     "name": "Student 126",
     "classes": [
       { "classNo": 278, "grade": null },
-      { "classNo": 243, "grade": 79 },
+      { "classNo": 243, "grade": 100 },
       { "classNo": 216, "grade": null },
       { "classNo": 251, "grade": 59 }
     ]
@@ -1323,9 +1323,9 @@
     "password": "123456",
     "name": "Student 127",
     "classes": [
-      { "classNo": 202, "grade": 28 },
+      { "classNo": 202, "grade": null },
       { "classNo": 246, "grade": null },
-      { "classNo": 246, "grade": 49 },
+      { "classNo": 246, "grade": null },
       { "classNo": 277, "grade": 33 }
     ]
   },
@@ -1335,11 +1335,11 @@
     "name": "Student 128",
     "classes": [
       { "classNo": 248, "grade": null },
-      { "classNo": 226, "grade": 95 },
-      { "classNo": 203, "grade": 86 },
+      { "classNo": 226, "grade": null },
+      { "classNo": 203, "grade": null },
       { "classNo": 206, "grade": null },
       { "classNo": 261, "grade": null },
-      { "classNo": 244, "grade": 91 }
+      { "classNo": 244, "grade": null }
     ]
   },
   {
@@ -1355,7 +1355,7 @@
     "classes": [
       { "classNo": 239, "grade": null },
       { "classNo": 257, "grade": null },
-      { "classNo": 214, "grade": 93 },
+      { "classNo": 214, "grade": null },
       { "classNo": 287, "grade": 80 },
       { "classNo": 278, "grade": 93 }
     ]
@@ -1365,7 +1365,7 @@
     "password": "123456",
     "name": "Student 131",
     "classes": [
-      { "classNo": 201, "grade": 22 },
+      { "classNo": 201, "grade": null },
       { "classNo": 200, "grade": null }
     ]
   },
@@ -1374,8 +1374,8 @@
     "password": "123456",
     "name": "Student 132",
     "classes": [
-      { "classNo": 217, "grade": 90 },
-      { "classNo": 226, "grade": 74 }
+      { "classNo": 217, "grade": null },
+      { "classNo": 226, "grade": null }
     ]
   },
   {
@@ -1400,8 +1400,8 @@
     "password": "123456",
     "name": "Student 135",
     "classes": [
-      { "classNo": 282, "grade": 84 },
-      { "classNo": 211, "grade": 48 },
+      { "classNo": 282, "grade": null },
+      { "classNo": 211, "grade": null },
       { "classNo": 256, "grade": null },
       { "classNo": 297, "grade": null },
       { "classNo": 236, "grade": 98 }
@@ -1414,7 +1414,7 @@
     "classes": [
       { "classNo": 211, "grade": null },
       { "classNo": 259, "grade": null },
-      { "classNo": 295, "grade": 10 },
+      { "classNo": 295, "grade": null },
       { "classNo": 239, "grade": 22 }
     ]
   },
@@ -1440,8 +1440,8 @@
     "password": "123456",
     "name": "Student 139",
     "classes": [
-      { "classNo": 217, "grade": 87 },
-      { "classNo": 245, "grade": 53 },
+      { "classNo": 217, "grade": null },
+      { "classNo": 245, "grade": null },
       { "classNo": 210, "grade": null }
     ]
   },
@@ -1453,7 +1453,7 @@
       { "classNo": 208, "grade": 74 },
       { "classNo": 231, "grade": 87 },
       { "classNo": 257, "grade": 79 },
-      { "classNo": 290, "grade": 5 },
+      { "classNo": 290, "grade": null },
       { "classNo": 209, "grade": null }
     ]
   },
@@ -1461,7 +1461,7 @@
     "username": "user141",
     "password": "123456",
     "name": "Student 141",
-    "classes": [{ "classNo": 254, "grade": 98 }]
+    "classes": [{ "classNo": 254, "grade": null }]
   },
   {
     "username": "user142",
@@ -1474,7 +1474,7 @@
     "password": "123456",
     "name": "Student 143",
     "classes": [
-      { "classNo": 240, "grade": 6 },
+      { "classNo": 240, "grade": null },
       { "classNo": 258, "grade": null }
     ]
   },
@@ -1482,16 +1482,16 @@
     "username": "user144",
     "password": "123456",
     "name": "Student 144",
-    "classes": [{ "classNo": 260, "grade": 33 }]
+    "classes": [{ "classNo": 260, "grade": null }]
   },
   {
     "username": "user145",
     "password": "123456",
     "name": "Student 145",
     "classes": [
-      { "classNo": 218, "grade": 42 },
+      { "classNo": 218, "grade": null },
       { "classNo": 225, "grade": 67 },
-      { "classNo": 265, "grade": 90 },
+      { "classNo": 265, "grade": null },
       { "classNo": 242, "grade": 5 }
     ]
   },
@@ -1499,7 +1499,7 @@
     "username": "user146",
     "password": "123456",
     "name": "Student 146",
-    "classes": [{ "classNo": 203, "grade": 55 }]
+    "classes": [{ "classNo": 203, "grade": null }]
   },
   {
     "username": "user147",
@@ -1513,9 +1513,9 @@
     "name": "Student 148",
     "classes": [
       { "classNo": 277, "grade": 61 },
-      { "classNo": 243, "grade": 89 },
+      { "classNo": 243, "grade": 100 },
       { "classNo": 264, "grade": null },
-      { "classNo": 214, "grade": 59 }
+      { "classNo": 214, "grade": null }
     ]
   },
   {
@@ -1528,7 +1528,7 @@
       { "classNo": 259, "grade": null },
       { "classNo": 220, "grade": null },
       { "classNo": 292, "grade": null },
-      { "classNo": 226, "grade": 18 }
+      { "classNo": 226, "grade": null }
     ]
   },
   {
@@ -1558,8 +1558,8 @@
     "password": "123456",
     "name": "Student 152",
     "classes": [
-      { "classNo": 204, "grade": 99 },
-      { "classNo": 230, "grade": 71 },
+      { "classNo": 204, "grade": null },
+      { "classNo": 230, "grade": null },
       { "classNo": 278, "grade": null }
     ]
   },
@@ -1568,7 +1568,7 @@
     "password": "123456",
     "name": "Student 153",
     "classes": [
-      { "classNo": 203, "grade": 42 },
+      { "classNo": 203, "grade": null },
       { "classNo": 228, "grade": null },
       { "classNo": 259, "grade": 4 }
     ]
@@ -1594,10 +1594,10 @@
     "name": "Student 156",
     "classes": [
       { "classNo": 251, "grade": null },
-      { "classNo": 289, "grade": 56 },
+      { "classNo": 289, "grade": null },
       { "classNo": 202, "grade": null },
       { "classNo": 224, "grade": null },
-      { "classNo": 254, "grade": 95 },
+      { "classNo": 254, "grade": null },
       { "classNo": 299, "grade": null }
     ]
   },
@@ -1606,7 +1606,7 @@
     "password": "123456",
     "name": "Student 157",
     "classes": [
-      { "classNo": 213, "grade": 29 },
+      { "classNo": 213, "grade": null },
       { "classNo": 242, "grade": 45 }
     ]
   },
@@ -1616,7 +1616,7 @@
     "name": "Student 158",
     "classes": [
       { "classNo": 225, "grade": 61 },
-      { "classNo": 285, "grade": 89 },
+      { "classNo": 285, "grade": null },
       { "classNo": 237, "grade": null },
       { "classNo": 233, "grade": 35 },
       { "classNo": 278, "grade": 13 }
@@ -1627,7 +1627,7 @@
     "password": "123456",
     "name": "Student 159",
     "classes": [
-      { "classNo": 265, "grade": 41 },
+      { "classNo": 265, "grade": null },
       { "classNo": 259, "grade": null },
       { "classNo": 252, "grade": null },
       { "classNo": 276, "grade": null },
@@ -1640,7 +1640,7 @@
     "name": "Student 160",
     "classes": [
       { "classNo": 262, "grade": null },
-      { "classNo": 295, "grade": 72 }
+      { "classNo": 295, "grade": null }
     ]
   },
   {
@@ -1649,10 +1649,10 @@
     "name": "Student 161",
     "classes": [
       { "classNo": 254, "grade": null },
-      { "classNo": 234, "grade": 46 },
+      { "classNo": 234, "grade": null },
       { "classNo": 212, "grade": 13 },
       { "classNo": 253, "grade": null },
-      { "classNo": 200, "grade": 34 }
+      { "classNo": 200, "grade": null }
     ]
   },
   {
@@ -1662,7 +1662,7 @@
     "classes": [
       { "classNo": 212, "grade": 49 },
       { "classNo": 265, "grade": null },
-      { "classNo": 282, "grade": 45 },
+      { "classNo": 282, "grade": null },
       { "classNo": 239, "grade": null }
     ]
   },
@@ -1677,9 +1677,9 @@
     "password": "123456",
     "name": "Student 164",
     "classes": [
-      { "classNo": 267, "grade": 20 },
+      { "classNo": 267, "grade": null },
       { "classNo": 255, "grade": null },
-      { "classNo": 211, "grade": 29 },
+      { "classNo": 211, "grade": null },
       { "classNo": 268, "grade": null },
       { "classNo": 274, "grade": null }
     ]
@@ -1700,7 +1700,7 @@
       { "classNo": 252, "grade": 26 },
       { "classNo": 276, "grade": null },
       { "classNo": 274, "grade": null },
-      { "classNo": 216, "grade": 62 }
+      { "classNo": 216, "grade": null }
     ]
   },
   {
@@ -1710,23 +1710,23 @@
     "classes": [
       { "classNo": 252, "grade": 24 },
       { "classNo": 261, "grade": null },
-      { "classNo": 249, "grade": 61 }
+      { "classNo": 249, "grade": null }
     ]
   },
   {
     "username": "user168",
     "password": "123456",
     "name": "Student 168",
-    "classes": [{ "classNo": 246, "grade": 76 }]
+    "classes": [{ "classNo": 246, "grade": null }]
   },
   {
     "username": "user169",
     "password": "123456",
     "name": "Student 169",
     "classes": [
-      { "classNo": 244, "grade": 4 },
+      { "classNo": 244, "grade": null },
       { "classNo": 227, "grade": null },
-      { "classNo": 227, "grade": 60 }
+      { "classNo": 227, "grade": null }
     ]
   },
   {
@@ -1773,7 +1773,7 @@
     "password": "123456",
     "name": "Student 174",
     "classes": [
-      { "classNo": 214, "grade": 36 },
+      { "classNo": 214, "grade": null },
       { "classNo": 217, "grade": null },
       { "classNo": 294, "grade": 21 }
     ]
@@ -1797,9 +1797,9 @@
     "name": "Student 176",
     "classes": [
       { "classNo": 212, "grade": null },
-      { "classNo": 271, "grade": 47 },
-      { "classNo": 245, "grade": 52 },
-      { "classNo": 222, "grade": 62 }
+      { "classNo": 271, "grade": null },
+      { "classNo": 245, "grade": null },
+      { "classNo": 222, "grade": null }
     ]
   },
   {
@@ -1813,9 +1813,9 @@
     "password": "123456",
     "name": "Student 178",
     "classes": [
-      { "classNo": 213, "grade": 55 },
+      { "classNo": 213, "grade": null },
       { "classNo": 269, "grade": 64 },
-      { "classNo": 268, "grade": 3 }
+      { "classNo": 268, "grade": null }
     ]
   },
   {
@@ -1833,8 +1833,8 @@
     "name": "Student 180",
     "classes": [
       { "classNo": 225, "grade": 29 },
-      { "classNo": 217, "grade": 91 },
-      { "classNo": 237, "grade": 20 },
+      { "classNo": 217, "grade": null },
+      { "classNo": 237, "grade": null },
       { "classNo": 295, "grade": null }
     ]
   },
@@ -1855,7 +1855,7 @@
     "password": "123456",
     "name": "Student 183",
     "classes": [
-      { "classNo": 258, "grade": 11 },
+      { "classNo": 258, "grade": null },
       { "classNo": 208, "grade": 23 },
       { "classNo": 224, "grade": null }
     ]
@@ -1866,7 +1866,7 @@
     "name": "Student 184",
     "classes": [
       { "classNo": 218, "grade": null },
-      { "classNo": 260, "grade": 65 },
+      { "classNo": 260, "grade": null },
       { "classNo": 235, "grade": null }
     ]
   },
@@ -1876,7 +1876,7 @@
     "name": "Student 185",
     "classes": [
       { "classNo": 283, "grade": 46 },
-      { "classNo": 219, "grade": 14 },
+      { "classNo": 219, "grade": null },
       { "classNo": 270, "grade": 25 },
       { "classNo": 277, "grade": 66 },
       { "classNo": 240, "grade": null }
@@ -1897,9 +1897,9 @@
     "password": "123456",
     "name": "Student 187",
     "classes": [
-      { "classNo": 240, "grade": 53 },
+      { "classNo": 240, "grade": null },
       { "classNo": 287, "grade": 72 },
-      { "classNo": 235, "grade": 89 },
+      { "classNo": 235, "grade": null },
       { "classNo": 245, "grade": null }
     ]
   },
@@ -1917,7 +1917,7 @@
       { "classNo": 231, "grade": 27 },
       { "classNo": 299, "grade": null },
       { "classNo": 241, "grade": 56 },
-      { "classNo": 279, "grade": 91 }
+      { "classNo": 279, "grade": null }
     ]
   },
   {
@@ -1926,10 +1926,10 @@
     "name": "Student 190",
     "classes": [
       { "classNo": 259, "grade": null },
-      { "classNo": 295, "grade": 4 },
-      { "classNo": 238, "grade": 72 },
-      { "classNo": 215, "grade": 23 },
-      { "classNo": 238, "grade": 52 }
+      { "classNo": 295, "grade": null },
+      { "classNo": 238, "grade": null },
+      { "classNo": 215, "grade": null },
+      { "classNo": 238, "grade": null }
     ]
   },
   {
@@ -1939,7 +1939,7 @@
     "classes": [
       { "classNo": 227, "grade": null },
       { "classNo": 228, "grade": 52 },
-      { "classNo": 267, "grade": 60 },
+      { "classNo": 267, "grade": null },
       { "classNo": 256, "grade": null },
       { "classNo": 278, "grade": null }
     ]
@@ -1962,7 +1962,7 @@
     "name": "Student 194",
     "classes": [
       { "classNo": 217, "grade": null },
-      { "classNo": 201, "grade": 13 }
+      { "classNo": 201, "grade": null }
     ]
   },
   {
@@ -1981,7 +1981,7 @@
     "classes": [
       { "classNo": 246, "grade": null },
       { "classNo": 266, "grade": 71 },
-      { "classNo": 289, "grade": 75 },
+      { "classNo": 289, "grade": null },
       { "classNo": 297, "grade": 62 },
       { "classNo": 293, "grade": null }
     ]
@@ -1991,8 +1991,8 @@
     "password": "123456",
     "name": "Student 197",
     "classes": [
-      { "classNo": 249, "grade": 22 },
-      { "classNo": 235, "grade": 87 },
+      { "classNo": 249, "grade": null },
+      { "classNo": 235, "grade": null },
       { "classNo": 257, "grade": 42 },
       { "classNo": 232, "grade": null },
       { "classNo": 248, "grade": null },
@@ -2004,7 +2004,7 @@
     "password": "123456",
     "name": "Student 198",
     "classes": [
-      { "classNo": 273, "grade": 99 },
+      { "classNo": 273, "grade": null },
       { "classNo": 228, "grade": 4 },
       { "classNo": 206, "grade": 51 }
     ]
@@ -2015,7 +2015,7 @@
     "name": "Student 199",
     "classes": [
       { "classNo": 211, "grade": null },
-      { "classNo": 271, "grade": 35 },
+      { "classNo": 271, "grade": null },
       { "classNo": 284, "grade": 7 }
     ]
   },
@@ -2025,7 +2025,7 @@
     "name": "Student 200",
     "classes": [
       { "classNo": 235, "grade": null },
-      { "classNo": 254, "grade": 24 }
+      { "classNo": 254, "grade": null }
     ]
   },
   {
@@ -2042,7 +2042,7 @@
     "password": "123456",
     "name": "Student 202",
     "classes": [
-      { "classNo": 230, "grade": 23 },
+      { "classNo": 230, "grade": null },
       { "classNo": 221, "grade": null }
     ]
   },
@@ -2064,7 +2064,7 @@
     "name": "Student 204",
     "classes": [
       { "classNo": 200, "grade": null },
-      { "classNo": 272, "grade": 39 },
+      { "classNo": 272, "grade": null },
       { "classNo": 283, "grade": null },
       { "classNo": 262, "grade": null }
     ]
@@ -2074,7 +2074,7 @@
     "password": "123456",
     "name": "Student 205",
     "classes": [
-      { "classNo": 245, "grade": 52 },
+      { "classNo": 245, "grade": null },
       { "classNo": 228, "grade": 83 },
       { "classNo": 250, "grade": null },
       { "classNo": 251, "grade": null },
@@ -2092,12 +2092,12 @@
     "password": "123456",
     "name": "Student 207",
     "classes": [
-      { "classNo": 289, "grade": 55 },
-      { "classNo": 201, "grade": 13 },
+      { "classNo": 289, "grade": null },
+      { "classNo": 201, "grade": null },
       { "classNo": 207, "grade": 26 },
       { "classNo": 298, "grade": null },
       { "classNo": 296, "grade": null },
-      { "classNo": 296, "grade": 57 }
+      { "classNo": 296, "grade": null }
     ]
   },
   {
@@ -2105,12 +2105,12 @@
     "password": "123456",
     "name": "Student 208",
     "classes": [
-      { "classNo": 262, "grade": 83 },
+      { "classNo": 262, "grade": null },
       { "classNo": 245, "grade": null },
-      { "classNo": 258, "grade": 87 },
-      { "classNo": 273, "grade": 26 },
+      { "classNo": 258, "grade": null },
+      { "classNo": 273, "grade": null },
       { "classNo": 206, "grade": 11 },
-      { "classNo": 272, "grade": 56 }
+      { "classNo": 272, "grade": null }
     ]
   },
   {
@@ -2121,7 +2121,7 @@
       { "classNo": 255, "grade": null },
       { "classNo": 276, "grade": null },
       { "classNo": 281, "grade": null },
-      { "classNo": 261, "grade": 42 },
+      { "classNo": 261, "grade": null },
       { "classNo": 234, "grade": null },
       { "classNo": 221, "grade": null }
     ]
@@ -2141,7 +2141,7 @@
     "name": "Student 211",
     "classes": [
       { "classNo": 236, "grade": null },
-      { "classNo": 222, "grade": 40 }
+      { "classNo": 222, "grade": null }
     ]
   },
   {
@@ -2152,7 +2152,7 @@
       { "classNo": 275, "grade": 54 },
       { "classNo": 241, "grade": null },
       { "classNo": 210, "grade": null },
-      { "classNo": 295, "grade": 63 }
+      { "classNo": 295, "grade": null }
     ]
   },
   {
@@ -2161,7 +2161,7 @@
     "name": "Student 213",
     "classes": [
       { "classNo": 246, "grade": null },
-      { "classNo": 237, "grade": 84 },
+      { "classNo": 237, "grade": null },
       { "classNo": 297, "grade": null }
     ]
   },
@@ -2172,7 +2172,7 @@
     "classes": [
       { "classNo": 270, "grade": 60 },
       { "classNo": 231, "grade": 87 },
-      { "classNo": 291, "grade": 35 },
+      { "classNo": 291, "grade": null },
       { "classNo": 208, "grade": 13 },
       { "classNo": 267, "grade": null },
       { "classNo": 272, "grade": null }
@@ -2185,7 +2185,7 @@
     "classes": [
       { "classNo": 281, "grade": null },
       { "classNo": 238, "grade": null },
-      { "classNo": 260, "grade": 18 }
+      { "classNo": 260, "grade": null }
     ]
   },
   {
@@ -2193,8 +2193,8 @@
     "password": "123456",
     "name": "Student 216",
     "classes": [
-      { "classNo": 214, "grade": 64 },
-      { "classNo": 274, "grade": 24 }
+      { "classNo": 214, "grade": null },
+      { "classNo": 274, "grade": null }
     ]
   },
   {
@@ -2224,7 +2224,7 @@
     "classes": [
       { "classNo": 278, "grade": null },
       { "classNo": 214, "grade": null },
-      { "classNo": 245, "grade": 90 }
+      { "classNo": 245, "grade": null }
     ]
   },
   {
@@ -2234,7 +2234,7 @@
     "classes": [
       { "classNo": 276, "grade": 56 },
       { "classNo": 239, "grade": 85 },
-      { "classNo": 219, "grade": 72 },
+      { "classNo": 219, "grade": null },
       { "classNo": 236, "grade": 3 },
       { "classNo": 293, "grade": null },
       { "classNo": 217, "grade": null }
@@ -2245,9 +2245,9 @@
     "password": "123456",
     "name": "Student 221",
     "classes": [
-      { "classNo": 285, "grade": 76 },
-      { "classNo": 256, "grade": 9 },
-      { "classNo": 215, "grade": 19 },
+      { "classNo": 285, "grade": null },
+      { "classNo": 256, "grade": null },
+      { "classNo": 215, "grade": null },
       { "classNo": 277, "grade": 17 },
       { "classNo": 242, "grade": null },
       { "classNo": 288, "grade": null }
@@ -2269,7 +2269,7 @@
     "name": "Student 223",
     "classes": [
       { "classNo": 242, "grade": 39 },
-      { "classNo": 243, "grade": null },
+      { "classNo": 243, "grade": 100 },
       { "classNo": 203, "grade": null },
       { "classNo": 289, "grade": null },
       { "classNo": 215, "grade": null }
@@ -2281,7 +2281,7 @@
     "name": "Student 224",
     "classes": [
       { "classNo": 253, "grade": null },
-      { "classNo": 261, "grade": 82 },
+      { "classNo": 261, "grade": null },
       { "classNo": 236, "grade": 51 },
       { "classNo": 279, "grade": null }
     ]
@@ -2291,7 +2291,7 @@
     "password": "123456",
     "name": "Student 225",
     "classes": [
-      { "classNo": 291, "grade": 68 },
+      { "classNo": 291, "grade": null },
       { "classNo": 297, "grade": null },
       { "classNo": 229, "grade": null },
       { "classNo": 233, "grade": null },
@@ -2304,7 +2304,7 @@
     "name": "Student 226",
     "classes": [
       { "classNo": 260, "grade": null },
-      { "classNo": 202, "grade": 50 },
+      { "classNo": 202, "grade": null },
       { "classNo": 230, "grade": null }
     ]
   },
@@ -2313,9 +2313,9 @@
     "password": "123456",
     "name": "Student 227",
     "classes": [
-      { "classNo": 280, "grade": 66 },
-      { "classNo": 211, "grade": 2 },
-      { "classNo": 267, "grade": 97 },
+      { "classNo": 280, "grade": null },
+      { "classNo": 211, "grade": null },
+      { "classNo": 267, "grade": null },
       { "classNo": 224, "grade": null },
       { "classNo": 264, "grade": null }
     ]
@@ -2325,7 +2325,7 @@
     "password": "123456",
     "name": "Student 228",
     "classes": [
-      { "classNo": 224, "grade": 14 },
+      { "classNo": 224, "grade": null },
       { "classNo": 220, "grade": 95 },
       { "classNo": 225, "grade": null },
       { "classNo": 294, "grade": 47 },
@@ -2350,8 +2350,8 @@
     "password": "123456",
     "name": "Student 230",
     "classes": [
-      { "classNo": 209, "grade": 98 },
-      { "classNo": 288, "grade": 43 },
+      { "classNo": 209, "grade": null },
+      { "classNo": 288, "grade": null },
       { "classNo": 278, "grade": null }
     ]
   },
@@ -2361,7 +2361,7 @@
     "name": "Student 231",
     "classes": [
       { "classNo": 219, "grade": null },
-      { "classNo": 293, "grade": 84 },
+      { "classNo": 293, "grade": null },
       { "classNo": 221, "grade": 19 },
       { "classNo": 281, "grade": null }
     ]
@@ -2373,7 +2373,7 @@
     "classes": [
       { "classNo": 290, "grade": null },
       { "classNo": 239, "grade": 96 },
-      { "classNo": 261, "grade": 36 },
+      { "classNo": 261, "grade": null },
       { "classNo": 270, "grade": null }
     ]
   },
@@ -2383,8 +2383,8 @@
     "name": "Student 233",
     "classes": [
       { "classNo": 257, "grade": null },
-      { "classNo": 267, "grade": 32 },
-      { "classNo": 258, "grade": 48 },
+      { "classNo": 267, "grade": null },
+      { "classNo": 258, "grade": null },
       { "classNo": 288, "grade": null },
       { "classNo": 224, "grade": null }
     ]
@@ -2394,9 +2394,9 @@
     "password": "123456",
     "name": "Student 234",
     "classes": [
-      { "classNo": 216, "grade": 9 },
+      { "classNo": 216, "grade": null },
       { "classNo": 231, "grade": null },
-      { "classNo": 254, "grade": 96 }
+      { "classNo": 254, "grade": null }
     ]
   },
   {
@@ -2404,7 +2404,7 @@
     "password": "123456",
     "name": "Student 235",
     "classes": [
-      { "classNo": 272, "grade": 14 },
+      { "classNo": 272, "grade": null },
       { "classNo": 286, "grade": 100 },
       { "classNo": 286, "grade": 58 },
       { "classNo": 294, "grade": null },
@@ -2417,10 +2417,10 @@
     "name": "Student 236",
     "classes": [
       { "classNo": 229, "grade": null },
-      { "classNo": 217, "grade": 6 },
+      { "classNo": 217, "grade": null },
       { "classNo": 235, "grade": null },
       { "classNo": 236, "grade": null },
-      { "classNo": 215, "grade": 82 }
+      { "classNo": 215, "grade": null }
     ]
   },
   {
@@ -2429,7 +2429,7 @@
     "name": "Student 237",
     "classes": [
       { "classNo": 253, "grade": 92 },
-      { "classNo": 234, "grade": 7 },
+      { "classNo": 234, "grade": null },
       { "classNo": 250, "grade": null },
       { "classNo": 298, "grade": null }
     ]
@@ -2443,7 +2443,7 @@
       { "classNo": 278, "grade": 67 },
       { "classNo": 233, "grade": null },
       { "classNo": 262, "grade": null },
-      { "classNo": 246, "grade": 28 }
+      { "classNo": 246, "grade": null }
     ]
   },
   {
@@ -2459,7 +2459,7 @@
     "classes": [
       { "classNo": 225, "grade": null },
       { "classNo": 248, "grade": null },
-      { "classNo": 274, "grade": 89 }
+      { "classNo": 274, "grade": null }
     ]
   },
   {
@@ -2470,8 +2470,8 @@
       { "classNo": 292, "grade": null },
       { "classNo": 246, "grade": null },
       { "classNo": 206, "grade": 18 },
-      { "classNo": 205, "grade": 41 },
-      { "classNo": 288, "grade": 86 }
+      { "classNo": 205, "grade": null },
+      { "classNo": 288, "grade": null }
     ]
   },
   {
@@ -2491,7 +2491,7 @@
       { "classNo": 223, "grade": null },
       { "classNo": 254, "grade": null },
       { "classNo": 239, "grade": 6 },
-      { "classNo": 245, "grade": 29 },
+      { "classNo": 245, "grade": null },
       { "classNo": 251, "grade": 19 },
       { "classNo": 282, "grade": null }
     ]
@@ -2501,7 +2501,7 @@
     "password": "123456",
     "name": "Student 244",
     "classes": [
-      { "classNo": 290, "grade": 53 },
+      { "classNo": 290, "grade": null },
       { "classNo": 251, "grade": null }
     ]
   },
@@ -2521,7 +2521,7 @@
     "password": "123456",
     "name": "Student 246",
     "classes": [
-      { "classNo": 243, "grade": null },
+      { "classNo": 243, "grade": 100 },
       { "classNo": 224, "grade": null }
     ]
   },
@@ -2541,8 +2541,8 @@
     "name": "Student 248",
     "classes": [
       { "classNo": 215, "grade": null },
-      { "classNo": 254, "grade": 74 },
-      { "classNo": 291, "grade": 41 }
+      { "classNo": 254, "grade": null },
+      { "classNo": 291, "grade": null }
     ]
   },
   {
@@ -2561,7 +2561,7 @@
     "name": "Student 250",
     "classes": [
       { "classNo": 246, "grade": null },
-      { "classNo": 219, "grade": 49 }
+      { "classNo": 219, "grade": null }
     ]
   },
   {
@@ -2570,7 +2570,7 @@
     "name": "Student 251",
     "classes": [
       { "classNo": 266, "grade": null },
-      { "classNo": 295, "grade": 25 },
+      { "classNo": 295, "grade": null },
       { "classNo": 287, "grade": 38 }
     ]
   },
@@ -2586,11 +2586,11 @@
     "name": "Student 253",
     "classes": [
       { "classNo": 216, "grade": null },
-      { "classNo": 205, "grade": 61 },
+      { "classNo": 205, "grade": null },
       { "classNo": 242, "grade": 86 },
       { "classNo": 299, "grade": 7 },
       { "classNo": 295, "grade": null },
-      { "classNo": 238, "grade": 5 }
+      { "classNo": 238, "grade": null }
     ]
   },
   {
@@ -2600,8 +2600,8 @@
     "classes": [
       { "classNo": 228, "grade": null },
       { "classNo": 292, "grade": null },
-      { "classNo": 203, "grade": 38 },
-      { "classNo": 265, "grade": 10 },
+      { "classNo": 203, "grade": null },
+      { "classNo": 265, "grade": null },
       { "classNo": 222, "grade": null },
       { "classNo": 281, "grade": null }
     ]
@@ -2621,7 +2621,7 @@
     "password": "123456",
     "name": "Student 256",
     "classes": [
-      { "classNo": 250, "grade": 33 },
+      { "classNo": 250, "grade": null },
       { "classNo": 290, "grade": null },
       { "classNo": 252, "grade": null },
       { "classNo": 224, "grade": null },
@@ -2640,7 +2640,7 @@
     "name": "Student 258",
     "classes": [
       { "classNo": 289, "grade": null },
-      { "classNo": 218, "grade": 23 },
+      { "classNo": 218, "grade": null },
       { "classNo": 287, "grade": null },
       { "classNo": 246, "grade": null },
       { "classNo": 297, "grade": 40 }
@@ -2652,10 +2652,10 @@
     "name": "Student 259",
     "classes": [
       { "classNo": 221, "grade": null },
-      { "classNo": 290, "grade": 76 },
+      { "classNo": 290, "grade": null },
       { "classNo": 280, "grade": null },
-      { "classNo": 256, "grade": 78 },
-      { "classNo": 262, "grade": 32 }
+      { "classNo": 256, "grade": null },
+      { "classNo": 262, "grade": null }
     ]
   },
   {
@@ -2666,7 +2666,7 @@
       { "classNo": 239, "grade": 39 },
       { "classNo": 217, "grade": null },
       { "classNo": 205, "grade": null },
-      { "classNo": 267, "grade": 29 },
+      { "classNo": 267, "grade": null },
       { "classNo": 241, "grade": null }
     ]
   },
@@ -2675,8 +2675,8 @@
     "password": "123456",
     "name": "Student 261",
     "classes": [
-      { "classNo": 265, "grade": 58 },
-      { "classNo": 280, "grade": 100 }
+      { "classNo": 265, "grade": null },
+      { "classNo": 280, "grade": null }
     ]
   },
   {
@@ -2684,7 +2684,7 @@
     "password": "123456",
     "name": "Student 262",
     "classes": [
-      { "classNo": 245, "grade": 39 },
+      { "classNo": 245, "grade": null },
       { "classNo": 211, "grade": null },
       { "classNo": 266, "grade": 13 },
       { "classNo": 225, "grade": null }
@@ -2702,7 +2702,7 @@
     "name": "Student 264",
     "classes": [
       { "classNo": 224, "grade": null },
-      { "classNo": 217, "grade": 99 },
+      { "classNo": 217, "grade": null },
       { "classNo": 223, "grade": 51 }
     ]
   },
@@ -2742,7 +2742,7 @@
     "password": "123456",
     "name": "Student 268",
     "classes": [
-      { "classNo": 215, "grade": 48 },
+      { "classNo": 215, "grade": null },
       { "classNo": 253, "grade": null },
       { "classNo": 241, "grade": 9 },
       { "classNo": 213, "grade": null }
@@ -2758,7 +2758,7 @@
       { "classNo": 242, "grade": null },
       { "classNo": 214, "grade": null },
       { "classNo": 281, "grade": null },
-      { "classNo": 245, "grade": 37 }
+      { "classNo": 245, "grade": null }
     ]
   },
   {
@@ -2767,9 +2767,9 @@
     "name": "Student 270",
     "classes": [
       { "classNo": 262, "grade": null },
-      { "classNo": 250, "grade": 52 },
+      { "classNo": 250, "grade": null },
       { "classNo": 244, "grade": null },
-      { "classNo": 285, "grade": 38 },
+      { "classNo": 285, "grade": null },
       { "classNo": 290, "grade": null },
       { "classNo": 232, "grade": 73 }
     ]
@@ -2781,7 +2781,7 @@
     "classes": [
       { "classNo": 210, "grade": null },
       { "classNo": 223, "grade": null },
-      { "classNo": 265, "grade": 48 }
+      { "classNo": 265, "grade": null }
     ]
   },
   {
@@ -2789,7 +2789,7 @@
     "password": "123456",
     "name": "Student 272",
     "classes": [
-      { "classNo": 279, "grade": 7 },
+      { "classNo": 279, "grade": null },
       { "classNo": 255, "grade": null },
       { "classNo": 286, "grade": 26 },
       { "classNo": 298, "grade": null },
@@ -2802,10 +2802,10 @@
     "password": "123456",
     "name": "Student 273",
     "classes": [
-      { "classNo": 204, "grade": 47 },
-      { "classNo": 203, "grade": 39 },
+      { "classNo": 204, "grade": null },
+      { "classNo": 203, "grade": null },
       { "classNo": 211, "grade": null },
-      { "classNo": 218, "grade": 28 }
+      { "classNo": 218, "grade": null }
     ]
   },
   {
@@ -2824,10 +2824,10 @@
     "classes": [
       { "classNo": 277, "grade": null },
       { "classNo": 235, "grade": null },
-      { "classNo": 274, "grade": 92 },
+      { "classNo": 274, "grade": null },
       { "classNo": 228, "grade": null },
-      { "classNo": 290, "grade": 38 },
-      { "classNo": 213, "grade": 17 }
+      { "classNo": 290, "grade": null },
+      { "classNo": 213, "grade": null }
     ]
   },
   {
@@ -2846,7 +2846,7 @@
     "classes": [
       { "classNo": 224, "grade": null },
       { "classNo": 266, "grade": 100 },
-      { "classNo": 218, "grade": 100 },
+      { "classNo": 218, "grade": null },
       { "classNo": 264, "grade": null },
       { "classNo": 245, "grade": null },
       { "classNo": 279, "grade": null }
@@ -2862,7 +2862,7 @@
     "username": "user279",
     "password": "123456",
     "name": "Student 279",
-    "classes": [{ "classNo": 227, "grade": 21 }]
+    "classes": [{ "classNo": 227, "grade": null }]
   },
   {
     "username": "user280",
@@ -2870,7 +2870,7 @@
     "name": "Student 280",
     "classes": [
       { "classNo": 207, "grade": 97 },
-      { "classNo": 296, "grade": 25 },
+      { "classNo": 296, "grade": null },
       { "classNo": 262, "grade": null },
       { "classNo": 294, "grade": 8 }
     ]
@@ -2901,7 +2901,7 @@
     "name": "Student 283",
     "classes": [
       { "classNo": 246, "grade": null },
-      { "classNo": 235, "grade": 85 },
+      { "classNo": 235, "grade": null },
       { "classNo": 286, "grade": 57 }
     ]
   },
@@ -2928,7 +2928,7 @@
       { "classNo": 233, "grade": null },
       { "classNo": 227, "grade": null },
       { "classNo": 232, "grade": 52 },
-      { "classNo": 243, "grade": 52 },
+      { "classNo": 243, "grade": 100 },
       { "classNo": 292, "grade": 73 }
     ]
   },
@@ -2937,12 +2937,12 @@
     "password": "123456",
     "name": "Student 287",
     "classes": [
-      { "classNo": 227, "grade": 69 },
-      { "classNo": 289, "grade": 59 },
+      { "classNo": 227, "grade": null },
+      { "classNo": 289, "grade": null },
       { "classNo": 274, "grade": null },
       { "classNo": 276, "grade": null },
       { "classNo": 236, "grade": null },
-      { "classNo": 293, "grade": 30 }
+      { "classNo": 293, "grade": null }
     ]
   },
   {
@@ -2951,7 +2951,7 @@
     "name": "Student 288",
     "classes": [
       { "classNo": 207, "grade": null },
-      { "classNo": 224, "grade": 31 },
+      { "classNo": 224, "grade": null },
       { "classNo": 255, "grade": 56 }
     ]
   },
@@ -2995,7 +2995,7 @@
     "username": "user293",
     "password": "123456",
     "name": "Student 293",
-    "classes": [{ "classNo": 238, "grade": 2 }]
+    "classes": [{ "classNo": 238, "grade": null }]
   },
   {
     "username": "user294",
@@ -3010,10 +3010,10 @@
     "classes": [
       { "classNo": 261, "grade": null },
       { "classNo": 207, "grade": 93 },
-      { "classNo": 262, "grade": 41 },
-      { "classNo": 244, "grade": 75 },
+      { "classNo": 262, "grade": null },
+      { "classNo": 244, "grade": null },
       { "classNo": 213, "grade": null },
-      { "classNo": 282, "grade": 94 }
+      { "classNo": 282, "grade": null }
     ]
   },
   {
@@ -3031,7 +3031,7 @@
     "name": "Student 297",
     "classes": [
       { "classNo": 225, "grade": null },
-      { "classNo": 243, "grade": 50 },
+      { "classNo": 243, "grade": 100 },
       { "classNo": 277, "grade": null }
     ]
   },
@@ -3041,7 +3041,7 @@
     "name": "Student 298",
     "classes": [
       { "classNo": 213, "grade": null },
-      { "classNo": 291, "grade": 66 },
+      { "classNo": 291, "grade": null },
       { "classNo": 222, "grade": null },
       { "classNo": 264, "grade": null },
       { "classNo": 286, "grade": null }
@@ -3053,9 +3053,9 @@
     "name": "Student 299",
     "classes": [
       { "classNo": 278, "grade": null },
-      { "classNo": 285, "grade": 36 },
+      { "classNo": 285, "grade": null },
       { "classNo": 239, "grade": 91 },
-      { "classNo": 243, "grade": 31 },
+      { "classNo": 243, "grade": 100 },
       { "classNo": 257, "grade": 69 },
       { "classNo": 283, "grade": 26 }
     ]
@@ -3089,8 +3089,8 @@
     "password": "123456",
     "name": "Student 303",
     "classes": [
-      { "classNo": 240, "grade": 69 },
-      { "classNo": 260, "grade": 57 },
+      { "classNo": 240, "grade": null },
+      { "classNo": 260, "grade": null },
       { "classNo": 273, "grade": null },
       { "classNo": 216, "grade": null },
       { "classNo": 206, "grade": 13 },
@@ -3119,7 +3119,7 @@
     "name": "Student 306",
     "classes": [
       { "classNo": 275, "grade": null },
-      { "classNo": 274, "grade": 98 },
+      { "classNo": 274, "grade": null },
       { "classNo": 272, "grade": null },
       { "classNo": 238, "grade": null }
     ]
@@ -3136,7 +3136,7 @@
     "name": "Student 308",
     "classes": [
       { "classNo": 223, "grade": 65 },
-      { "classNo": 243, "grade": null },
+      { "classNo": 243, "grade": 100 },
       { "classNo": 231, "grade": 100 },
       { "classNo": 298, "grade": null },
       { "classNo": 253, "grade": null }
@@ -3180,7 +3180,7 @@
     "name": "Student 313",
     "classes": [
       { "classNo": 299, "grade": 34 },
-      { "classNo": 261, "grade": 15 }
+      { "classNo": 261, "grade": null }
     ]
   },
   {
@@ -3188,7 +3188,7 @@
     "password": "123456",
     "name": "Student 314",
     "classes": [
-      { "classNo": 258, "grade": 18 },
+      { "classNo": 258, "grade": null },
       { "classNo": 247, "grade": null }
     ]
   },
@@ -3199,9 +3199,9 @@
     "classes": [
       { "classNo": 255, "grade": 5 },
       { "classNo": 252, "grade": 39 },
-      { "classNo": 272, "grade": 73 },
+      { "classNo": 272, "grade": null },
       { "classNo": 206, "grade": null },
-      { "classNo": 285, "grade": 41 }
+      { "classNo": 285, "grade": null }
     ]
   },
   {
@@ -3209,7 +3209,7 @@
     "password": "123456",
     "name": "Student 316",
     "classes": [
-      { "classNo": 235, "grade": 26 },
+      { "classNo": 235, "grade": null },
       { "classNo": 287, "grade": 26 },
       { "classNo": 214, "grade": null },
       { "classNo": 214, "grade": null },
@@ -3223,7 +3223,7 @@
     "classes": [
       { "classNo": 248, "grade": 33 },
       { "classNo": 298, "grade": 23 },
-      { "classNo": 285, "grade": 46 }
+      { "classNo": 285, "grade": null }
     ]
   },
   {
@@ -3238,11 +3238,11 @@
     "name": "Student 319",
     "classes": [
       { "classNo": 206, "grade": null },
-      { "classNo": 265, "grade": 28 },
+      { "classNo": 265, "grade": null },
       { "classNo": 217, "grade": null },
       { "classNo": 227, "grade": null },
-      { "classNo": 279, "grade": 42 },
-      { "classNo": 288, "grade": 83 }
+      { "classNo": 279, "grade": null },
+      { "classNo": 288, "grade": null }
     ]
   },
   {
@@ -3284,10 +3284,10 @@
     "password": "123456",
     "name": "Student 323",
     "classes": [
-      { "classNo": 289, "grade": 18 },
+      { "classNo": 289, "grade": null },
       { "classNo": 204, "grade": null },
       { "classNo": 239, "grade": null },
-      { "classNo": 235, "grade": 39 }
+      { "classNo": 235, "grade": null }
     ]
   },
   {
@@ -3296,10 +3296,10 @@
     "name": "Student 324",
     "classes": [
       { "classNo": 291, "grade": null },
-      { "classNo": 265, "grade": 33 },
+      { "classNo": 265, "grade": null },
       { "classNo": 267, "grade": null },
       { "classNo": 232, "grade": 56 },
-      { "classNo": 213, "grade": 78 }
+      { "classNo": 213, "grade": null }
     ]
   },
   {
@@ -3309,7 +3309,7 @@
     "classes": [
       { "classNo": 275, "grade": 18 },
       { "classNo": 251, "grade": null },
-      { "classNo": 224, "grade": 68 }
+      { "classNo": 224, "grade": null }
     ]
   },
   {
@@ -3326,9 +3326,9 @@
     "password": "123456",
     "name": "Student 327",
     "classes": [
-      { "classNo": 244, "grade": 11 },
+      { "classNo": 244, "grade": null },
       { "classNo": 246, "grade": null },
-      { "classNo": 204, "grade": 90 }
+      { "classNo": 204, "grade": null }
     ]
   },
   {
@@ -3337,7 +3337,7 @@
     "name": "Student 328",
     "classes": [
       { "classNo": 298, "grade": null },
-      { "classNo": 219, "grade": 47 },
+      { "classNo": 219, "grade": null },
       { "classNo": 247, "grade": 16 },
       { "classNo": 299, "grade": 3 }
     ]
@@ -3347,8 +3347,8 @@
     "password": "123456",
     "name": "Student 329",
     "classes": [
-      { "classNo": 293, "grade": 25 },
-      { "classNo": 260, "grade": 35 },
+      { "classNo": 293, "grade": null },
+      { "classNo": 260, "grade": null },
       { "classNo": 212, "grade": null },
       { "classNo": 228, "grade": 59 }
     ]
@@ -3365,7 +3365,7 @@
     "name": "Student 331",
     "classes": [
       { "classNo": 218, "grade": null },
-      { "classNo": 213, "grade": 40 },
+      { "classNo": 213, "grade": null },
       { "classNo": 283, "grade": 13 },
       { "classNo": 252, "grade": 98 }
     ]
@@ -3403,9 +3403,9 @@
     "password": "123456",
     "name": "Student 336",
     "classes": [
-      { "classNo": 202, "grade": 78 },
+      { "classNo": 202, "grade": null },
       { "classNo": 256, "grade": null },
-      { "classNo": 200, "grade": 72 }
+      { "classNo": 200, "grade": null }
     ]
   },
   {
@@ -3427,7 +3427,7 @@
       { "classNo": 256, "grade": null },
       { "classNo": 229, "grade": null },
       { "classNo": 242, "grade": 14 },
-      { "classNo": 280, "grade": 29 }
+      { "classNo": 280, "grade": null }
     ]
   },
   {
@@ -3438,7 +3438,7 @@
       { "classNo": 241, "grade": null },
       { "classNo": 281, "grade": 88 },
       { "classNo": 276, "grade": null },
-      { "classNo": 235, "grade": 1 }
+      { "classNo": 235, "grade": null }
     ]
   },
   {
@@ -3451,7 +3451,7 @@
       { "classNo": 206, "grade": null },
       { "classNo": 207, "grade": 98 },
       { "classNo": 205, "grade": null },
-      { "classNo": 288, "grade": 43 }
+      { "classNo": 288, "grade": null }
     ]
   },
   {
@@ -3461,7 +3461,7 @@
     "classes": [
       { "classNo": 286, "grade": null },
       { "classNo": 286, "grade": null },
-      { "classNo": 235, "grade": 26 },
+      { "classNo": 235, "grade": null },
       { "classNo": 253, "grade": 75 },
       { "classNo": 208, "grade": 82 },
       { "classNo": 254, "grade": null }
@@ -3483,10 +3483,10 @@
     "password": "123456",
     "name": "Student 343",
     "classes": [
-      { "classNo": 289, "grade": 12 },
+      { "classNo": 289, "grade": null },
       { "classNo": 276, "grade": 94 },
-      { "classNo": 229, "grade": 24 },
-      { "classNo": 204, "grade": 64 }
+      { "classNo": 229, "grade": null },
+      { "classNo": 204, "grade": null }
     ]
   },
   {
@@ -3502,17 +3502,17 @@
     "username": "user345",
     "password": "123456",
     "name": "Student 345",
-    "classes": [{ "classNo": 279, "grade": 66 }]
+    "classes": [{ "classNo": 279, "grade": null }]
   },
   {
     "username": "user346",
     "password": "123456",
     "name": "Student 346",
     "classes": [
-      { "classNo": 227, "grade": 67 },
+      { "classNo": 227, "grade": null },
       { "classNo": 262, "grade": null },
       { "classNo": 295, "grade": null },
-      { "classNo": 234, "grade": 52 },
+      { "classNo": 234, "grade": null },
       { "classNo": 223, "grade": null }
     ]
   },
@@ -3537,7 +3537,7 @@
     "name": "Student 349",
     "classes": [
       { "classNo": 288, "grade": null },
-      { "classNo": 222, "grade": 6 },
+      { "classNo": 222, "grade": null },
       { "classNo": 284, "grade": null },
       { "classNo": 279, "grade": null },
       { "classNo": 292, "grade": 1 }
@@ -3557,7 +3557,7 @@
     "password": "123456",
     "name": "Student 351",
     "classes": [
-      { "classNo": 295, "grade": 46 },
+      { "classNo": 295, "grade": null },
       { "classNo": 233, "grade": null },
       { "classNo": 254, "grade": null }
     ]
@@ -3568,7 +3568,7 @@
     "name": "Student 352",
     "classes": [
       { "classNo": 248, "grade": 99 },
-      { "classNo": 200, "grade": 37 },
+      { "classNo": 200, "grade": null },
       { "classNo": 235, "grade": null }
     ]
   },
@@ -3578,8 +3578,8 @@
     "name": "Student 353",
     "classes": [
       { "classNo": 207, "grade": 78 },
-      { "classNo": 256, "grade": 45 },
-      { "classNo": 295, "grade": 71 }
+      { "classNo": 256, "grade": null },
+      { "classNo": 295, "grade": null }
     ]
   },
   {
@@ -3596,8 +3596,8 @@
     "password": "123456",
     "name": "Student 355",
     "classes": [
-      { "classNo": 289, "grade": 25 },
-      { "classNo": 224, "grade": 17 }
+      { "classNo": 289, "grade": null },
+      { "classNo": 224, "grade": null }
     ]
   },
   {
@@ -3606,7 +3606,7 @@
     "name": "Student 356",
     "classes": [
       { "classNo": 202, "grade": null },
-      { "classNo": 254, "grade": 3 },
+      { "classNo": 254, "grade": null },
       { "classNo": 277, "grade": null },
       { "classNo": 282, "grade": null }
     ]
@@ -3616,7 +3616,7 @@
     "password": "123456",
     "name": "Student 357",
     "classes": [
-      { "classNo": 227, "grade": 32 },
+      { "classNo": 227, "grade": null },
       { "classNo": 241, "grade": 13 }
     ]
   },
@@ -3628,7 +3628,7 @@
       { "classNo": 208, "grade": 78 },
       { "classNo": 291, "grade": null },
       { "classNo": 286, "grade": null },
-      { "classNo": 234, "grade": 54 }
+      { "classNo": 234, "grade": null }
     ]
   },
   {
@@ -3636,9 +3636,9 @@
     "password": "123456",
     "name": "Student 359",
     "classes": [
-      { "classNo": 238, "grade": 82 },
+      { "classNo": 238, "grade": null },
       { "classNo": 242, "grade": null },
-      { "classNo": 245, "grade": 45 },
+      { "classNo": 245, "grade": null },
       { "classNo": 275, "grade": 74 }
     ]
   },
@@ -3677,7 +3677,7 @@
     "password": "123456",
     "name": "Student 364",
     "classes": [
-      { "classNo": 229, "grade": 61 },
+      { "classNo": 229, "grade": null },
       { "classNo": 210, "grade": 65 },
       { "classNo": 262, "grade": null },
       { "classNo": 232, "grade": null },
@@ -3689,8 +3689,8 @@
     "password": "123456",
     "name": "Student 365",
     "classes": [
-      { "classNo": 217, "grade": 24 },
-      { "classNo": 254, "grade": 91 },
+      { "classNo": 217, "grade": null },
+      { "classNo": 254, "grade": null },
       { "classNo": 269, "grade": 82 }
     ]
   },
@@ -3707,7 +3707,7 @@
     "classes": [
       { "classNo": 252, "grade": 43 },
       { "classNo": 208, "grade": 32 },
-      { "classNo": 219, "grade": 24 },
+      { "classNo": 219, "grade": null },
       { "classNo": 213, "grade": null },
       { "classNo": 233, "grade": null }
     ]
@@ -3717,7 +3717,7 @@
     "password": "123456",
     "name": "Student 368",
     "classes": [
-      { "classNo": 204, "grade": 28 },
+      { "classNo": 204, "grade": null },
       { "classNo": 297, "grade": 21 },
       { "classNo": 270, "grade": null }
     ]
@@ -3727,8 +3727,8 @@
     "password": "123456",
     "name": "Student 369",
     "classes": [
-      { "classNo": 254, "grade": 55 },
-      { "classNo": 204, "grade": 57 },
+      { "classNo": 254, "grade": null },
+      { "classNo": 204, "grade": null },
       { "classNo": 228, "grade": 90 },
       { "classNo": 239, "grade": null }
     ]
@@ -3750,7 +3750,7 @@
     "username": "user371",
     "password": "123456",
     "name": "Student 371",
-    "classes": [{ "classNo": 279, "grade": 70 }]
+    "classes": [{ "classNo": 279, "grade": null }]
   },
   {
     "username": "user372",
@@ -3758,11 +3758,11 @@
     "name": "Student 372",
     "classes": [
       { "classNo": 297, "grade": null },
-      { "classNo": 204, "grade": 84 },
+      { "classNo": 204, "grade": null },
       { "classNo": 224, "grade": null },
       { "classNo": 286, "grade": null },
       { "classNo": 200, "grade": null },
-      { "classNo": 234, "grade": 25 }
+      { "classNo": 234, "grade": null }
     ]
   },
   {
@@ -3770,7 +3770,7 @@
     "password": "123456",
     "name": "Student 373",
     "classes": [
-      { "classNo": 256, "grade": 43 },
+      { "classNo": 256, "grade": null },
       { "classNo": 263, "grade": null },
       { "classNo": 245, "grade": null }
     ]
@@ -3783,7 +3783,7 @@
       { "classNo": 284, "grade": null },
       { "classNo": 278, "grade": 22 },
       { "classNo": 282, "grade": null },
-      { "classNo": 211, "grade": 24 },
+      { "classNo": 211, "grade": null },
       { "classNo": 230, "grade": null }
     ]
   },
@@ -3792,11 +3792,11 @@
     "password": "123456",
     "name": "Student 375",
     "classes": [
-      { "classNo": 202, "grade": 10 },
-      { "classNo": 209, "grade": 75 },
+      { "classNo": 202, "grade": null },
+      { "classNo": 209, "grade": null },
       { "classNo": 212, "grade": null },
       { "classNo": 298, "grade": null },
-      { "classNo": 234, "grade": 100 },
+      { "classNo": 234, "grade": null },
       { "classNo": 285, "grade": null }
     ]
   },
@@ -3825,7 +3825,7 @@
     "name": "Student 378",
     "classes": [
       { "classNo": 294, "grade": 91 },
-      { "classNo": 291, "grade": 33 }
+      { "classNo": 291, "grade": null }
     ]
   },
   {
@@ -3833,11 +3833,11 @@
     "password": "123456",
     "name": "Student 379",
     "classes": [
-      { "classNo": 215, "grade": 29 },
+      { "classNo": 215, "grade": null },
       { "classNo": 290, "grade": null },
       { "classNo": 270, "grade": 20 },
-      { "classNo": 296, "grade": 57 },
-      { "classNo": 254, "grade": 0 }
+      { "classNo": 296, "grade": null },
+      { "classNo": 254, "grade": null }
     ]
   },
   {
@@ -3848,7 +3848,7 @@
       { "classNo": 299, "grade": null },
       { "classNo": 207, "grade": null },
       { "classNo": 254, "grade": null },
-      { "classNo": 219, "grade": 44 },
+      { "classNo": 219, "grade": null },
       { "classNo": 297, "grade": null }
     ]
   },
@@ -3860,7 +3860,7 @@
       { "classNo": 259, "grade": null },
       { "classNo": 251, "grade": null },
       { "classNo": 241, "grade": 5 },
-      { "classNo": 238, "grade": 4 }
+      { "classNo": 238, "grade": null }
     ]
   },
   {
@@ -3870,7 +3870,7 @@
     "classes": [
       { "classNo": 256, "grade": null },
       { "classNo": 281, "grade": 63 },
-      { "classNo": 289, "grade": 80 },
+      { "classNo": 289, "grade": null },
       { "classNo": 248, "grade": 60 },
       { "classNo": 278, "grade": null }
     ]
@@ -3880,7 +3880,7 @@
     "password": "123456",
     "name": "Student 383",
     "classes": [
-      { "classNo": 227, "grade": 47 },
+      { "classNo": 227, "grade": null },
       { "classNo": 224, "grade": null },
       { "classNo": 248, "grade": null }
     ]
@@ -3890,9 +3890,9 @@
     "password": "123456",
     "name": "Student 384",
     "classes": [
-      { "classNo": 230, "grade": 20 },
+      { "classNo": 230, "grade": null },
       { "classNo": 278, "grade": 94 },
-      { "classNo": 234, "grade": 91 }
+      { "classNo": 234, "grade": null }
     ]
   },
   {
@@ -3916,7 +3916,7 @@
     "password": "123456",
     "name": "Student 387",
     "classes": [
-      { "classNo": 224, "grade": 75 },
+      { "classNo": 224, "grade": null },
       { "classNo": 260, "grade": null },
       { "classNo": 287, "grade": 89 },
       { "classNo": 211, "grade": null },
@@ -3927,7 +3927,7 @@
     "username": "user388",
     "password": "123456",
     "name": "Student 388",
-    "classes": [{ "classNo": 274, "grade": 9 }]
+    "classes": [{ "classNo": 274, "grade": null }]
   },
   {
     "username": "user389",
@@ -3936,7 +3936,7 @@
     "classes": [
       { "classNo": 284, "grade": 12 },
       { "classNo": 210, "grade": null },
-      { "classNo": 211, "grade": 83 },
+      { "classNo": 211, "grade": null },
       { "classNo": 257, "grade": null },
       { "classNo": 233, "grade": 25 }
     ]
@@ -3946,7 +3946,7 @@
     "password": "123456",
     "name": "Student 390",
     "classes": [
-      { "classNo": 285, "grade": 5 },
+      { "classNo": 285, "grade": null },
       { "classNo": 219, "grade": null },
       { "classNo": 232, "grade": 57 }
     ]
@@ -3958,7 +3958,7 @@
     "classes": [
       { "classNo": 253, "grade": null },
       { "classNo": 258, "grade": null },
-      { "classNo": 216, "grade": 53 },
+      { "classNo": 216, "grade": null },
       { "classNo": 210, "grade": null }
     ]
   },
@@ -3967,9 +3967,9 @@
     "password": "123456",
     "name": "Student 392",
     "classes": [
-      { "classNo": 230, "grade": 72 },
-      { "classNo": 201, "grade": 58 },
-      { "classNo": 245, "grade": 54 },
+      { "classNo": 230, "grade": null },
+      { "classNo": 201, "grade": null },
+      { "classNo": 245, "grade": null },
       { "classNo": 275, "grade": 94 },
       { "classNo": 292, "grade": 96 }
     ]
@@ -3979,8 +3979,8 @@
     "password": "123456",
     "name": "Student 393",
     "classes": [
-      { "classNo": 274, "grade": 54 },
-      { "classNo": 222, "grade": 30 }
+      { "classNo": 274, "grade": null },
+      { "classNo": 222, "grade": null }
     ]
   },
   {
@@ -3996,9 +3996,9 @@
     "classes": [
       { "classNo": 299, "grade": 100 },
       { "classNo": 256, "grade": null },
-      { "classNo": 201, "grade": 37 },
-      { "classNo": 274, "grade": 14 },
-      { "classNo": 205, "grade": 53 }
+      { "classNo": 201, "grade": null },
+      { "classNo": 274, "grade": null },
+      { "classNo": 205, "grade": null }
     ]
   },
   {
@@ -4006,7 +4006,7 @@
     "password": "123456",
     "name": "Student 396",
     "classes": [
-      { "classNo": 246, "grade": 38 },
+      { "classNo": 246, "grade": null },
       { "classNo": 219, "grade": null }
     ]
   },
@@ -4029,14 +4029,14 @@
       { "classNo": 261, "grade": null },
       { "classNo": 280, "grade": null },
       { "classNo": 278, "grade": 9 },
-      { "classNo": 267, "grade": 87 }
+      { "classNo": 267, "grade": null }
     ]
   },
   {
     "username": "user399",
     "password": "123456",
     "name": "Student 399",
-    "classes": [{ "classNo": 260, "grade": 33 }]
+    "classes": [{ "classNo": 260, "grade": null }]
   },
   {
     "username": "user400",
@@ -4044,9 +4044,9 @@
     "name": "Student 400",
     "classes": [
       { "classNo": 263, "grade": null },
-      { "classNo": 235, "grade": 19 },
+      { "classNo": 235, "grade": null },
       { "classNo": 273, "grade": null },
-      { "classNo": 235, "grade": 95 },
+      { "classNo": 235, "grade": null },
       { "classNo": 295, "grade": null }
     ]
   },
@@ -4068,7 +4068,7 @@
     "name": "Student 403",
     "classes": [
       { "classNo": 225, "grade": 17 },
-      { "classNo": 216, "grade": 91 },
+      { "classNo": 216, "grade": null },
       { "classNo": 284, "grade": null },
       { "classNo": 220, "grade": null }
     ]
@@ -4079,8 +4079,8 @@
     "name": "Student 404",
     "classes": [
       { "classNo": 263, "grade": null },
-      { "classNo": 296, "grade": 13 },
-      { "classNo": 243, "grade": null }
+      { "classNo": 296, "grade": null },
+      { "classNo": 243, "grade": 100 }
     ]
   },
   {
@@ -4089,7 +4089,7 @@
     "name": "Student 405",
     "classes": [
       { "classNo": 275, "grade": 46 },
-      { "classNo": 273, "grade": 92 },
+      { "classNo": 273, "grade": null },
       { "classNo": 287, "grade": null },
       { "classNo": 220, "grade": null },
       { "classNo": 204, "grade": null }
@@ -4103,8 +4103,8 @@
       { "classNo": 249, "grade": null },
       { "classNo": 266, "grade": null },
       { "classNo": 216, "grade": null },
-      { "classNo": 256, "grade": 53 },
-      { "classNo": 261, "grade": 1 }
+      { "classNo": 256, "grade": null },
+      { "classNo": 261, "grade": null }
     ]
   },
   {
@@ -4114,10 +4114,10 @@
     "classes": [
       { "classNo": 258, "grade": null },
       { "classNo": 229, "grade": null },
-      { "classNo": 240, "grade": 45 },
+      { "classNo": 240, "grade": null },
       { "classNo": 290, "grade": null },
       { "classNo": 206, "grade": 77 },
-      { "classNo": 204, "grade": 62 }
+      { "classNo": 204, "grade": null }
     ]
   },
   {
@@ -4130,7 +4130,7 @@
       { "classNo": 210, "grade": null },
       { "classNo": 251, "grade": null },
       { "classNo": 286, "grade": null },
-      { "classNo": 216, "grade": 56 }
+      { "classNo": 216, "grade": null }
     ]
   },
   {
@@ -4155,10 +4155,10 @@
     "classes": [
       { "classNo": 287, "grade": null },
       { "classNo": 242, "grade": null },
-      { "classNo": 205, "grade": 51 },
-      { "classNo": 291, "grade": 51 },
+      { "classNo": 205, "grade": null },
+      { "classNo": 291, "grade": null },
       { "classNo": 219, "grade": null },
-      { "classNo": 237, "grade": 10 }
+      { "classNo": 237, "grade": null }
     ]
   },
   {
@@ -4166,7 +4166,7 @@
     "password": "123456",
     "name": "Student 412",
     "classes": [
-      { "classNo": 260, "grade": 91 },
+      { "classNo": 260, "grade": null },
       { "classNo": 230, "grade": null },
       { "classNo": 297, "grade": 65 },
       { "classNo": 233, "grade": 96 }
@@ -4188,7 +4188,7 @@
     "classes": [
       { "classNo": 217, "grade": null },
       { "classNo": 251, "grade": null },
-      { "classNo": 200, "grade": 94 },
+      { "classNo": 200, "grade": null },
       { "classNo": 232, "grade": null },
       { "classNo": 276, "grade": 69 }
     ]
@@ -4205,7 +4205,7 @@
     "name": "Student 416",
     "classes": [
       { "classNo": 237, "grade": null },
-      { "classNo": 243, "grade": null }
+      { "classNo": 243, "grade": 100 }
     ]
   },
   {
@@ -4215,7 +4215,7 @@
     "classes": [
       { "classNo": 233, "grade": 97 },
       { "classNo": 259, "grade": 77 },
-      { "classNo": 202, "grade": 36 },
+      { "classNo": 202, "grade": null },
       { "classNo": 252, "grade": null }
     ]
   },
@@ -4224,7 +4224,7 @@
     "password": "123456",
     "name": "Student 418",
     "classes": [
-      { "classNo": 203, "grade": 91 },
+      { "classNo": 203, "grade": null },
       { "classNo": 242, "grade": 100 }
     ]
   },
@@ -4251,7 +4251,7 @@
     "password": "123456",
     "name": "Student 421",
     "classes": [
-      { "classNo": 230, "grade": 51 },
+      { "classNo": 230, "grade": null },
       { "classNo": 252, "grade": null }
     ]
   },
@@ -4295,7 +4295,7 @@
     "name": "Student 426",
     "classes": [
       { "classNo": 274, "grade": null },
-      { "classNo": 230, "grade": 63 },
+      { "classNo": 230, "grade": null },
       { "classNo": 261, "grade": null },
       { "classNo": 259, "grade": null }
     ]
@@ -4326,7 +4326,7 @@
     "password": "123456",
     "name": "Student 429",
     "classes": [
-      { "classNo": 203, "grade": 54 },
+      { "classNo": 203, "grade": null },
       { "classNo": 236, "grade": null },
       { "classNo": 277, "grade": 80 },
       { "classNo": 278, "grade": 53 },
@@ -4345,8 +4345,8 @@
     "password": "123456",
     "name": "Student 431",
     "classes": [
-      { "classNo": 249, "grade": 39 },
-      { "classNo": 235, "grade": 32 },
+      { "classNo": 249, "grade": null },
+      { "classNo": 235, "grade": null },
       { "classNo": 230, "grade": null },
       { "classNo": 283, "grade": null }
     ]
@@ -4366,8 +4366,8 @@
     "password": "123456",
     "name": "Student 433",
     "classes": [
-      { "classNo": 215, "grade": 91 },
-      { "classNo": 272, "grade": 50 },
+      { "classNo": 215, "grade": null },
+      { "classNo": 272, "grade": null },
       { "classNo": 271, "grade": null },
       { "classNo": 291, "grade": null },
       { "classNo": 232, "grade": null }
@@ -4391,7 +4391,7 @@
     "classes": [
       { "classNo": 269, "grade": null },
       { "classNo": 237, "grade": null },
-      { "classNo": 245, "grade": 87 },
+      { "classNo": 245, "grade": null },
       { "classNo": 283, "grade": 49 }
     ]
   },
@@ -4401,7 +4401,7 @@
     "name": "Student 436",
     "classes": [
       { "classNo": 278, "grade": 35 },
-      { "classNo": 279, "grade": 43 }
+      { "classNo": 279, "grade": null }
     ]
   },
   {
@@ -4409,12 +4409,12 @@
     "password": "123456",
     "name": "Student 437",
     "classes": [
-      { "classNo": 200, "grade": 6 },
-      { "classNo": 268, "grade": 88 },
+      { "classNo": 200, "grade": null },
+      { "classNo": 268, "grade": null },
       { "classNo": 266, "grade": 74 },
       { "classNo": 284, "grade": null },
       { "classNo": 281, "grade": 35 },
-      { "classNo": 290, "grade": 5 }
+      { "classNo": 290, "grade": null }
     ]
   },
   {
@@ -4429,8 +4429,8 @@
     "name": "Student 439",
     "classes": [
       { "classNo": 261, "grade": null },
-      { "classNo": 213, "grade": 33 },
-      { "classNo": 214, "grade": 32 },
+      { "classNo": 213, "grade": null },
+      { "classNo": 214, "grade": null },
       { "classNo": 215, "grade": null },
       { "classNo": 274, "grade": null }
     ]
@@ -4441,7 +4441,7 @@
     "name": "Student 440",
     "classes": [
       { "classNo": 248, "grade": 92 },
-      { "classNo": 249, "grade": 59 },
+      { "classNo": 249, "grade": null },
       { "classNo": 298, "grade": null },
       { "classNo": 221, "grade": null }
     ]
@@ -4466,7 +4466,7 @@
       { "classNo": 207, "grade": null },
       { "classNo": 220, "grade": null },
       { "classNo": 298, "grade": null },
-      { "classNo": 219, "grade": 0 },
+      { "classNo": 219, "grade": null },
       { "classNo": 251, "grade": 82 }
     ]
   },
@@ -4474,7 +4474,7 @@
     "username": "user443",
     "password": "123456",
     "name": "Student 443",
-    "classes": [{ "classNo": 288, "grade": 3 }]
+    "classes": [{ "classNo": 288, "grade": null }]
   },
   {
     "username": "user444",
@@ -4482,8 +4482,8 @@
     "name": "Student 444",
     "classes": [
       { "classNo": 274, "grade": null },
-      { "classNo": 295, "grade": 43 },
-      { "classNo": 213, "grade": 100 }
+      { "classNo": 295, "grade": null },
+      { "classNo": 213, "grade": null }
     ]
   },
   {
@@ -4502,7 +4502,7 @@
     "name": "Student 446",
     "classes": [
       { "classNo": 255, "grade": 63 },
-      { "classNo": 215, "grade": 80 },
+      { "classNo": 215, "grade": null },
       { "classNo": 231, "grade": null }
     ]
   },
@@ -4512,9 +4512,9 @@
     "name": "Student 447",
     "classes": [
       { "classNo": 210, "grade": null },
-      { "classNo": 282, "grade": 98 },
-      { "classNo": 244, "grade": 53 },
-      { "classNo": 254, "grade": 31 },
+      { "classNo": 282, "grade": null },
+      { "classNo": 244, "grade": null },
+      { "classNo": 254, "grade": null },
       { "classNo": 284, "grade": 46 }
     ]
   },
@@ -4535,9 +4535,9 @@
     "password": "123456",
     "name": "Student 449",
     "classes": [
-      { "classNo": 293, "grade": 31 },
+      { "classNo": 293, "grade": null },
       { "classNo": 206, "grade": null },
-      { "classNo": 280, "grade": 57 }
+      { "classNo": 280, "grade": null }
     ]
   },
   {
@@ -4548,7 +4548,7 @@
       { "classNo": 203, "grade": null },
       { "classNo": 211, "grade": null },
       { "classNo": 293, "grade": null },
-      { "classNo": 256, "grade": 91 }
+      { "classNo": 256, "grade": null }
     ]
   },
   {
@@ -4556,7 +4556,7 @@
     "password": "123456",
     "name": "Student 451",
     "classes": [
-      { "classNo": 244, "grade": 4 },
+      { "classNo": 244, "grade": null },
       { "classNo": 293, "grade": null },
       { "classNo": 297, "grade": null },
       { "classNo": 255, "grade": 78 },
@@ -4577,15 +4577,15 @@
     "classes": [
       { "classNo": 299, "grade": 10 },
       { "classNo": 284, "grade": null },
-      { "classNo": 262, "grade": 39 },
-      { "classNo": 271, "grade": 18 }
+      { "classNo": 262, "grade": null },
+      { "classNo": 271, "grade": null }
     ]
   },
   {
     "username": "user454",
     "password": "123456",
     "name": "Student 454",
-    "classes": [{ "classNo": 238, "grade": 46 }]
+    "classes": [{ "classNo": 238, "grade": null }]
   },
   {
     "username": "user455",
@@ -4593,8 +4593,8 @@
     "name": "Student 455",
     "classes": [
       { "classNo": 276, "grade": null },
-      { "classNo": 211, "grade": 39 },
-      { "classNo": 288, "grade": 5 },
+      { "classNo": 211, "grade": null },
+      { "classNo": 288, "grade": null },
       { "classNo": 225, "grade": 49 }
     ]
   },
@@ -4603,10 +4603,10 @@
     "password": "123456",
     "name": "Student 456",
     "classes": [
-      { "classNo": 282, "grade": 50 },
+      { "classNo": 282, "grade": null },
       { "classNo": 201, "grade": null },
-      { "classNo": 268, "grade": 56 },
-      { "classNo": 215, "grade": 12 },
+      { "classNo": 268, "grade": null },
+      { "classNo": 215, "grade": null },
       { "classNo": 269, "grade": null }
     ]
   },
@@ -4637,7 +4637,7 @@
     "name": "Student 459",
     "classes": [
       { "classNo": 248, "grade": null },
-      { "classNo": 282, "grade": 15 },
+      { "classNo": 282, "grade": null },
       { "classNo": 242, "grade": 27 },
       { "classNo": 201, "grade": null },
       { "classNo": 267, "grade": null }
@@ -4649,7 +4649,7 @@
     "name": "Student 460",
     "classes": [
       { "classNo": 263, "grade": 91 },
-      { "classNo": 240, "grade": 94 },
+      { "classNo": 240, "grade": null },
       { "classNo": 283, "grade": null }
     ]
   },
@@ -4658,9 +4658,9 @@
     "password": "123456",
     "name": "Student 461",
     "classes": [
-      { "classNo": 214, "grade": 30 },
+      { "classNo": 214, "grade": null },
       { "classNo": 212, "grade": null },
-      { "classNo": 267, "grade": 13 },
+      { "classNo": 267, "grade": null },
       { "classNo": 204, "grade": null }
     ]
   },
@@ -4671,7 +4671,7 @@
     "classes": [
       { "classNo": 271, "grade": null },
       { "classNo": 224, "grade": null },
-      { "classNo": 204, "grade": 66 },
+      { "classNo": 204, "grade": null },
       { "classNo": 298, "grade": 46 },
       { "classNo": 253, "grade": null }
     ]
@@ -4690,8 +4690,8 @@
     "password": "123456",
     "name": "Student 464",
     "classes": [
-      { "classNo": 261, "grade": 58 },
-      { "classNo": 296, "grade": 33 },
+      { "classNo": 261, "grade": null },
+      { "classNo": 296, "grade": null },
       { "classNo": 257, "grade": 21 }
     ]
   },
@@ -4700,7 +4700,7 @@
     "password": "123456",
     "name": "Student 465",
     "classes": [
-      { "classNo": 237, "grade": 37 },
+      { "classNo": 237, "grade": null },
       { "classNo": 239, "grade": null },
       { "classNo": 234, "grade": null },
       { "classNo": 232, "grade": null },
@@ -4721,8 +4721,8 @@
       { "classNo": 221, "grade": null },
       { "classNo": 248, "grade": 4 },
       { "classNo": 286, "grade": null },
-      { "classNo": 226, "grade": 83 },
-      { "classNo": 229, "grade": 63 },
+      { "classNo": 226, "grade": null },
+      { "classNo": 229, "grade": null },
       { "classNo": 288, "grade": null }
     ]
   },
@@ -4732,8 +4732,8 @@
     "name": "Student 468",
     "classes": [
       { "classNo": 223, "grade": 6 },
-      { "classNo": 258, "grade": 46 },
-      { "classNo": 279, "grade": 89 }
+      { "classNo": 258, "grade": null },
+      { "classNo": 279, "grade": null }
     ]
   },
   {
@@ -4741,7 +4741,7 @@
     "password": "123456",
     "name": "Student 469",
     "classes": [
-      { "classNo": 204, "grade": 44 },
+      { "classNo": 204, "grade": null },
       { "classNo": 268, "grade": null },
       { "classNo": 219, "grade": null }
     ]
@@ -4767,7 +4767,7 @@
       { "classNo": 227, "grade": null },
       { "classNo": 245, "grade": null },
       { "classNo": 208, "grade": null },
-      { "classNo": 258, "grade": 99 }
+      { "classNo": 258, "grade": null }
     ]
   },
   {
@@ -4775,8 +4775,8 @@
     "password": "123456",
     "name": "Student 472",
     "classes": [
-      { "classNo": 204, "grade": 93 },
-      { "classNo": 218, "grade": 25 },
+      { "classNo": 204, "grade": null },
+      { "classNo": 218, "grade": null },
       { "classNo": 221, "grade": null },
       { "classNo": 255, "grade": 26 }
     ]
@@ -4786,12 +4786,12 @@
     "password": "123456",
     "name": "Student 473",
     "classes": [
-      { "classNo": 243, "grade": 40 },
+      { "classNo": 243, "grade": 100 },
       { "classNo": 236, "grade": null },
-      { "classNo": 238, "grade": 21 },
+      { "classNo": 238, "grade": null },
       { "classNo": 233, "grade": 70 },
-      { "classNo": 237, "grade": 16 },
-      { "classNo": 217, "grade": 10 }
+      { "classNo": 237, "grade": null },
+      { "classNo": 217, "grade": null }
     ]
   },
   {
@@ -4800,9 +4800,9 @@
     "name": "Student 474",
     "classes": [
       { "classNo": 205, "grade": null },
-      { "classNo": 280, "grade": 8 },
+      { "classNo": 280, "grade": null },
       { "classNo": 268, "grade": null },
-      { "classNo": 245, "grade": 87 }
+      { "classNo": 245, "grade": null }
     ]
   },
   {
@@ -4811,7 +4811,7 @@
     "name": "Student 475",
     "classes": [
       { "classNo": 224, "grade": null },
-      { "classNo": 262, "grade": 70 }
+      { "classNo": 262, "grade": null }
     ]
   },
   {
@@ -4847,7 +4847,7 @@
       { "classNo": 290, "grade": null },
       { "classNo": 283, "grade": null },
       { "classNo": 231, "grade": null },
-      { "classNo": 217, "grade": 80 }
+      { "classNo": 217, "grade": null }
     ]
   },
   {
@@ -4855,8 +4855,8 @@
     "password": "123456",
     "name": "Student 480",
     "classes": [
-      { "classNo": 234, "grade": 76 },
-      { "classNo": 214, "grade": 30 },
+      { "classNo": 234, "grade": null },
+      { "classNo": 214, "grade": null },
       { "classNo": 232, "grade": 30 },
       { "classNo": 283, "grade": 54 },
       { "classNo": 212, "grade": 58 }
@@ -4867,7 +4867,7 @@
     "password": "123456",
     "name": "Student 481",
     "classes": [
-      { "classNo": 216, "grade": 42 },
+      { "classNo": 216, "grade": null },
       { "classNo": 207, "grade": 78 },
       { "classNo": 273, "grade": null },
       { "classNo": 280, "grade": null }
@@ -4878,8 +4878,8 @@
     "password": "123456",
     "name": "Student 482",
     "classes": [
-      { "classNo": 289, "grade": 45 },
-      { "classNo": 293, "grade": 30 },
+      { "classNo": 289, "grade": null },
+      { "classNo": 293, "grade": null },
       { "classNo": 252, "grade": null }
     ]
   },
@@ -4889,9 +4889,9 @@
     "name": "Student 483",
     "classes": [
       { "classNo": 258, "grade": null },
-      { "classNo": 293, "grade": 27 },
+      { "classNo": 293, "grade": null },
       { "classNo": 201, "grade": null },
-      { "classNo": 250, "grade": 82 }
+      { "classNo": 250, "grade": null }
     ]
   },
   {
@@ -4899,7 +4899,7 @@
     "password": "123456",
     "name": "Student 484",
     "classes": [
-      { "classNo": 205, "grade": 56 },
+      { "classNo": 205, "grade": null },
       { "classNo": 280, "grade": null },
       { "classNo": 286, "grade": 19 },
       { "classNo": 223, "grade": null },
@@ -4918,7 +4918,7 @@
     "name": "Student 486",
     "classes": [
       { "classNo": 246, "grade": null },
-      { "classNo": 295, "grade": 62 }
+      { "classNo": 295, "grade": null }
     ]
   },
   {
@@ -4928,7 +4928,7 @@
     "classes": [
       { "classNo": 259, "grade": null },
       { "classNo": 219, "grade": null },
-      { "classNo": 262, "grade": 95 }
+      { "classNo": 262, "grade": null }
     ]
   },
   {
@@ -4936,8 +4936,8 @@
     "password": "123456",
     "name": "Student 488",
     "classes": [
-      { "classNo": 202, "grade": 9 },
-      { "classNo": 240, "grade": 38 }
+      { "classNo": 202, "grade": null },
+      { "classNo": 240, "grade": null }
     ]
   },
   {
@@ -4945,11 +4945,11 @@
     "password": "123456",
     "name": "Student 489",
     "classes": [
-      { "classNo": 282, "grade": 51 },
+      { "classNo": 282, "grade": null },
       { "classNo": 285, "grade": null },
       { "classNo": 207, "grade": null },
       { "classNo": 235, "grade": null },
-      { "classNo": 290, "grade": 79 },
+      { "classNo": 290, "grade": null },
       { "classNo": 272, "grade": null }
     ]
   },
@@ -4960,8 +4960,8 @@
     "classes": [
       { "classNo": 231, "grade": 96 },
       { "classNo": 280, "grade": null },
-      { "classNo": 282, "grade": 49 },
-      { "classNo": 267, "grade": 75 },
+      { "classNo": 282, "grade": null },
+      { "classNo": 267, "grade": null },
       { "classNo": 267, "grade": null }
     ]
   },
@@ -4970,7 +4970,7 @@
     "password": "123456",
     "name": "Student 491",
     "classes": [
-      { "classNo": 279, "grade": 74 },
+      { "classNo": 279, "grade": null },
       { "classNo": 225, "grade": null },
       { "classNo": 220, "grade": null },
       { "classNo": 268, "grade": null }
@@ -4981,7 +4981,7 @@
     "password": "123456",
     "name": "Student 492",
     "classes": [
-      { "classNo": 250, "grade": 86 },
+      { "classNo": 250, "grade": null },
       { "classNo": 225, "grade": 21 },
       { "classNo": 275, "grade": null }
     ]
@@ -4999,7 +4999,7 @@
     "classes": [
       { "classNo": 211, "grade": null },
       { "classNo": 230, "grade": null },
-      { "classNo": 272, "grade": 17 }
+      { "classNo": 272, "grade": null }
     ]
   },
   {
@@ -5007,7 +5007,7 @@
     "password": "123456",
     "name": "Student 495",
     "classes": [
-      { "classNo": 238, "grade": 29 },
+      { "classNo": 238, "grade": null },
       { "classNo": 283, "grade": null },
       { "classNo": 223, "grade": null },
       { "classNo": 214, "grade": null },
@@ -5020,15 +5020,15 @@
     "password": "123456",
     "name": "Student 496",
     "classes": [
-      { "classNo": 222, "grade": 64 },
-      { "classNo": 224, "grade": 62 }
+      { "classNo": 222, "grade": null },
+      { "classNo": 224, "grade": null }
     ]
   },
   {
     "username": "user497",
     "password": "123456",
     "name": "Student 497",
-    "classes": [{ "classNo": 229, "grade": 54 }]
+    "classes": [{ "classNo": 229, "grade": null }]
   },
   {
     "username": "user498",
@@ -5036,7 +5036,7 @@
     "name": "Student 498",
     "classes": [
       { "classNo": 254, "grade": null },
-      { "classNo": 265, "grade": 74 }
+      { "classNo": 265, "grade": null }
     ]
   },
   {

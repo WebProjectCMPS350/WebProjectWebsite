@@ -63,6 +63,36 @@ class Class {
 
     return await courseRepo.getCourse(courseNo);
   }
+
+  async getClassesByInstructor(name) {
+    const classes = await this.getClasses();
+    const filteredClasses = classes.filter((clas) => clas.instructor == name);
+    return filteredClasses;
+  }
+
+  async getPendingClasses() {
+    const classes = await this.getClasses();
+    const filteredClasses = classes.filter((clas) => clas.status == "Pending");
+    return filteredClasses.length;
+  }
+
+  async getOpenClasses() {
+    const classes = await this.getClasses();
+    const filteredClasses = classes.filter((clas) => clas.status == "Open");
+    return filteredClasses.length;
+  }
+
+  async getCurrentClasses() {
+    const classes = await this.getClasses();
+    const filteredClasses = classes.filter((clas) => clas.status == "Current");
+    return filteredClasses.length;
+  }
+
+  async getClosedClasses() {
+    const classes = await this.getClasses();
+    const filteredClasses = classes.filter((clas) => clas.status == "Closed");
+    return filteredClasses.length;
+  }
 }
 
 export default new Class();

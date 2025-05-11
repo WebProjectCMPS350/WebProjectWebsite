@@ -1,5 +1,6 @@
 import fse from "fs-extra";
 import path from "path";
+import classRepo from "./Class.js";
 
 class Instructor {
   constructor() {
@@ -69,6 +70,36 @@ class Instructor {
   async getTotalInstructors() {
     const instructors = await this.getInstructors();
     return instructors.length;
+  }
+
+  async getInstructorLoad(instructorName) {
+    const instructorClasses = await classRepo.getClassesByInstructor(
+      instructorName
+    );
+
+    const totalClasses = instructorClasses.length;
+    const totalStudents = instructorClasses.reduce(
+      (sum, cls) => sum + (cls.noOfStudents || 0),
+      0
+    );
+
+    return {
+      name: instructorName,
+      totalClasses,
+      totalStudents,
+    };
+  }
+
+  async getInstructorsLoad() {
+    const instructors = await this.getInstructors();
+    const instructorLoadPromises = instructors.map((instructor) =>
+      this.getInstructorLoad(instructor.name)
+    );
+
+    const instructorLoads = await Promise.all(instructorLoadPromises);
+    instructorLoads.sort((a, b) => b.totalStudents - a.totalStudents);
+
+    return instructorLoads;
   }
 }
 

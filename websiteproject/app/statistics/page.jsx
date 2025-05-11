@@ -1,24 +1,46 @@
 "use client";
 import React, { useState } from "react";
+import Link from "next/link";
 import { useEffect } from "react";
 import {
   getTotalStudentsAction,
   getTotalCoursesAction,
   getTotalInstructorsAction,
-  getTotalStudentsPerCourseAction,
+  getTotalClassesAction,
+  getAvgStudentsPerCourseAction,
   getStudentsAverageGradeAction,
   getStudentsAverageGPAAction,
   getTop3CoursesAction,
+  getFailureRatePerCourseAction,
+  getAvgClassSizePerCourseCategoryAction,
+  getAvgClassSizePerCourseAction,
+  getInstructorsLoadAction,
+  getPassRatePerCourseAction,
+  getPendingClassesAction,
+  getOpenClassesAction,
+  getCurrentClassesAction,
+  getClosedClassesAction,
 } from "../actions/server-actions";
 
 export default function Statistics() {
   const [totalStudents, setTotalStudents] = useState(0);
   const [totalCourses, setTotalCourses] = useState(0);
   const [totalInstructors, setTotalInstructors] = useState(0);
+  const [totalClasses, setTotalClasses] = useState(0);
   const [studentsPerCourse, setStudentsPerCourse] = useState(0);
   const [averageGrade, setAverageGrade] = useState(0);
   const [averageGPA, setAverageGPA] = useState(0);
   const [Top3Courses, setTop3Courses] = useState([]);
+  const [failureRatePerCourse, setFailureRatePerCourse] = useState([]);
+  const [avgClassSizePerCourseCategory, setAvgClassSizePerCourseCategory] =
+    useState([]);
+  const [avgClassSizePerCourse, setAvgClassSizePerCourse] = useState([]);
+  const [instructorsLoad, setInstructorsLoad] = useState([]);
+  const [passRatePerCourse, setPassRatePerCourse] = useState([]);
+  const [pendingClasses, setPendingClasses] = useState(null);
+  const [openClasses, setOpenClasses] = useState(null);
+  const [currentClasses, setCurrentClasses] = useState(null);
+  const [closedClasses, setClosedClasses] = useState(null);
 
   async function getTotalStudents() {
     const t = await getTotalStudentsAction();
@@ -34,8 +56,13 @@ export default function Statistics() {
     setTotalInstructors(t);
   }
 
+  async function getTotalClasses() {
+    const t = await getTotalClassesAction();
+    setTotalClasses(t);
+  }
+
   async function getStudentsPerCourse() {
-    const t = await getTotalStudentsPerCourseAction();
+    const t = await getAvgStudentsPerCourseAction();
     setStudentsPerCourse(t);
   }
 
@@ -53,15 +80,63 @@ export default function Statistics() {
     const top3Courses = await getTop3CoursesAction();
     setTop3Courses(top3Courses);
   }
+  async function getFailureRatePerCourse() {
+    const failureRate = await getFailureRatePerCourseAction();
+    setFailureRatePerCourse(failureRate);
+  }
+
+  async function getAvgClassSizePerCourseCategory() {
+    const avgClassSize = await getAvgClassSizePerCourseCategoryAction();
+    setAvgClassSizePerCourseCategory(avgClassSize);
+  }
+
+  async function getAvgClassSizePerCourse() {
+    const courses = await getAvgClassSizePerCourseAction();
+
+    setAvgClassSizePerCourse(courses);
+  }
+
+  async function getInstructorsLoad() {
+    const instructorsLoad = await getInstructorsLoadAction();
+    setInstructorsLoad(instructorsLoad);
+  }
+
+  async function getPassRatePerCourse() {
+    const passRate = await getPassRatePerCourseAction();
+    setPassRatePerCourse(passRate);
+  }
+
+  async function getPendingClasses() {
+    const pendingClasses = await getPendingClassesAction();
+    setPendingClasses(pendingClasses);
+  }
+  async function getOpenClasses() {
+    const openClasses = await getOpenClassesAction();
+    setOpenClasses(openClasses);
+  }
+  async function getCurrentClasses() {
+    const currentClasses = await getCurrentClassesAction();
+    setCurrentClasses(currentClasses);
+  }
+  async function getClosedClasses() {
+    const closedClasses = await getClosedClassesAction();
+    setClosedClasses(closedClasses);
+  }
 
   useEffect(() => {
-    getTotalStudents();
-    getTotalCourses();
-    getTotalInstructors();
-    getStudentsPerCourse();
-    getAverageGrade();
-    getAverageGPA();
-    getTop3Courses();
+    Promise.all([
+      getTotalStudents(),
+      getTotalCourses(),
+      getTotalInstructors(),
+      getTotalClasses(),
+      getStudentsPerCourse(),
+      getAverageGrade(),
+      getAverageGPA(),
+      getPendingClasses(),
+      getOpenClasses(),
+      getCurrentClasses(),
+      getClosedClasses(),
+    ]);
   }, []);
 
   return (
@@ -74,20 +149,20 @@ export default function Statistics() {
         <nav>
           <ul>
             <li>
-              <a href="about-us.html">About us</a>
+              <Link href="about-us.html">About us</Link>
             </li>
             <li>
-              <a href="contact-us.html">Contact us</a>
+              <Link href="contact-us.html">Contact us</Link>
             </li>
             <li>
-              <a className="changable-link" href="#">
+              <Link className="changable-link" href="admin-main-page.html">
                 Main page
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="login-page.html" id="logout">
+              <Link href="login-page.html" id="logout">
                 Logout
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
@@ -109,7 +184,7 @@ export default function Statistics() {
           <div className="statistics-content">
             <ol>
               <li className="card">
-                <a href="#">Total Students: </a>
+                <p>Total Students: </p>
                 {totalStudents ? (
                   <span>{totalStudents}</span>
                 ) : (
@@ -118,7 +193,7 @@ export default function Statistics() {
                 {totalStudents > 1 ? "Students" : "Student"}
               </li>
               <li className="card">
-                <a href="#">Total Courses: </a>
+                <p>Total Courses: </p>
                 {totalCourses ? (
                   <span>{totalCourses}</span>
                 ) : (
@@ -127,7 +202,16 @@ export default function Statistics() {
                 {totalCourses > 1 ? "Courses" : "Course"}
               </li>
               <li className="card">
-                <a href="#">Total Instructor: </a>
+                <p>Total Classes: </p>
+                {totalCourses ? (
+                  <span>{totalClasses}</span>
+                ) : (
+                  <span> Loading...</span>
+                )}{" "}
+                {totalClasses > 1 ? "Classes" : "Class"}
+              </li>
+              <li className="card">
+                <p>Total Instructor: </p>
                 {totalInstructors ? (
                   <span>{totalInstructors}</span>
                 ) : (
@@ -136,7 +220,7 @@ export default function Statistics() {
                 {totalInstructors > 1 ? "Instructors" : "Instructor"}
               </li>
               <li className="card">
-                <a href="#">The total of students per course: </a>
+                <p>The average number of students per course: </p>
                 {studentsPerCourse ? (
                   <span>{studentsPerCourse}</span>
                 ) : (
@@ -145,7 +229,7 @@ export default function Statistics() {
                 {studentsPerCourse > 1 ? "Students" : "Student"}
               </li>
               <li className="card">
-                <a href="#">Average grade: </a>
+                <p>Average grade: </p>
                 {averageGrade ? (
                   <span>{averageGrade}</span>
                 ) : (
@@ -153,7 +237,7 @@ export default function Statistics() {
                 )}{" "}
               </li>
               <li className="card">
-                <a href="#">Average GPA: </a>
+                <p>Average GPA: </p>
                 {averageGPA ? (
                   <span>{averageGPA}</span>
                 ) : (
@@ -161,51 +245,104 @@ export default function Statistics() {
                 )}{" "}
                 Out of 4.0
               </li>
-              <li className="card">
-                <a href="#">The top 3 courses taken by the students: </a>
+              <li className="card" onClick={getTop3Courses}>
+                <p>The top 3 courses taken by the students: </p>
                 <ol className="sub-list">
                   {Top3Courses.map((course, index) => (
-                    <li key={index}>{course}</li>
+                    <li key={index}>
+                      {course.courseName} : {course.noOfStudents}
+                      {course.noOfStudents > 1 ? " Students" : " Student"}
+                    </li>
+                  ))}
+                </ol>
+              </li>
+              <li className="card" onClick={getFailureRatePerCourse}>
+                <p>The failure rate per course: </p>
+                <ol className="sub-list">
+                  {failureRatePerCourse.map((course, index) => (
+                    <li key={index}>
+                      {course.courseName} : {course.failureRate}%
+                    </li>
+                  ))}
+                </ol>
+              </li>
+
+              <li className="card" onClick={getAvgClassSizePerCourseCategory}>
+                <p>Average Class Size per Course Category: </p>
+                <ol className="sub-list">
+                  {avgClassSizePerCourseCategory.map((course, index) => (
+                    <li key={index}>
+                      {course.category} : {course.avgClassSize}
+                      {course.avgClassSize > 1 ? " Students" : " Student"}
+                    </li>
+                  ))}
+                </ol>
+              </li>
+              <li className="card" onClick={getAvgClassSizePerCourse}>
+                <p>Average Class Size per Course: </p>
+                <ol className="sub-list">
+                  {avgClassSizePerCourse.map((course, index) => (
+                    <li key={index}>
+                      {course.courseName} : {course.avgClassSize}
+                      {course.avgClassSize > 1 ? " Students" : " Student"}
+                    </li>
+                  ))}
+                </ol>
+              </li>
+              <li className="card" onClick={getInstructorsLoad}>
+                <p>Instructor Load (Number of Classes per Instructor): </p>
+                <ol className="sub-list">
+                  {instructorsLoad.map((instructor, index) => (
+                    <li key={index}>
+                      {instructor.name} : {instructor.totalClasses}{" "}
+                      {instructor.totalClasses > 1 ? "Classes" : "Class"} with{" "}
+                      {instructor.totalStudents}{" "}
+                      {instructor.totalStudents > 1 ? "Students" : "Student"}
+                    </li>
+                  ))}
+                </ol>
+              </li>
+              <li className="card" onClick={getPassRatePerCourse}>
+                <p>Pass Rate per Course: </p>
+                <ol className="sub-list">
+                  {passRatePerCourse.map((course, index) => (
+                    <li key={index}>
+                      {course.courseName} : {course.passRate}%
+                    </li>
                   ))}
                 </ol>
               </li>
               <li className="card">
-                <a href="#">The failure rate per course</a>
+                <p>Number of Pending classes: </p>
+                <span>{pendingClasses}</span>
+                {pendingClasses > 1 ? " Classes" : " Class"}
               </li>
               <li className="card">
-                <a href="#">Most popular course</a>
+                <p>Number of Open Classes: </p>
+                {openClasses ? (
+                  <span>{openClasses}</span>
+                ) : (
+                  <span> Loading...</span>
+                )}{" "}
+                {openClasses > 1 ? "Classes" : "Class"}
               </li>
               <li className="card">
-                <a href="#">Average Class Size per Course Category</a>
+                <p>Number of Current Classes: </p>
+                {currentClasses ? (
+                  <span>{currentClasses}</span>
+                ) : (
+                  <span> Loading...</span>
+                )}{" "}
+                {currentClasses > 1 ? "Classes" : "Class"}
               </li>
               <li className="card">
-                <a href="#">Average Class Size per Course</a>
-              </li>
-              <li className="card">
-                <a href="#">
-                  Instructor Load (Number of Classes per Instructor):{" "}
-                </a>
-              </li>
-              <li className="card">
-                <a href="#">Student Enrollment Trends</a>
-              </li>
-              <li className="card">
-                <a href="#">Most Active Days for Classes: </a>
-              </li>
-              <li className="card">
-                <a href="#">Pass Rate per Class / Course: </a>
-              </li>
-              <li className="card">
-                <a href="#">Average Number of Classes per Student: </a>
-              </li>
-              <li className="card">
-                <a href="#">Class Availability Rate: </a>
-              </li>
-              <li className="card">
-                <a href="#">Grade Distribution per Course: </a>
-              </li>
-              <li className="card">
-                <a href="#">Courses with Most Prerequisites: </a>
+                <p>Number of Closed Classes: </p>
+                {closedClasses ? (
+                  <span>{closedClasses}</span>
+                ) : (
+                  <span> Loading...</span>
+                )}{" "}
+                {closedClasses > 1 ? "Classes" : "Class"}
               </li>
             </ol>
           </div>

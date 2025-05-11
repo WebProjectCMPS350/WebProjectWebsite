@@ -62,7 +62,7 @@ class Student {
     return students.length;
   }
 
-  async getTotalStudentsPerCourse() {
+  async getAvgStudentsPerCourse() {
     const students = await this.getStudents();
     const courses = await courseRepo.getCourses();
     return Math.floor(students.length / courses.length);
@@ -108,6 +108,15 @@ class Student {
       }
     }
     return (gpa / n).toFixed(2);
+  }
+
+  async getStudentsByClass(classNo) {
+    const students = await this.getStudents();
+    const studentsInClass = students.filter((student) =>
+      student.classes.some((c) => c.classNo === classNo)
+    );
+
+    return studentsInClass;
   }
 }
 
