@@ -56,6 +56,11 @@ class Student {
     await this.saveStudents(students);
     return { message: "Student deleted successfully" };
   }
+
+  async getTotalStudents() {
+    const students = await this.getStudents();
+    return students.length;
+  }
 }
 
 export default new Student();

@@ -1,6 +1,29 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
+import { useEffect } from "react";
+import {
+  getTotalStudentsAction,
+  getTotalCoursesAction,
+} from "../actions/server-actions";
 
-export default function page() {
+export default function Statistics() {
+  const [totalStudents, setTotalStudents] = useState(0);
+  const [totalCourses, setTotalCourses] = useState(0);
+
+  async function getTotalStudents() {
+    const t = await getTotalStudentsAction();
+    setTotalStudents(t);
+  }
+  async function getTotalCourses() {
+    const t = await getTotalCoursesAction();
+    setTotalCourses(t);
+  }
+
+  useEffect(() => {
+    getTotalStudents();
+    getTotalCourses();
+  }, []);
+
   return (
     <div className="container">
       <header>
@@ -32,48 +55,91 @@ export default function page() {
 
       <main>
         <div className="statistics">
-          <h2>Statistics</h2>
+          <h2>📊 Statistics Dashboard</h2>
+          <p>
+            Welcome to the Statistics Dashboard of the QU Student Management
+            System. This page provides key insights into student enrollments,
+            course performance, instructor workloads, and overall academic
+            trends across the platform. By analyzing this data, administrators
+            and educators can make informed decisions to improve curriculum
+            design, resource allocation, and student success outcomes.
+          </p>
+          <hr />
+
           <div className="statistics-content">
-            <div className="statistic">
-              <h3>Total Students</h3>
-              <p>1500</p>
-            </div>
-            <div className="statistic">
-              <h3>Total Courses</h3>
-              <p>50</p>
-            </div>
-            <div className="statistic">
-              <h3>Total Faculty</h3>
-              <p>100</p>
-            </div>
-            <div className="statistic">
-              <h3>The total of students per course: </h3>
-              <p>10</p>
-            </div>
-            <div className="statistic">
-              <h3>Average GPA</h3>
-              <p>3.5</p>
-            </div>
-            <div className="statistic">
-              <h3>Total Graduates</h3>
-              <p>300</p>
-            </div>
-            <div className="statistic">
-              <h3>The top 3 courses taken by the students: </h3>
-              <p>50</p>
-            </div>
-            <div className="statistic">
-              <h3>The failure rate per course: </h3>
-              <p>Engineering</p>
-            </div>
-            <div className="statistic">
-              <h3>Most popular course</h3>
-              <p>Computer Science</p>
-            </div>
-            <div className="statistic">
-              <h3>Average Class Size per Course Category: </h3>
-              <p>Engineering</p>
-            </div>
+            <ol>
+              <li className="card">
+                <a href="#">Total Students: </a>
+                {totalStudents ? (
+                  <span>{totalStudents}</span>
+                ) : (
+                  <span> Loading...</span>
+                )}{" "}
+                Student
+              </li>
+              <li className="card">
+                <a href="#">Total Courses: </a>
+                {totalCourses ? (
+                  <span>{totalCourses}</span>
+                ) : (
+                  <span> Loading...</span>
+                )}{" "}
+                Course
+              </li>
+              <li className="card">
+                <a href="#">Total Faculty</a>
+              </li>
+              <li className="card">
+                <a href="#">The total of students per course</a>
+              </li>
+              <li className="card">
+                <a href="#">Average GPA</a>
+              </li>
+              <li className="card">
+                <a href="#">Total Graduates</a>
+              </li>
+              <li className="card">
+                <a href="#">The top 3 courses taken by the students</a>
+              </li>
+              <li className="card">
+                <a href="#">The failure rate per course</a>
+              </li>
+              <li className="card">
+                <a href="#">Most popular course</a>
+              </li>
+              <li className="card">
+                <a href="#">Average Class Size per Course Category</a>
+              </li>
+              <li className="card">
+                <a href="#">Average Class Size per Course</a>
+              </li>
+              <li className="card">
+                <a href="#">
+                  Instructor Load (Number of Classes per Instructor):{" "}
+                </a>
+              </li>
+              <li className="card">
+                <a href="#">Student Enrollment Trends</a>
+              </li>
+              <li className="card">
+                <a href="#">Most Active Days for Classes: </a>
+              </li>
+              <li className="card">
+                <a href="#">Pass Rate per Class / Course: </a>
+              </li>
+              <li className="card">
+                <a href="#">Average Number of Classes per Student: </a>
+              </li>
+              <li className="card">
+                <a href="#">Class Availability Rate: </a>
+              </li>
+              <li className="card">
+                <a href="#">Grade Distribution per Course: </a>
+              </li>
+              <li className="card">
+                <a href="#">Courses with Most Prerequisites: </a>
+              </li>
+            </ol>
           </div>
         </div>
       </main>

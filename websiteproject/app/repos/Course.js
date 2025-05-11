@@ -97,6 +97,11 @@ class Course {
       course.category.toLowerCase().includes(category.toLowerCase())
     );
   }
+
+  async getTotalCourses() {
+    const courses = await this.getCourses();
+    return courses.length;
+  }
 }
 
 export default new Course();
