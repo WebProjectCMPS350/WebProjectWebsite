@@ -65,6 +65,11 @@ class Instructor {
     await this.saveInstructors(instructors);
     return { message: "Instructor deleted successfully" };
   }
+
+  async getTotalInstructors() {
+    const instructors = await this.getInstructors();
+    return instructors.length;
+  }
 }
 
 export default new Instructor();

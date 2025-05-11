@@ -1,6 +1,7 @@
 import fse from "fs-extra";
 import path from "path";
 import classRepo from "./Class.js";
+import { log } from "console";
 class Course {
   constructor() {
     this.coursesFilePath = path.join(process.cwd(), "app/data/courses.json"); //
@@ -101,6 +102,42 @@ class Course {
   async getTotalCourses() {
     const courses = await this.getCourses();
     return courses.length;
+  }
+
+  async getClassNoOfStudents(classNo) {
+    const clas = await classRepo.getClass(classNo);
+    if (!clas) {
+      return { error: "Class not found" };
+    }
+    return clas.noOfStudents;
+  }
+
+  async getClassesNoOfStudents(classes) {
+    let num = 0;
+
+    for (const clas of classes) {
+      num += clas.noOfStudents;
+    }
+
+    return num;
+  }
+
+  async getTop3Courses() {
+    const courses = await this.getCourses();
+
+    const coursesWithClasses = [];
+    for (const course of courses) {
+      const cla = await this.getCourseClasses(course.courseNo);
+
+      coursesWithClasses.push({
+        courseName: course.name,
+        classes: await this.getClassesNoOfStudents(cla),
+      });
+    }
+    coursesWithClasses.sort((a, b) => b.classes - a.classes);
+    const top3Courses = coursesWithClasses.slice(0, 3);
+
+    return top3Courses.map((course) => course.courseName);
   }
 }
 

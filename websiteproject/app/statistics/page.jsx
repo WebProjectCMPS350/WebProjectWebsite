@@ -4,11 +4,21 @@ import { useEffect } from "react";
 import {
   getTotalStudentsAction,
   getTotalCoursesAction,
+  getTotalInstructorsAction,
+  getTotalStudentsPerCourseAction,
+  getStudentsAverageGradeAction,
+  getStudentsAverageGPAAction,
+  getTop3CoursesAction,
 } from "../actions/server-actions";
 
 export default function Statistics() {
   const [totalStudents, setTotalStudents] = useState(0);
   const [totalCourses, setTotalCourses] = useState(0);
+  const [totalInstructors, setTotalInstructors] = useState(0);
+  const [studentsPerCourse, setStudentsPerCourse] = useState(0);
+  const [averageGrade, setAverageGrade] = useState(0);
+  const [averageGPA, setAverageGPA] = useState(0);
+  const [Top3Courses, setTop3Courses] = useState([]);
 
   async function getTotalStudents() {
     const t = await getTotalStudentsAction();
@@ -19,9 +29,39 @@ export default function Statistics() {
     setTotalCourses(t);
   }
 
+  async function getTotalInstructors() {
+    const t = await getTotalInstructorsAction();
+    setTotalInstructors(t);
+  }
+
+  async function getStudentsPerCourse() {
+    const t = await getTotalStudentsPerCourseAction();
+    setStudentsPerCourse(t);
+  }
+
+  async function getAverageGrade() {
+    const t = await getStudentsAverageGradeAction();
+    setAverageGrade(t);
+  }
+
+  async function getAverageGPA() {
+    const t = await getStudentsAverageGPAAction();
+    setAverageGPA(t);
+  }
+
+  async function getTop3Courses() {
+    const top3Courses = await getTop3CoursesAction();
+    setTop3Courses(top3Courses);
+  }
+
   useEffect(() => {
     getTotalStudents();
     getTotalCourses();
+    getTotalInstructors();
+    getStudentsPerCourse();
+    getAverageGrade();
+    getAverageGPA();
+    getTop3Courses();
   }, []);
 
   return (
@@ -75,7 +115,7 @@ export default function Statistics() {
                 ) : (
                   <span> Loading...</span>
                 )}{" "}
-                Student
+                {totalStudents > 1 ? "Students" : "Student"}
               </li>
               <li className="card">
                 <a href="#">Total Courses: </a>
@@ -84,22 +124,50 @@ export default function Statistics() {
                 ) : (
                   <span> Loading...</span>
                 )}{" "}
-                Course
+                {totalCourses > 1 ? "Courses" : "Course"}
               </li>
               <li className="card">
-                <a href="#">Total Faculty</a>
+                <a href="#">Total Instructor: </a>
+                {totalInstructors ? (
+                  <span>{totalInstructors}</span>
+                ) : (
+                  <span> Loading...</span>
+                )}{" "}
+                {totalInstructors > 1 ? "Instructors" : "Instructor"}
               </li>
               <li className="card">
-                <a href="#">The total of students per course</a>
+                <a href="#">The total of students per course: </a>
+                {studentsPerCourse ? (
+                  <span>{studentsPerCourse}</span>
+                ) : (
+                  <span> Loading...</span>
+                )}{" "}
+                {studentsPerCourse > 1 ? "Students" : "Student"}
               </li>
               <li className="card">
-                <a href="#">Average GPA</a>
+                <a href="#">Average grade: </a>
+                {averageGrade ? (
+                  <span>{averageGrade}</span>
+                ) : (
+                  <span> Loading...</span>
+                )}{" "}
               </li>
               <li className="card">
-                <a href="#">Total Graduates</a>
+                <a href="#">Average GPA: </a>
+                {averageGPA ? (
+                  <span>{averageGPA}</span>
+                ) : (
+                  <span> Loading...</span>
+                )}{" "}
+                Out of 4.0
               </li>
               <li className="card">
-                <a href="#">The top 3 courses taken by the students</a>
+                <a href="#">The top 3 courses taken by the students: </a>
+                <ol className="sub-list">
+                  {Top3Courses.map((course, index) => (
+                    <li key={index}>{course}</li>
+                  ))}
+                </ol>
               </li>
               <li className="card">
                 <a href="#">The failure rate per course</a>

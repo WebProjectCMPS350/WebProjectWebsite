@@ -2845,8 +2845,8 @@
     "name": "Student 277",
     "classes": [
       { "classNo": 224, "grade": null },
-      { "classNo": 266, "grade": 23 },
-      { "classNo": 218, "grade": 67 },
+      { "classNo": 266, "grade": 100 },
+      { "classNo": 218, "grade": 100 },
       { "classNo": 264, "grade": null },
       { "classNo": 245, "grade": null },
       { "classNo": 279, "grade": null }

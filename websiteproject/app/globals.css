@@ -183,6 +183,15 @@ footer ul li a:hover {
     color: #333;
 }
 
+.sub-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+  
+}
+
 
 
 .statistics >h2 {

@@ -1,6 +1,6 @@
 import fse from "fs-extra";
 import path from "path";
-
+import courseRepo from "./Course.js";
 class Student {
   constructor() {
     this.studentsFilePath = path.join(process.cwd(), "app/data/students.json"); //
@@ -60,6 +60,54 @@ class Student {
   async getTotalStudents() {
     const students = await this.getStudents();
     return students.length;
+  }
+
+  async getTotalStudentsPerCourse() {
+    const students = await this.getStudents();
+    const courses = await courseRepo.getCourses();
+    return Math.floor(students.length / courses.length);
+  }
+
+  async getStudentAverageGrade(student) {
+    const grades = student.classes
+      .map((c) => c.grade)
+      .filter((grade) => grade !== null && grade !== undefined);
+
+    if (grades.length === 0) return null;
+
+    const total = grades.reduce((sum, grade) => sum + grade, 0);
+
+    return total / grades.length;
+  }
+
+  async getStudentsAverageGrade() {
+    const students = await this.getStudents();
+    let grades = 0;
+    let n = 0;
+
+    for (const student of students) {
+      const average = await this.getStudentAverageGrade(student);
+      if (average !== null) {
+        grades += average;
+        n++;
+      }
+    }
+    return (grades / n).toFixed(2);
+  }
+
+  async getStudentsAverageGPA() {
+    const students = await this.getStudents();
+    let gpa = 0;
+    let n = 0;
+
+    for (const student of students) {
+      const average = await this.getStudentAverageGrade(student);
+      if (average !== null) {
+        gpa += average / 20;
+        n++;
+      }
+    }
+    return (gpa / n).toFixed(2);
   }
 }
 
