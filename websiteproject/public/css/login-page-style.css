@@ -23,14 +23,19 @@ header h1 {
 
 }
 
+
 body {
     display: flex;
+    height: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow: scroll;
 
 
+}
+
+main{
+    flex: 1;
 }
 
 body::-webkit-scrollbar {
@@ -123,10 +128,13 @@ footer{
     padding: 1rem 1rem;
     text-align: center;
     width: 100%;
+    position: fixed;
+    bottom: 0;
     box-shadow: 0 0px 50px 5px #4392F1a1;
-    border: none;
     font-size: 1.1rem;
+
 }
+
 
 footer ul {
     display: flex;
@@ -171,6 +179,7 @@ footer ul li a:hover {
         height: 30rem;
     }
 
+
     .footer-content {
         display: flex;
         flex-direction: row;
@@ -180,3 +189,6 @@ footer ul li a:hover {
         padding: 0rem 1rem;
     }
 }
+
+
+
