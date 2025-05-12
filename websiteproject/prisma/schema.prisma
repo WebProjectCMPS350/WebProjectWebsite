@@ -11,50 +11,63 @@ datasource db {
 }
 
 model Class {
-  id           Int        @id @default(autoincrement())
-  classNo      Int
+  id           Int       @id @default(autoincrement())
+  classNo      Int       @unique
   classTime    String
   classDays    Json
-  instructors   Instructor[]
   status       String
-  parentCourse Course[]
-  noOfStudent  Student[]    
-  instructorId Int
+  noOfStudents Int
+  parentCourse Int
+  students     Student[] @relation("StudentClasses")
+  instructors  Instructor[] @relation("ClassInstructors")
+  courses      Course[]  @relation("CourseClasses")
 }
+
+
+
+
+
 
 model Student {
-  id       Int     @id @default(autoincrement())
-  username String  @unique
-  password String
-  name     String
-  class    Class[]
+  id        Int       @id @default(autoincrement())
+  username  String    @unique
+  password  String
+  name      String
+  classes   Class[]   @relation("StudentClasses")
 }
+
+
+
 
 model Instructor {
-  id       Int      @id @default(autoincrement())
-  username String
-  password String
-  name     String
-  expArea  Course[]
- 
-  classes Class[]
+  id        Int       @id @default(autoincrement())
+  username  String    @unique
+  password  String
+  name      String
+  expArea   String
+  classes   Class[]   @relation("ClassInstructors")
+  courses   Course[]  @relation("InstructorCourses")
 }
-model Course {
-  id            Int      @id @default(autoincrement())
-  courseNo      Int
-  name          String
-  description   String
-  category      String
-  status        String
-  prerequisites Json
-  classes         Json
- Instructors Instructor[]
 
-  Class Class[]
+
+
+model Course {
+  id           Int       @id @default(autoincrement())
+  courseNo     Int       @unique
+  name         String
+  description  String
+  category     String
+  status       String
+  prerequisites Json
+  classes      Class[]   @relation("CourseClasses")
+  instructors  Instructor[] @relation("InstructorCourses")
 }
+
+
 
 model Admin {
   id       Int    @id @default(autoincrement())
   username String @unique
   password String
 }
+
