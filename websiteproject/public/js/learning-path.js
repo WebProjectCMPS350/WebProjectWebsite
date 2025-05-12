@@ -9,6 +9,7 @@ const userNameWelcoming = document.querySelector("#user-name");
 const student = await studentRepo.getStudent(localStorage.username);
 
 document.addEventListener("DOMContentLoaded", loadCourses());
+const classes = await studentRepo.getStudentClasses(student.username);
 
 async function loadCourses(e) {
   userNameWelcoming.innerHTML = `Welcome ${student.name}`;
@@ -22,27 +23,16 @@ async function loadCourses(e) {
 }
 
 async function templateCourses(course) {
-  const classes = await studentRepo.getStudentClasses(student.username);
-  const classes2 = student.classes;
+  const registeredClass = await classRepo.getRegisteredClass(
+    course.courseNo,
+    classes
+  );
 
-  const arr = [];
-  for (const clas of classes) {
-    if (clas.parentCourse != course.courseNo) {
-      continue;
-    } else {
-      arr.push(clas);
+  student.classes.forEach((classItem) => {
+    if (classItem.classNo == registeredClass.classNo) {
+      registeredClass.grade = classItem.grade;
     }
-  }
-
-  const registeredClass = arr[0];
-  let grade = 0;
-  for (const clas of classes2) {
-    if (clas.classNo != registeredClass.classNo) {
-      continue;
-    } else {
-      grade = clas.grade;
-    }
-  }
+  });
 
   return `
     
@@ -60,11 +50,13 @@ async function templateCourses(course) {
             
         </div>
         <div class="footer" style="color: black">
+            <h3>Class Information</h3>
+            <p id="classNo">Class No: ${registeredClass.classNo}</p>
             <p id="studentsNo">Number of students: ${registeredClass.noOfStudents}</p>
             <p>Instructor: ${registeredClass.instructor} </p>
             <p>Class Time: ${registeredClass.classTime} </p>
             <p>Class Days: ${registeredClass.classDays} </p>
-            <p> Grade: ${grade} </p>
+            <p> Grade: ${registeredClass.grade} </p>
         </div>
     </div>
     `;

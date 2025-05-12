@@ -54,6 +54,16 @@ class Class {
     );
     return instructorClasses;
   }
+
+  async getRegisteredClass(courseNo, classes) {
+    const registeredClass = classes.find(
+      (clas) => clas.parentCourse == courseNo
+    );
+    if (!registeredClass) {
+      return { error: "Class not found" };
+    }
+    return registeredClass;
+  }
 }
 
 export default new Class();
