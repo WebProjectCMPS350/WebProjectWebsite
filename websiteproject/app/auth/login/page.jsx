@@ -44,7 +44,7 @@ export default function LoginPage() {
       <form onSubmit={handleLogin}>
         <input
           type="text"
-          placeholder="Email"
+          placeholder="Administrator username..."
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
