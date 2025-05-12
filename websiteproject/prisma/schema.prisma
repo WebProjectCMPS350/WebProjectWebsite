@@ -11,17 +11,19 @@ datasource db {
 }
 
 model Class {
-  id           Int       @id @default(autoincrement())
-  classNo      Int       @unique
+  id           Int          @id @default(autoincrement())
+  classNo      Int          @unique
   classTime    String
   classDays    Json
   status       String
   noOfStudents Int
   parentCourse Int
-  students     Student[] @relation("StudentClasses")
-  instructors  Instructor[] @relation("ClassInstructors")
-  courses      Course[]  @relation("CourseClasses")
+
+  studentClasses   StudentClass[]
+  instructorClasses InstructorClass[]
+  courseClasses    CourseClass[]
 }
+
 
 
 
@@ -29,38 +31,44 @@ model Class {
 
 
 model Student {
-  id        Int       @id @default(autoincrement())
-  username  String    @unique
-  password  String
-  name      String
-  classes   Class[]   @relation("StudentClasses")
+  id       Int          @id @default(autoincrement())
+  username String       @unique
+  password String
+  name     String
+
+  studentClasses StudentClass[]
 }
+
+
 
 
 
 
 model Instructor {
-  id        Int       @id @default(autoincrement())
-  username  String    @unique
-  password  String
-  name      String
-  expArea   String
-  classes   Class[]   @relation("ClassInstructors")
-  courses   Course[]  @relation("InstructorCourses")
+  id       Int          @id @default(autoincrement())
+  username String       @unique
+  password String
+  name     String
+  expArea  String
+
+  instructorClasses InstructorClass[]
 }
 
 
 
+
+
+
 model Course {
-  id           Int       @id @default(autoincrement())
-  courseNo     Int       @unique
+  id           Int          @id @default(autoincrement())
+  courseNo     Int          @unique
   name         String
   description  String
   category     String
   status       String
   prerequisites Json
-  classes      Class[]   @relation("CourseClasses")
-  instructors  Instructor[] @relation("InstructorCourses")
+
+  courseClasses CourseClass[]
 }
 
 
@@ -71,3 +79,30 @@ model Admin {
   password String
 }
 
+
+model StudentClass {
+  studentId Int
+  classId   Int
+  Student   Student @relation(fields: [studentId], references: [id])
+  Class     Class   @relation(fields: [classId], references: [id])
+
+  @@id([studentId, classId])
+}
+
+model InstructorClass {
+  instructorId Int
+  classId      Int
+  Instructor   Instructor @relation(fields: [instructorId], references: [id])
+  Class        Class      @relation(fields: [classId], references: [id])
+
+  @@id([instructorId, classId])
+}
+
+model CourseClass {
+  courseId Int
+  classId  Int
+  Course   Course @relation(fields: [courseId], references: [id])
+  Class    Class  @relation(fields: [classId], references: [id])
+
+  @@id([courseId, classId])
+}
