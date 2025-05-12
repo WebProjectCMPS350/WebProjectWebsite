@@ -11,16 +11,50 @@ datasource db {
 }
 
 model Class {
+  id           Int        @id @default(autoincrement())
+  classNo      Int
+  classTime    String
+  classDays    Json
+  instructors   Instructor[]
+  status       String
+  parentCourse Course[]
+  noOfStudent  Student[]    
+  instructorId Int
 }
 
 model Student {
+  id       Int     @id @default(autoincrement())
+  username String  @unique
+  password String
+  name     String
+  class    Class[]
 }
 
 model Instructor {
+  id       Int      @id @default(autoincrement())
+  username String
+  password String
+  name     String
+  expArea  Course[]
+ 
+  classes Class[]
 }
-
 model Course {
+  id            Int      @id @default(autoincrement())
+  courseNo      Int
+  name          String
+  description   String
+  category      String
+  status        String
+  prerequisites Json
+  classes         Json
+ Instructors Instructor[]
+
+  Class Class[]
 }
 
 model Admin {
+  id       Int    @id @default(autoincrement())
+  username String @unique
+  password String
 }
