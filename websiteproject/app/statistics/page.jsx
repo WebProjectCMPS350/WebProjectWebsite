@@ -48,7 +48,6 @@ export default function Statistics() {
 
   useEffect(() => {
     async function checkAuth() {
-      // First try JWT cookie
       const token = document.cookie
         .split("; ")
         .find((row) => row.startsWith("id_token="))
@@ -68,19 +67,15 @@ export default function Statistics() {
           setAuthorized(true);
           loadStatistics();
           return;
-        } catch {
-          // fallback to next check
-        }
+        } catch {}
       }
 
-      // Try GitHub login session (NextAuth)
       const session = await getSession();
       if (session) {
         setUserName(session.user.name);
         setAuthorized(true);
         loadStatistics();
       } else {
-        // Neither method succeeded
         setAuthorized(false);
         window.location.href = "/auth/login";
       }
@@ -175,7 +170,7 @@ export default function Statistics() {
   }
 
   if (authorized === null) return <p>Loading...</p>;
-  if (authorized === false) return null; // already redirected
+  if (authorized === false) return null;
 
   return (
     <div className="container">
@@ -385,7 +380,6 @@ export default function Statistics() {
             </ol>
           </div>
         </div>
-        {/* ... your statistics UI ... */}
       </main>
       <footer>
         <div className="footer-content">
@@ -432,7 +426,6 @@ export default function Statistics() {
             </li>
           </ul>
         </div>
-        {/* ... your footer ... */}
       </footer>
     </div>
   );
