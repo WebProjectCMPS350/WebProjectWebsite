@@ -36,7 +36,8 @@ export default function Statistics() {
   const [averageGPA, setAverageGPA] = useState(0);
   const [Top3Courses, setTop3Courses] = useState([]);
   const [failureRatePerCourse, setFailureRatePerCourse] = useState([]);
-  const [avgClassSizePerCourseCategory, setAvgClassSizePerCourseCategory] = useState([]);
+  const [avgClassSizePerCourseCategory, setAvgClassSizePerCourseCategory] =
+    useState([]);
   const [avgClassSizePerCourse, setAvgClassSizePerCourse] = useState([]);
   const [instructorsLoad, setInstructorsLoad] = useState([]);
   const [passRatePerCourse, setPassRatePerCourse] = useState([]);
@@ -179,13 +180,258 @@ export default function Statistics() {
   return (
     <div className="container">
       <header>
-        <h2>Welcome, {userName}!</h2>
-        {/* ... your existing nav or header ... */}
+        <a className="changable-link" href="#">
+          <h1>QU Student Management</h1>
+        </a>
+
+        <nav>
+          <ul>
+            <li>
+              <Link href="about-us.html">About us</Link>
+            </li>
+            <li>
+              <Link href="contact-us.html">Contact us</Link>
+            </li>
+            <li>
+              <Link className="changable-link" href="admin-main-page.html">
+                Main page
+              </Link>
+            </li>
+            <li>
+              <Link href="login-page.html" id="logout">
+                Logout
+              </Link>
+            </li>
+          </ul>
+        </nav>
       </header>
+
       <main>
+        <div className="statistics">
+          <h2>📊 Statistics Dashboard</h2>
+          <p>
+            Welcome to the Statistics Dashboard of the QU Student Management
+            System. This page provides key insights into student enrollments,
+            course performance, instructor workloads, and overall academic
+            trends across the platform. By analyzing this data, administrators
+            and educators can make informed decisions to improve curriculum
+            design, resource allocation, and student success outcomes.
+          </p>
+          <hr />
+
+          <div className="statistics-content">
+            <ol>
+              <li className="card">
+                <p>Total Students: </p>
+                {totalStudents ? (
+                  <span>{totalStudents}</span>
+                ) : (
+                  <span> Loading...</span>
+                )}{" "}
+                {totalStudents > 1 ? "Students" : "Student"}
+              </li>
+              <li className="card">
+                <p>Total Courses: </p>
+                {totalCourses ? (
+                  <span>{totalCourses}</span>
+                ) : (
+                  <span> Loading...</span>
+                )}{" "}
+                {totalCourses > 1 ? "Courses" : "Course"}
+              </li>
+              <li className="card">
+                <p>Total Classes: </p>
+                {totalCourses ? (
+                  <span>{totalClasses}</span>
+                ) : (
+                  <span> Loading...</span>
+                )}{" "}
+                {totalClasses > 1 ? "Classes" : "Class"}
+              </li>
+              <li className="card">
+                <p>Total Instructor: </p>
+                {totalInstructors ? (
+                  <span>{totalInstructors}</span>
+                ) : (
+                  <span> Loading...</span>
+                )}{" "}
+                {totalInstructors > 1 ? "Instructors" : "Instructor"}
+              </li>
+              <li className="card">
+                <p>The average number of students per course: </p>
+                {studentsPerCourse ? (
+                  <span>{studentsPerCourse}</span>
+                ) : (
+                  <span> Loading...</span>
+                )}{" "}
+                {studentsPerCourse > 1 ? "Students" : "Student"}
+              </li>
+              <li className="card">
+                <p>Average grade: </p>
+                {averageGrade ? (
+                  <span>{averageGrade}</span>
+                ) : (
+                  <span> Loading...</span>
+                )}{" "}
+              </li>
+              <li className="card">
+                <p>Average GPA: </p>
+                {averageGPA ? (
+                  <span>{averageGPA}</span>
+                ) : (
+                  <span> Loading...</span>
+                )}{" "}
+                Out of 4.0
+              </li>
+              <li className="card" onClick={getTop3Courses}>
+                <p>The top 3 courses taken by the students: </p>
+                <ol className="sub-list">
+                  {Top3Courses.map((course, index) => (
+                    <li key={index}>
+                      {course.courseName} : {course.noOfStudents}
+                      {course.noOfStudents > 1 ? " Students" : " Student"}
+                    </li>
+                  ))}
+                </ol>
+              </li>
+              <li className="card" onClick={getFailureRatePerCourse}>
+                <p>The failure rate per course: </p>
+                <ol className="sub-list">
+                  {failureRatePerCourse.map((course, index) => (
+                    <li key={index}>
+                      {course.courseName} : {course.failureRate}%
+                    </li>
+                  ))}
+                </ol>
+              </li>
+
+              <li className="card" onClick={getAvgClassSizePerCourseCategory}>
+                <p>Average Class Size per Course Category: </p>
+                <ol className="sub-list">
+                  {avgClassSizePerCourseCategory.map((course, index) => (
+                    <li key={index}>
+                      {course.category} : {course.avgClassSize}
+                      {course.avgClassSize > 1 ? " Students" : " Student"}
+                    </li>
+                  ))}
+                </ol>
+              </li>
+              <li className="card" onClick={getAvgClassSizePerCourse}>
+                <p>Average Class Size per Course: </p>
+                <ol className="sub-list">
+                  {avgClassSizePerCourse.map((course, index) => (
+                    <li key={index}>
+                      {course.courseName} : {course.avgClassSize}
+                      {course.avgClassSize > 1 ? " Students" : " Student"}
+                    </li>
+                  ))}
+                </ol>
+              </li>
+              <li className="card" onClick={getInstructorsLoad}>
+                <p>Instructor Load (Number of Classes per Instructor): </p>
+                <ol className="sub-list">
+                  {instructorsLoad.map((instructor, index) => (
+                    <li key={index}>
+                      {instructor.name} : {instructor.totalClasses}{" "}
+                      {instructor.totalClasses > 1 ? "Classes" : "Class"} with{" "}
+                      {instructor.totalStudents}{" "}
+                      {instructor.totalStudents > 1 ? "Students" : "Student"}
+                    </li>
+                  ))}
+                </ol>
+              </li>
+              <li className="card" onClick={getPassRatePerCourse}>
+                <p>Pass Rate per Course: </p>
+                <ol className="sub-list">
+                  {passRatePerCourse.map((course, index) => (
+                    <li key={index}>
+                      {course.courseName} : {course.passRate}%
+                    </li>
+                  ))}
+                </ol>
+              </li>
+              <li className="card">
+                <p>Number of Pending classes: </p>
+                <span>{pendingClasses}</span>
+                {pendingClasses > 1 ? " Classes" : " Class"}
+              </li>
+              <li className="card">
+                <p>Number of Open Classes: </p>
+                {openClasses ? (
+                  <span>{openClasses}</span>
+                ) : (
+                  <span> Loading...</span>
+                )}{" "}
+                {openClasses > 1 ? "Classes" : "Class"}
+              </li>
+              <li className="card">
+                <p>Number of Current Classes: </p>
+                {currentClasses ? (
+                  <span>{currentClasses}</span>
+                ) : (
+                  <span> Loading...</span>
+                )}{" "}
+                {currentClasses > 1 ? "Classes" : "Class"}
+              </li>
+              <li className="card">
+                <p>Number of Closed Classes: </p>
+                {closedClasses ? (
+                  <span>{closedClasses}</span>
+                ) : (
+                  <span> Loading...</span>
+                )}{" "}
+                {closedClasses > 1 ? "Classes" : "Class"}
+              </li>
+            </ol>
+          </div>
+        </div>
         {/* ... your statistics UI ... */}
       </main>
       <footer>
+        <div className="footer-content">
+          <p>&copy; 2025 QU Student Management. All rights reserved.</p>
+
+          <ul className="socials">
+            <li>
+              <a href="#" title="Soon...">
+                <i className="fa-brands fa-facebook"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" title="Soon...">
+                <i className="fa-brands fa-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" title="Soon...">
+                <i className="fa-brands fa-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" title="Soon...">
+                <i className="fa-brands fa-linkedin"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" title="Soon...">
+                <i className="fa-brands fa-youtube"></i>
+              </a>
+            </li>
+            <li>
+              <a
+                title="Check the website repo on GitHub"
+                href="https://github.com/WebProjectCMPS350/WebProjectWebsite"
+              >
+                <i className="fa-brands fa-github"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" title="Soon...">
+                <i className="fa-solid fa-envelope"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
         {/* ... your footer ... */}
       </footer>
     </div>
